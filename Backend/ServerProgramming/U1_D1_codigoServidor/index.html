@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Visitas</title>
+
+</head>
+<body>
+
+    <p id="contadorVisitas"></p>
+
+    <script>
+        let visitas = localStorage.getItem("contadorVisitas"); //es un string
+
+        if (!visitas) {//si no hay vistas
+            visitas = 1;
+        } else {
+            visitas = parseInt(visitas) + 1;// hay que castearlo a entero
+        }
+
+        localStorage.setItem("contadorVisitas", visitas);//se actualiza el local storage
+        document.getElementById("contadorVisitas").textContent = `Has visitado esta página ${visitas} veces.`;
+    </script>
+
+</body>
+</html>

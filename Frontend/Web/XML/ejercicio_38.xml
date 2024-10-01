@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listacursos [
+
+    <!ELEMENT listacursos (curso+)>
+    <!ELEMENT curso (alumno+)>
+    <!ELEMENT alumno (DNI, nombre, apellido, segundo_apellido?, asignaturas)>
+    <!ELEMENT DNI (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT segundo_apellido (#PCDATA)>
+    <!ELEMENT asignaturas (asignatura+)>
+    <!ELEMENT asignatura (nombre, profesor)>
+    <!ATTLIST asignatura codigo CDATA #REQUIRED>
+    <!ELEMENT profesor (NRP, nombre, apellido, segundo_apellido?)>
+    <!ELEMENT NRP (#PCDATA)>
+]>
+
+
+<listacursos>
+    <curso>
+        <alumno>
+            <DNI>12345678A</DNI>
+            <nombre>Juan</nombre>
+            <apellido>García</apellido>
+            <asignaturas>
+                <asignatura codigo="MATH101">
+                    <nombre>Matemáticas</nombre>
+                    <profesor>
+                        <NRP>001</NRP>
+                        <nombre>María</nombre>
+                        <apellido>Ruiz</apellido>
+                    </profesor>
+                </asignatura>
+                <asignatura codigo="PHYS101">
+                    <nombre>Física</nombre>
+                    <profesor>
+                        <NRP>002</NRP>
+                        <nombre>Pedro</nombre>
+                        <apellido>López</apellido>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+        <alumno>
+            <DNI>87654321B</DNI>
+            <nombre>María</nombre>
+            <apellido>González</apellido>
+            <segundo_apellido>Gómez</segundo_apellido>
+            <asignaturas>
+                <asignatura codigo="BIO101">
+                    <nombre>Biología</nombre>
+                    <profesor>
+                        <NRP>003</NRP>
+                        <nombre>Luis</nombre>
+                        <apellido>Rodríguez</apellido>
+                    </profesor>
+                </asignatura>
+            </asignaturas>
+        </alumno>
+    </curso>
+</listacursos>

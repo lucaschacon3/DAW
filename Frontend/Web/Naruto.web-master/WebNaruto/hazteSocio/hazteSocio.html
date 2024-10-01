@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hazte socio</title>
+    <link rel="stylesheet" href="../../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="/WebNaruto/hazteSocio/hazteSocio.js"></script>
+    <link rel="stylesheet" href="hazteSocio.css">
+    <link rel="shortcut icon" href="../icons/naruto_logo.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../icons/icono_Naruto.png" alt=""
+                    height="80" width="80"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Naruto/naruto.html">Naruto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Naruto_shippuden/naruto_shippuden.html">Naruto
+                            Shippuden</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Boruto/boruto.html">Boruto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Hazte socio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form action="../hazteSocio/formularioEnviado.html" method="get" onsubmit="return validarFormulario();">
+        <div>
+            <label for="Nombre" class="form-label">Nombre: </label>
+            <input type="text" class="form-control" name="Nombre" id="Nombre">
+        </div>
+        <div>
+            <label for="Apellidos" class="form-label">Apellidos: </label>
+            <input type="text" class="form-control" name="Apellidos" id="Apellidos">
+        </div>
+        <div>
+            <label for="Correo" class="form-label">Correo electrónico: </label>
+            <input type="email" class="form-control" name="Correo" id="Correo">
+        </div>
+        <div>
+            <label for="Tel" class="form-label">Número de teléfono: </label>
+            <input type="tel" class="form-control" name="Tel" id="Tel" pattern="[6,7,9]{1}[0-9]{2} [0-9]{3} [0-9]{3}"
+                placeholder="000 000 000">
+        </div>
+        <div>
+            <label for="Pais" class="form-label">País: </label>
+            <input type="text" class="form-control" name="Pais" id="Pais">
+        </div>
+        <div>
+            <label for="Ciudad" class="form-label">Ciudad: </label>
+            <input type="text" class="form-control" name="Ciudad" id="Ciudad">
+        </div>
+        <div>
+            <label for="Motivo" class="form-label">Motivo por el que te haces socio</label>
+            <textarea class="form-control" name="motivo" id="Motivo" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" id="Si" name="Elegir">
+            <label for="Si" class="form-label">Acepto los términos y las condiciones
+            </label>
+        </div>
+        <div id="botones">
+            <button type="submit" class="btn btn-outline-light" value="Submit">Enviar</button>
+            <button type="reset" class="btn btn-outline-light" value="Reset">Cancelar</button>
+        </div>
+    </form>
+
+
+    <div class="PCR">
+        <p><a href="../PPrivacidad.html" target="_blank">Política de Privacidad</a></p>
+        <p>Copyright © 2024 Naruto Inc. Todos los derechos reservados</p>
+        <p><img src="../icons/instagram.svg" alt="Icono Instagram"> <img src="../icons/facebook.svg"
+                alt="Icono Facebook"> <img src="../icons/twitter-x.svg" alt="Icono Twitter/X"> <img
+                src="../icons/youtube.svg" alt="Icono Youtube"></p>
+        <hr>
+        <p>Naruto SA CIF B73317494. C/Santa Irene, 4, Ciudad Lineal 28017, Madrid, Comunidad de Madrid. ESPAÑA.</p>
+    </div>
+
+</body>
+
+</html>

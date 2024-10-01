@@ -1,0 +1,13 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+#contenedor {
+    display: grid;
+    gap: 1em;
+    border: 1px solid #A781B9;
+    border-radius: 10px;
+    background-color: #D9D2E9;
+    padding: 10px;
+}

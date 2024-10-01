@@ -1,0 +1,84 @@
+Los codigos eran:
+    - Caros y mucho tiempo.
+    - Dificil de gestionar y mantener.
+    - No cumplen ni requisitos ni expectativas del cliente.
+    - Errores dificiles de corregir.
+    - Codigo espagueti -> incomprensible, complejo y desordenado.
+
+Un sofware de calidad es:
+    - Eficiente -> En CPU, RAM y almacenamiento.
+    - Fiable -> Que no de errores.
+    - Escalable -> Poder aumentar en numero de usuarios.
+    - Usable -> Satisface al cliente.
+    - Portable -> Multiplataforma en diferentes S.O.
+    - Seguro:
+        - Disponibilidad.
+        - Autenticidad.
+        - No repudio (la informacion queda registrada).
+        - Integridad (no se manipula la informacion).
+        - Confidencialidad.
+
+Un codigo limpio es:
+    - Legible.
+    - Mantenible y modificable.
+    - Sin errores.
+    - Legible (facil de entender).
+    - Productivo (mas costoso en tiempo de programacion pero mas facil de modificar)
+    - Bien tabulado.
+
+Programacion estructurada:
+    - No usar beak o continue.
+    - Algoridmos estructurados -> Secuenciales, condicionales, bucles.
+
+POO:
+    - Encapsulacion -> metodos y atributos privados.
+    - Modularidad -> Dividir programa en modulos.
+    - Abstraccion -> Facilitar el entendimiento.
+    - Herencia y polimorfismo.
+
+    Abstraccion del lenguaje:
+    - Humano -> Es ambiguo.
+    - Alto nivel -> Como java, python, matematicas, fortran (1º lenguaje POO).
+    - Medio nivel -> Como c/c++.
+    - Bajo nivel -> Como ensamblador y codigo maquina/binario/objeto.
+    - Hardware.
+
+Nombres significativos (nombres a variables, funciones, clases, metodos):
+    - Ayuda a leer el codigo y saber que hace.
+    - Acerca el codigo a lenguaje natural.
+    - Mas facil de entender y modificar.
+    - Evitar nombres similares.
+    - Facil de pronunciar y buscar con el IDE.
+    - Lenguaje en comun con el equipo.
+    - Formas de nombrar:
+        - Constantes -> PI.
+        - Variables -> num, cad.
+        - Variables booleanas -> esVariable, es_variable.
+        - Funciones estaticas -> ComprobarPar(), Comprobar_par().
+        - Metodos -> getSueldo().
+        - Clases -> Persona, Cuenta.
+
+Funciones:
+    - Que hagan una cosa -> Mas claro, modificable y testeable.
+    - Corta -> Que ocupe una pagina (15 lineas, alto X ancho).
+    - Que reciba maximo 3 argumentos -> Como hacer clase y pasarla por parametro.
+
+Comentarios:
+    - Hay que evitarlos, el codigo debe parecerse al lenguaje natural.
+    - Usar solo para casos concretos como espreciones regulares -> ["'z-a'+1"].
+    - Usarlos al programar y borrarlos al refactorizar.
+
+Optimizar -> Mediante algoridmia disminuir el uso de CPU, RAM y almacenamiento.
+
+Refactorizar (Hace el codigo mas legible pero es igual de eficiente):
+    - Renombrar -> Usar nombres significativos.
+    - Restructurar codigo -> Simplificar codigo, eliminar codigo sin usar, disminuir anidaciones.
+    - Extraer / Dividir -> dividir en funciones que hagan una sola cosa.
+    - Eliminar comentarios.
+    - Eliminar duplicados.
+    - Patron de diseño -> solucion estandar a un problema recurrente.
+    - Smell Codes -> Son tecnicas y formas de refactorizar codigos que "huelen mal".
+
+
+
+

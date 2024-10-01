@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE productos [
+    <!ELEMENT productos (producto)*>
+    <!ELEMENT producto (identificacion, nombre)>
+    <!ELEMENT identificacion (#PCDATA | codigo | id)*>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+]>
+<productos>
+    <producto>
+        <identificacion>
+            <codigo>Qudan 14 unidades.</codigo>
+        </identificacion>
+        <nombre>martillo</nombre>
+    </producto>
+    <producto>
+        <identificacion>
+            <codigo>No hay stock.</codigo>
+        </identificacion>
+        <nombre>destornillador</nombre>
+    </producto>
+</productos>

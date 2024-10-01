@@ -1,0 +1,15 @@
+- listar los metodos de tipo propiedad de get-date
+    get-date | get-member -type property
+
+- ordenar procesos por nombre
+    get process | sort-objet -property Name
+
+- filtrar procesos que ocupan menos de 10%
+    get process | where-Objet CPU -gt 10
+
+- muestra los metodos del servicio w32time
+    get-Services -property name w32time | get member -type method 
+    
+- lista archivos creados que ocupen mas de 10mb ordenar descendiente
+    get item | where-Objet lenth -gt 10mb | sort-Objet file desc
+    get item | where-Objet lastwritetime -lt "2024-05-16" | sort-Objet file desc

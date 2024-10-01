@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola MundoLucas Chacon</title>
+
+    <!--con la etiqueta <script> en el head -->
+    <script>
+        function helloFromHead() {
+            console.log("Hola Mundo desde el head");
+        }
+    </script>
+</head>
+<body onload="helloFromHead()">
+
+    <h1>Ejercicio de integración de código</h1>
+
+    <!-- con onclick -->
+    <button onclick="helloFromButton()">Click aquí para mostrar Hola Mundo</button>
+
+    <!--con la etiqueta <script> en el body -->
+    <script>
+        document.write("Hola Mundo desde el body<br>");
+    </script>
+
+    <!--evento onclick -->
+    <script>
+        function helloFromButton() {
+            alert("Hola Mundo desde el botón");
+        }
+    </script>
+</body>
+</html>

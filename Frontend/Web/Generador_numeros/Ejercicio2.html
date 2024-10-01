@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        input {
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        button {
+            height: 30px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        div {
+            margin: 5px;
+            padding: 20px;
+            width: 50%;
+        }
+
+        h1 {
+            margin: 5px;
+        }
+
+        #numerosGenerados {
+            border: 1px black solid;
+        }
+
+        #totales {
+            border: 1px solid rgb(193, 38, 138);
+            color: rgb(193, 38, 138);
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        var contPares = 0;
+        var contImpares = 0;
+
+        this.onload = function () {
+            generarNumeros();
+        }
+
+        function generarNumeros() {
+
+            numeroAleatorio = Math.floor(Math.random() * 20) + 1;
+            document.getElementById("numerosGenerados").innerHTML = "Número generado: " + numeroAleatorio;
+            for (let index = 1; index < numeroAleatorio + 1; index++) {
+                document.getElementById("numerosGenerados").innerHTML = document.getElementById("numerosGenerados").innerHTML + "<br>" + index;
+            }
+
+            if (numeroAleatorio % 2 == 0) {
+                contPares++;
+            }
+            if (numeroAleatorio % 2 == 1) {
+                contImpares++;
+            }
+            document.getElementById("totales").innerHTML = "Se han generado " + contPares + " pares y " + contImpares + " impares";
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Números aleatorios</h1>
+    <div>
+        <div id="numerosGenerados">
+            Aquí irán los números generados
+        </div>
+        <div id="totales">Aquí irán los totales</div>
+        <button onclick="generarNumeros()">Generar</button>
+    </div>
+</body>
+
+</html>

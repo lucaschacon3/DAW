@@ -1,0 +1,45 @@
+PowerShell: (no distingue mayusculas).
+CMDLETS
+
+Get-member -> te devuelve las propiedades y metodos del objeto -> $num | get-member.
+Get-Command (gcm) -> Lista todos los comandos disponibles en PowerShell.
+Get-Help (help) -> Proporciona información de ayuda sobre comandos de PowerShell.
+Get-ChildItem (ls, dir) -> Lista los archivos y carpetas en el directorio actual.
+Get-ChildItem -Recurse -> Lista archivos y carpetas de forma recursiva en un directorio.
+Set-Location (cd) -> Cambia el directorio actual.
+New-Item (ni) -> Crea un nuevo archivo o directorio.
+Remove-Item (rm, rmdir) -> Elimina un archivo o directorio.
+Copy-Item (cp) -> Copia archivos de un lugar a otro.
+Move-Item (mv) -> Mueve archivos o carpetas de un lugar a otro.
+Rename-Item (ren) -> Cambia el nombre de un archivo o carpeta.
+Clear-Host (cls) -> Limpia la pantalla de la consola.
+Exit -> Cierra la ventana de PowerShell.
+Shutdown / Restart-Computer -> Apaga o reinicia el sistema.
+Get-Item -> Obtiene información sobre un archivo o directorio.
+Sort-Object -> Ordena objetos por propiedades.
+Select-Object (select, sl) -> Selecciona propiedades específicas de un objeto.
+Get-Date -> Obtiene la fecha y hora actuales.
+Get-Location (pwd) -> Obtiene el directorio actual.
+Get-Variable (gv) -> Obtiene variables en la sesión de PowerShell.
+Format-Table (ft) -> Formatea la salida de un comando en una tabla.
+Get-Module -> Obtiene los módulos cargados actualmente en la sesión de PowerShell.
+Start-Sleep -> Pausa la ejecución de un script por un período de tiempo especificado.
+New-ItemProperty (ni) -> Crea una nueva propiedad en un elemento del sistema de archivos o registro.
+Get-EventLog -> Obtiene eventos del registro del sistema.
+Import-Module -> Importa un módulo de PowerShell en la sesión actual.
+Export-Csv -> Exporta datos de PowerShell a un archivo CSV.
+Start-Process -> Inicia un nuevo proceso, similar a ejecutar un archivo en el Explorador de archivos.
+Get-Content (gc) -> Obtiene el contenido de archivos de texto.
+Test-Path -> Verifica si una ruta de acceso existe en el sistema de archivos.
+New-Module -> Crea un nuevo módulo de PowerShell.
+Get-Process (gps) -> Obtiene información sobre los procesos en ejecución.
+Stop-Process (kill) -> Detiene un proceso en ejecución.
+Test-Connection (ping) -> Realiza una prueba de conexión similar al comando ping de CMD.
+Get-NetIPConfiguration (ipconfig) -> Muestra la configuración de red, incluyendo la dirección IP.
+Get-Service (gsv) -> Obtiene información sobre los servicios en el sistema.
+Test-NetConnection -> Realiza una serie de pruebas de red para verificar la conectividad con un host remoto.
+
+
+Para corregir la restricción por defecto PowerShell
+Abre la consola PowerShell como administrador y comprueba el error escribiendo «Get-ExecutionPolicy».
+Escribe en la consola «Set-ExecutionPolicy Unrestricted»

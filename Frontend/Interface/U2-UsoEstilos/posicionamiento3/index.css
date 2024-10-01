@@ -1,0 +1,28 @@
+*{
+    padding: 0.3em;
+    margin: 0.3em;
+}
+#caja1, #caja2, #caja3, #caja4{
+    border: solid 1px;
+    height: 100px;
+    width: 100px;
+}
+#contenedor1{
+    float: left;
+}
+#contenedor2{
+    float: right;
+}
+#caja4{
+    float: left;
+}
+#caja1{
+    float: right;
+}
+#caja3{
+    float: left;
+}
+#caja2{
+    float: right;
+}
+

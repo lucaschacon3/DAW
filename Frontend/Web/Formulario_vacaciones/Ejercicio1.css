@@ -1,0 +1,38 @@
+*{
+    margin: 0.2em;
+    padding: 0.2em;
+}
+body{
+    width: 600px;
+    margin: auto;
+    
+}
+h1{
+    text-align: center;
+}
+#enviar{
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 200px;
+}
+#cancelar{
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    height: 30px;
+    width: 200px;
+}
+#nom,#dir{
+    height: 30px;
+    width: 500px;
+}
+#tel{
+    height: 30px;
+    width: 200px;
+}
+#edad{
+    height: 30px;
+    width: 100px;
+}

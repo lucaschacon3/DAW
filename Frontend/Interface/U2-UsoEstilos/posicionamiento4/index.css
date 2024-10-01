@@ -1,0 +1,31 @@
+*{
+    margin: 0.1em;
+    padding: 0.1em;
+}
+#cabecera, #pie{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: solid 1px;
+}
+#contenedor{
+    height: 110px;
+    align-items: center;
+}
+
+#caja60, #caja20-1, #caja20-2{
+    border: solid 1px;
+    height: 100px;
+}
+#caja60{
+    width: 58%;
+    float: left;
+}
+#caja20-1{
+    width: 20%;
+    float: left;
+}
+#caja20-2{
+    width: 20%;
+    float: left;
+}

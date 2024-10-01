@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hoja 4 Ejercicio 1</title>
+    <link rel="stylesheet" href="Hoja_4_E2_JS.css">
+    <script src="Hoja_4_E2_JS.js"></script>
+    
+</head>
+
+<body>
+    
+    <form name="form1" onsubmit='return validar()'>
+        <h1>Solicitud de información</h1>
+        <div>
+            <label for='nombre'>Nombre:</label>
+            <input type='text' name='nombre' id='nombre' placeholder="Escribe tu nombre"/>
+        </div>
+        <div>
+            <label for='email'>Email:</label>
+            <input type='email' name='email' id='email' placeholder="Escribe tu email"/>
+        </div>
+        <div>
+            <label for='estudios'>Nivel de Estudios *</label>
+            <select id='estudios' name='estudios' >
+                <option value="0">Selecciona una opción</option>
+                <option value="1">Pedir información</option>
+                <option onclick="estado_solicitud()" value="2">Estado de una solicitud</option>
+                <option value="3">Otros</option>
+            </select>
+        </div>
+        <div>
+            <span id="nsolicitud">
+                <label for='solicitud'>Nº Solicitud:</label>
+                <input type='solicitud' name='solicitud' id='solicitud' placeholder="Escribe el nº de solicitud"/>
+            </span>
+        </div>
+        <div>
+            <label for='mensaje'>Escribe mensaje:</label>
+            <input type='text' name='mensaje' id='mensaje' />
+        </div>
+        <div>
+            <span id="error">Algunos campos no son correctos, revísalos</span>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

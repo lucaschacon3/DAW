@@ -1,0 +1,36 @@
+*{
+    padding: 0.3em;
+    margin: 0.3em;
+}
+
+#primero{
+    display: inline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#segundo{
+    display: inline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#titulo{
+    height: 20px;
+    width: 100%;
+    border: solid 2px;
+    text-align: center;
+    background-color: rgb(223, 220, 91);
+}
+
+#cuerpo{
+    height: 420px;
+    width: 70%;
+    border: solid 2px;
+    float: left;
+    background-color: rgb(206, 204, 101);
+}
+
+#enlaces{
+    height: 150px;
+    width: 150px;
+    border: solid 2px;
+    float: right;
+    background-color: rgb(206, 204, 101);
+}

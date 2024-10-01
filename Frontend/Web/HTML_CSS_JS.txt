@@ -1,0 +1,186 @@
+HTML
+  <h1><h2><h3> 
+  <p>
+  <strong> -> negrita
+  <span> -> para meter contenido de dentro de una etiqueta.
+  <hr> -> barra separadora.
+  <br> -> salto de linea.
+  <ul><ol> -> lista desordenada, ordenada.
+   <li value=“15”> -> elemento de la lista, empieza por nº15.
+  <dl> -> lista de definiciones.
+   <dt> -> elemento de la lista.
+   <dd> -> definicion.
+  colores: rgb(0,0,0),nombre,#RRGGBB
+  <img src=“perro.jpg” alt=“perro” width=“25%” heigth=“25%” border=“10” align=“rigth”/>
+  <a href=“daw.html/daw.com” target”_blank”> pincha aquí </a>
+  <a href=“#tituloh2” target”_blank”> pincha aquí </a>
+  <div id=“caja”> <section>
+  <h2 class=“tituloh2”>
+  <table border="1">
+   <thead>
+   <tbody>
+   <tfoot>
+   <tr> -> fila.
+   <th> -> encabezado.
+   <td> -> siguiente fila.
+   <td colspan=2> -> caja que ocupa 2 filas.
+   <td rowspan=2> -> caja que ocupa 2 columnas.
+  tr:nth-child(3) -> fila 3.
+              (odd) -> filas pares.
+  td:nth-child(even) -> filas impares.
+  tr:nth-child(3n+1) -> filas de 3 en tres.
+
+ Formulario:
+  <form action="http://www.google.com/search" method="get(datos visibles)/post(datos ocultos)">
+  <label for="">Buscador</label>
+  <textarea name="obs" id="" cols="70" rows="5"> -> lo que cabe dentro del area sin agrandarla.
+  <fieldset> -> apartados
+   <legend>Leyenda del apartado</legend>
+  <button type="submit">buscar</button>
+  <button type="reset">limpiar</button>
+  <select name="fiestas">
+     <option>Selecciona la fiesta</option>
+     <optgroup label="Regalos">
+       <option>Reyes</option>
+       <option>Navidad</option>
+     </optgroup>
+     <option>Noche Vieja</option>
+     <option>Año nuevo</option>
+  </select>
+ 
+ Input:
+  // poner id, name y for con el mismo nombre y diferentes en el resto
+  <label for="nombre">EJEMPLO/label>
+  <input type="radio">
+  <select name="nombre">
+ 
+  <input type="text" (*) >
+    name="nombre"
+    id="nom" 
+    autofocus="autofocus" -> que al refrescar se ponga el foco.
+    maxlength="20"
+    max="99999"
+    placeholder="Texto por defecto"
+    value="Texto ya escrito"
+    checked="checked"
+    disabled="disabled"
+    pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{2} [0-9]{10}"
+    required
+    
+     <input type="button">
+     <input type="checkbox">
+     <input type="color">
+     <input type="date">
+     <input type="datetime-local">
+     <input type="email">
+     <input type="file">
+     <input type="hidden">
+     <input type="image">
+     <input type="month">
+     <input type="number">
+     <input type="password">
+     <input type="radio">
+     <input type="range">
+     <input type="reset">
+     <input type="search">
+     <input type="submit">
+     <input type="tel">
+     <input type="text">
+     <input type="time">
+     <input type="url">
+     <input type="week">
+ 
+CSS
+  <link rel=“stylesheet” href=“estilos.css”/>
+  En <head> abres <styles>
+  Body{
+    Padding: 1em;
+    Margin: 1.em;
+    Border: 1px solid black;
+    Margin / padding - ( top / R / bottom / L):1(%/em/rem/px/pt,);
+    Margin / padding: top( ) R( ) bottom( ) L( );
+    
+    Text align: center;
+    Text-decoration:underline; -> quitar linea baja a los enlaces.
+    Margin-left: 20px;
+    
+    Font-family: sans-serif;
+    Font-style: italic;
+    Font-weight: bolder;
+    Color: red;
+    Background-color: red;
+  }
+  
+  a:hover/focus/visited{ 
+    -> hover= al pasar el cursor.
+    -> focus= al clickar.
+    -> visited= enlace visitado.
+  }
+  
+  div{
+    margin: auto;
+    position: absolute, relative, fixed (no se mueve con scroll), static;
+    top: 20px;
+    left: 100px;
+    bottom: 100px;
+    float: right;
+    clear: left;
+    
+    background-image: url(perro.jpg);
+    height: 500px;
+    width: 150px;
+  }
+  h3 i{} -> todos los i en h3.
+  h3>i{} -> hijos de h3, tipo i.
+  h2~h3{} -> hermanos h2 y h3.
+  h2+h3{} -> h2 y h3 justo al lado.
+  
+  todos -> *
+  clase ->.nombre
+  id->#nombre
+  elemento->nombre
+
+JavaScript
+  var -> solo se puede usar 1 vez.
+  let -> se pude usar varias veces.
+
+  document.write("Hola Mundo + "<br>"); -> escribe en el html.
+  console.log("hola"); -> se ve en la consola.
+  alert("Hola Mundo"); -> mensaje emergente.
+
+  <button onclick="Resta()"></button> -> ejecutar funciones.
+
+  document.getElementById("1").style.backgroundColor = "rgb(172, 111, 172)";
+  document.getElementById("resultado").innerHTML = "ES PAR";
+  
+  function Resta(){
+    var numero1= document.getElementById ("numero1").value; -> si es un input.
+    // var numero1= document.getElementById ("numero1").innerHTML; -> si es un elemento html.
+    // var checkbox= document.getElementById ("numero1").cheked;-> devuelve boolean.
+    // para una opcion de un select hay que ponerle value en el html y comprobar en un if.
+    var numero2= document.getElementById ("numero2");
+    var resultado= document.getElementById ("resultado");
+
+    var resta=(numero1)-(numero2.value);
+    resultado.value=resta;
+  }
+
+  this.onload = function() { ->cuando se carge la pagina (si el elemento que se usa en JS no se ha cargado en el HTML)
+    Iniciar();
+    numeroAdivinar = Math.floor(Math.random() *100); -> multiplicarlo por el numero hasta el que queremos.
+  }
+
+  if (nombre.length<2) { -> para que de un mensaje que estaba oculto
+        error.style.display = "block";
+        return false;
+    }
+
+  let miDiv = document.getElementById("divFrutas"); 
+  let misLbl = miDiv.getElementsByTagName("label"); -> devuleve un array con los labels de miDiv
+
+  let moradas = document.getElementsByClassName("morado"); -> devuleve un array
+  
+  let todasverduras=document.getElementById("todasverduras"); -> hay que usar .value o . innerHTML
+
+  let morado=document.querySelector("label.morado"); -> devuelve el primer elemento.
+  let morados=document.querySelectorAll("label.morado"); -> Devuelve una colección con todos los elementos seleccionado.

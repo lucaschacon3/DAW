@@ -1,0 +1,14 @@
+body, div, button, input, label{
+    margin: 0.2em;
+    padding: 0.2em;
+
+}
+label, button{
+    font-weight: 600;
+}
+h2{
+    text-decoration: underline;
+}
+input{
+    background-color: darkorange;
+}

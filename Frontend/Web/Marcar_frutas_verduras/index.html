@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="funcion.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <div>
+            <label for="todasfrutas">Marcar todas las frutas</label>
+            <input type="checkbox" id="todasfrutas" name="todasfrutas" onchange="marcarFrutas();">
+            <label for="todasverduras">Marcar todas las Verduras</label>
+            <input type="checkbox" id="todasverduras" name="todasverduras" onchange="marcarVerduras();">
+
+            <div>
+                <br>
+                <button onclick="contarLabel()">Contar label</button>
+    
+                <button onclick="cambiarColor()">Cambiar color</button>
+            </div>
+
+        </div>
+        <div id="divFrutas">
+            <label for="Naranja" class="morado">Naranja</label>
+            <input type="checkbox" name="fruta" id="Naranja" />
+            <label for="Manzana" class="morado">Manzana</label>
+            <input type="checkbox" name="fruta" id="Manzana" />
+            <label for="Uva" class="morado">Uva</label>
+            <input type="checkbox" name="fruta" id="Uva" />
+            <label for="Calabacin">Calabacín</label>
+            <input type="checkbox" name="verdura" id="Calabacin" />
+            <label for="Puerro">Puerro</label>
+            <input type="checkbox" name="verdura" id="Puerro" />
+        </div>
+    </div>
+</body>
+
+</html>

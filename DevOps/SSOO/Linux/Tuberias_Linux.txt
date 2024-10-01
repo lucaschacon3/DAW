@@ -1,0 +1,30 @@
+TUBERIAS
+
+- lista el contenido de /home/alumno con sus permisos y filtra todos los ficheros para los que algun usuario o grupo tienen permisos (RWX).
+    ls -l /home/lucas | grep rwx
+
+-  concatenar /etc/passwd y /etc/group filtrar las lineas que contengan alumno y contarlas.
+    cat /etc/passwd /etc/group | grep lucas | wc -l
+
+- lista /sbin y mostar las que contengan " mk".
+    ls -s /sbin | grep mk
+    
+- del archivo codigos.txt, filtra los que contengan "45" no queremos lineas repetidas.
+    grep "45" codigo.txt | sort | unique
+    // short ordena los nombres para que con el unique borre los repetidos, sino no borra todos.
+
+- Cuántos ficheros hay en el directorio actual?.
+    ls | wc -l
+
+- Cuenta el número de directorios que hay en el directorio actual.
+    ls -l | grep ^d | wc -l
+
+- Usando las órdenes who, sort, uniq y cut indica los usuarios que están trabajando en el  sistema en este momento, el listado se muestra ordenado.
+    cut -f1 -d “ “ | sort | uniq 
+
+- ¿Cuál es la diferencia.
+    sort -u FILE
+    sort FILE | uniq
+
+- Obtener un listado de los ficheros del directorio actual, ordenado por tamaño de archivo.
+    ls -l | sort +4n

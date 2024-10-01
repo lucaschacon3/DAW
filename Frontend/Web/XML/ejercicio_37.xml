@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+    <!ELEMENT personas (persona+)>
+    <!ELEMENT persona (nombre, nacimiento?, direccion+, varon)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT nacimiento EMPTY>
+    <!ATTLIST nacimiento dia CDATA #REQUIRED
+                         mes CDATA #REQUIRED
+                         año CDATA #REQUIRED>
+    <!ELEMENT direccion (calle, poblacion, provincia, cpostal)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT poblacion (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT cpostal (#PCDATA)>
+    <!ELEMENT varon EMPTY>
+]>
+<personas>
+    <persona>
+        <nombre>Juan Pardo</nombre>
+        <nacimiento dia="10" mes="Abril" año="1982"/>
+        <direccion>
+            <calle>caoba 1</calle>
+            <poblacion>Madrid</poblacion>
+            <provincia>Madrid</provincia>
+            <cpostal>28005</cpostal>
+        </direccion>
+        <varon/>
+    </persona>
+    <persona>
+        <nombre>Lucas Chacon</nombre>
+        <nacimiento dia="11" mes="Mayo" año="2003"/>
+        <direccion>
+            <calle>Irene 4</calle>
+            <poblacion>Madrid</poblacion>
+            <provincia>Madrid</provincia>
+            <cpostal>28017</cpostal>
+        </direccion>
+        <varon/>
+    </persona>
+</personas>

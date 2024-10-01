@@ -1,0 +1,143 @@
+* {
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+#cabecera {
+    top: 0;
+    text-align: center;
+    position: sticky;
+}
+
+button {
+    height: 50px;
+    width: 110px;
+    border: solid 5px;
+
+}
+
+button:hover {
+    background-color: coral;
+}
+
+#caja1 {
+    float: left;
+    width: 43%;
+    height: 530px;
+    border: solid 5px;
+}
+#caja2 {
+    float: right;
+    width: 43%;
+    height: 530px;
+    border: solid 5px;
+}
+
+#contenedor {
+    height: 570px;
+}
+#cajaimg1-2 {
+
+   
+    height: 43%;
+    width: 98%;
+}
+
+#cajaimg3-4 {
+
+    height: 43%;
+    width: 98%;
+}
+
+#img1,
+#img2,
+#img3,
+#img4 {
+
+    width: 90%;
+    height: 240px;
+}
+
+#img1 {
+    background-image: url(img/img1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 40%;
+}
+
+#img2 {
+    background-image: url(img/img2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    float: right;
+    width: 40%;
+}
+
+#img3 {
+    background-image: url(img/img3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    width: 40%;
+}
+
+#img4 {
+    background-image: url(img/img4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    float: right;
+    width: 40%;
+}
+
+#tituloPokeball {
+    height: 50px;
+    border: solid 5px;
+    text-align: center;
+}
+
+#cajaPokeball {
+    text-align: center;
+    border: solid 5px;
+}
+
+#imagenPokeball {
+    border: solid 5px;
+}
+
+#tituloFormulario {
+    height: 50px;
+    border: solid 5px;
+    text-align: center;
+}
+
+#cajaFormulario {
+    border: solid 5px;
+    height: 250px;
+}
+
+#botonValidar {
+    height: 180px;
+    width: 80px;
+    float: left;
+}
+
+#botonValidar:hover {
+    background-color: gainsboro;
+}
+
+fieldset {
+    width: 70%;
+    height: 40%;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 80%;
+}

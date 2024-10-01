@@ -1,0 +1,44 @@
+Java es:
+    - Orientado a objetos.
+    - Lenguaje de alto nivel.
+    - Funciona bajo una maquina virtual (JVM) (multiplataforma - "Write once, run everywhere").
+    
+Forma de compilar:
+    - prog.java -----> compila -----> prog.class (BYTECODES) ------> enlaza (link) -----> librerias (BYTECODES) ------> prog.jar (ejecutable).
+    - La maquina virtual (JVM) interpreta BYTECODES.
+
+Estructura:
+    - JDK (Java development Kit):
+        - Herramientas de desarrollo.
+        - JRE (Java runtime enviroment).
+            - JVM (Java virtual machine).
+
+Comandos Java:
+    - Crear .java -> touch prog.java.
+    - Mostrar codigo -> more prog.java.
+    - Crear  .class -> javac prog.java.
+    - Ejecutar .class -> java prog.
+    - Ejecutar .jar -> java -jar prog.jar
+    - Descompilar -> javap prog.class.
+    - Documentacion -> javadoc prog.java.
+    - Depurar -> jdb prog.
+    - Consola -> jshell.
+    - Dependencia de clases -> jdeps prog.class.
+
+Javadoc:
+    - Para generar documentacion API del codigo.
+    - Se hace con /** /.
+    - Elementos:
+        - @author (solo en las clases).
+        - @version (solo en las clases).
+        - @return (lo que devuelve, no usar con void).
+        - @param (parametros que recibe).
+        - @deprecated (marca que el metodo esta obsoleto).
+
+    - Ejemplo:
+        - @author Lucas
+        - @version 1.2
+        - @return int
+        - @param f1,f2
+        - @deprecated 
+

@@ -1,0 +1,33 @@
+Persona: (DNI(PK), nombre, apellido 1, apellido 2(N))
+
+Fundador: (DNI(FK:Persona)(PK), fecha fundación)
+
+CEO: (DNI(FK:Persona)(PK), fecha inicio, fecha fin(N))
+
+Inversor: (DNI(FK:Persona)(PK), cantidad invertida, nº de acciones)
+
+Diseñador: (DNI(FK:Persona)(PK), nacionalidad)
+
+Empleado: (DNI(FK:Persona)(PK), NSS(U), código-emp(U), estado-civil(N), (código-dpto, código-suc)(FK:Departamento), código-jefe(FK:Empleado), fecha incorporación)
+
+Marca de ropa: (Nombre(PK), fecha creación, dirección postal, URL página web)
+
+Estilos de ropa: (Nombre(PK))
+
+Tiene: (Marca(FK:Marca de ropa), estilo(FK:Estilo de ropa), (PK:Marca, estilo))
+
+Prenda: (Nombre(PK), precio, temporada)
+
+Compuesto por: (Estilo(FK:Estilo de ropa), prenda(FK:Prenda), (PK:Estilo, prenda))
+
+Diseñada: (Prenda(FK:Prenda), DNI(FK:Diseñador), (PK:Prenda, DNI))
+
+Sucursal: (Código-suc(PK), nombre, dirección, marca(FK:Marca de ropa))
+
+Departamento: (Código-suc(FK:Sucursal), código-dpto, nombre, responsable(FK:Empleado)(U), (PK:Código-suc, código-dpto))
+
+Proveedor: (CIF(PK), nombre, teléfono, dirección postal)
+
+Materia prima: (Código_mp(PK), nombre, estado, procedencia)
+
+Suministra: (Nombre(FK:Marca de ropa), CIF(FK:Proveedor), código_mp(FK:Materia prima), (PK:Nombre, CIF, código_mp))

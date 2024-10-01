@@ -1,0 +1,17 @@
+#caja20{
+    border: solid 1px;
+    height: 1200px;
+    width: 20%;
+    position: fixed;
+}
+
+#caja80{
+    border: solid 1px;
+    height: 1200px;
+    width: 78%;
+    float: right;
+}
+
+img{
+    float: right;
+}
