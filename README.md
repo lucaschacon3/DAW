@@ -17,7 +17,7 @@
 5. AWS-Azure.
 6. Git.
 
-## [Backend](https:Enlace)
+## [Frontend](https:Enlace)
 1. CSS.
 2. SaaS.
 3. TailWind.
