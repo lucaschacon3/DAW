@@ -32,6 +32,7 @@
 5. Colecciones: listas, tuplas, conjuntos, diccionarios.
 6. POO: clases, métodos, herencia, polimorfismo.
 7. Ficheros.
+8. Scripts.
 
 ## [Web](https://github.com/lucaschacon3/DAW1/tree/main/Web)
 
