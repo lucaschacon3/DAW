@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="validarFormulario.php" method="get">
+            <div>
+                <label for="usuario">Nombre de Usuario: </label>
+                <input type="text" name="usuario" id="usuario">
+            </div>
+
+            <div>
+                <label for="correo">Correo Electrónico: </label>
+                <input type="email" name="correo" id="correo">
+            </div>
+
+            <div>
+                <label for="contraseña">Contraseña: </label>
+                <input type="password" name="contraseña" id="contraseña">
+            </div>
+            <div>
+                <label for="alergias">Alergias: </label>
+                <input type="checkbox" name="alergias" id="alergias">
+            </div>
+            <div>
+                <button type="reset" style="background-color: red;">Cancelar</button>
+                <button type="submit" style="background-color: green;">Enviar</button>
+            </div>
+
+
+        </form>
+
+
+    </body>
+</html>
