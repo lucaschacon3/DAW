@@ -1,0 +1,18 @@
+* {
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div{
+    border: solid 1px;
+}
+#caja1, #caja2,#caja3,#caja4{
+    height: 70px;
+    width: 190px;
+}

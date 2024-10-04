@@ -1,0 +1,31 @@
+* {
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+#contenedor{
+    border: solid 1px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 16.6%  16.6% 16.6% 16.6% 16.6% 16.6%;
+    height: 400px;
+    width: 100%;
+}
+
+#celdaA, #celdaB, #celdaC, #celdaD, #celdaE, #celdaF, #celdaG, #celdaH, #celdaI, #celdaJ, #celdaK, #celdaL, #celdaM {
+    border: solid 1px;
+
+}
+#celdaM{
+    grid-column: 2/6;
+    grid-row: 2/6;
+
+}
+#celdaF{
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+#celdaG{
+    grid-column: 1/2;
+    grid-row: 4/6;
+}
