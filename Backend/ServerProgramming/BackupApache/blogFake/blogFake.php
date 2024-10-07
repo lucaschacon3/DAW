@@ -13,6 +13,7 @@
 //Se usa el enlace para refrescar la página y actualizar 
 //el área de texto con los mensajes acumulados.
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,6 +26,9 @@
         <label for="mensaje">Nuevo mensaje:</label>
         <input type="text" name="mensaje" id="mensaje">
         <button type="submit">Enviar</button>
+        
+        <!-- Enviamos los mensajes anteriores como un campo oculto -->
+        <input type="hidden" name="mensajes" value="<?php echo isset($_GET['mensajes']) ? htmlspecialchars($_GET['mensajes']) : ''; ?>">
     </form>
 
     <h3>Mensajes:</h3>
@@ -41,9 +45,12 @@
     // Encadenamos los mensajes con los anteriores
     if (isset($_GET['mensaje'])) {
         $nuevoMensaje = $_GET['mensaje'];
-        $mensajesAnteriores = isset($_GET['mensajes']) ? $_GET['mensajes'] : "";
-        $mensajesActualizados = $mensajesAnteriores . "\n" . $nuevoMensaje;
-        echo "<a href='?mensajes=" . urlencode($mensajesActualizados) . "'>Actualizar mensajes</a>";
+        $mensajesAnteriores = isset($_GET['mensajes']) ? $_GET['mensajes'] . "\n" : "";
+        $mensajesAnteriores .= $nuevoMensaje;
+
+        // Refrescamos la página con los mensajes concatenados
+        header("Location: ?mensajes=" . urlencode($mensajesAnteriores));
+        exit();
     }
     ?>
 </body>
