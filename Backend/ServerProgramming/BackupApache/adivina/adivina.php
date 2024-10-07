@@ -32,12 +32,11 @@ $numAleatorio = $_SESSION['numAleatorio'];
 
 <?php
 if (isset($_REQUEST["numeroUsuario"])) { // if no es null
-    echo "El numero aleatiorio es ". $numAleatorio. "</br>";
     $numeroUsuario = $_REQUEST["numeroUsuario"];
 
     if ($numeroUsuario == $numAleatorio) {
         echo "¡Has acertado!";
-        $_SESSION['numAleatorio']=null;//para que genere oto aleatorio
+        $_SESSION['numAleatorio']=null;//para que genere ota sesion
     } elseif ($numeroUsuario > $numAleatorio) {
         echo "El número introducido es mayor";
     } else {
