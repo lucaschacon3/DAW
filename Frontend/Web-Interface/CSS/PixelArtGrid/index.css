@@ -18,13 +18,13 @@
 #caja2{
     border: solid 1px;
     grid-row: 1/2;
-    grid-column: 7/13;
+    grid-column: 7/14;
     background-color: black;
 }
 #caja3{
     border: solid 1px;
     grid-row: 1/2;
-    grid-column: 13/19;
+    grid-column: 14/20;
 
 }
 
@@ -46,19 +46,19 @@
 #caja6{
     border: solid 1px;
     grid-row: 2/3;
-    grid-column: 7/13;
+    grid-column: 7/14;
     background-color: rgb(235, 207, 51);
 }
 #caja7{
     border: solid 1px;
     grid-row: 2/3;
-    grid-column: 13/14;
+    grid-column: 14/15;
     background-color: black;
 }
 #caja8{
     border: solid 1px;
     grid-row: 2/3;
-    grid-column: 14/19;
+    grid-column: 15/20;
 }
 
 
@@ -79,19 +79,19 @@
 #caja11{
     border: solid 1px;
     grid-row: 3/4;
-    grid-column: 6/14;
+    grid-column: 6/15;
     background-color: rgb(235, 207, 51);
 }
 #caja12{
     border: solid 1px;
     grid-row: 3/4;
-    grid-column: 14/15;
+    grid-column: 15/16;
     background-color: black;
 }
 #caja13{
     border: solid 1px;
     grid-row: 3/4;
-    grid-column: 15/19;
+    grid-column: 16/20;
 }
 
 
@@ -113,31 +113,31 @@
 #caja16{
     border: solid 1px;
     grid-row: 4/5;
-    grid-column: 6/8;
+    grid-column: 6/9;
     background-color: rgb(235, 207, 51);
 }
 #caja17{
     border: solid 1px;
     grid-row: 4/5;
-    grid-column: 8/12;
+    grid-column: 9/12;
     background-color: red;
 }
 #caja18{
     border: solid 1px;
     grid-row: 4/5;
-    grid-column: 12/14;
+    grid-column: 12/15;
     background-color: rgb(235, 207, 51);
 }
 #caja19{
     border: solid 1px;
     grid-row: 4/5;
-    grid-column: 14/15;
+    grid-column: 15/16;
     background-color: black;
 }
 #caja20{
     border: solid 1px;
     grid-row: 4/5;
-    grid-column: 15/19;
+    grid-column: 16/20;
 }
 
 
@@ -164,37 +164,37 @@
 #caja24{
     border: solid 1px;
     grid-row: 5/6;
-    grid-column: 6/8;
+    grid-column: 6/9;
     background-color: red;
 }
 #caja25{
     border: solid 1px;
     grid-row: 5/6;
-    grid-column: 8/12;
+    grid-column: 9/12;
     background-color: rgb(235, 207, 51);
 }
 #caja26{
     border: solid 1px;
     grid-row: 5/6;
-    grid-column: 12/14;
+    grid-column: 12/15;
     background-color: red;
 }
 #caja27{
     border: solid 1px;
     grid-row: 5/6;
-    grid-column: 14/15;
+    grid-column: 15/16;
     background-color: rgb(235, 207, 51);
 }
 #caja28{
     border: solid 1px;
     grid-row: 5/6;
-    grid-column: 15/16;
+    grid-column: 16/17;
     background-color: black;
 }
 #caja29{
     border: solid 1px;
     grid-row: 5/6;
-    grid-column: 16/19;
+    grid-column: 17/20;
 }
 
 
@@ -222,37 +222,37 @@
 #caja33{
     border: solid 1px;
     grid-row: 6/7;
-    grid-column: 6/8;
+    grid-column: 6/9;
     background-color: rgb(235, 207, 51);
 }
 #caja34{
     border: solid 1px;
     grid-row: 6/7;
-    grid-column: 8/12;
+    grid-column: 9/12;
     background-color: black
 }
 #caja35{
     border: solid 1px;
     grid-row: 6/7;
-    grid-column: 12/14;
+    grid-column: 12/15;
     background-color: rgb(235, 207, 51);
 }
 #caja36{
     border: solid 1px;
     grid-row: 6/7;
-    grid-column: 14/15;
+    grid-column: 15/16;
     background-color: red;
 }
 #caja37{
     border: solid 1px;
     grid-row: 6/7;
-    grid-column: 15/16;
+    grid-column: 16/17;
     background-color: black;
 }
 #caja38{
     border: solid 1px;
     grid-row: 6/7;
-    grid-column: 16/19;
+    grid-column: 17/20;
 }
 
 
@@ -280,25 +280,25 @@
 #caja42{
     border: solid 1px;
     grid-row: 7/8;
-    grid-column: 6/14;
+    grid-column: 6/15;
     background-color: black
 }
 #caja43{
     border: solid 1px;
     grid-row: 7/8;
-    grid-column: 14/16;
+    grid-column: 15/17;
     background-color: rgb(235, 207, 51);
 }
 #caja44{
     border: solid 1px;
     grid-row: 7/8;
-    grid-column: 16/18;
+    grid-column: 17/19;
     background-color: black;
 }
 #caja45{
     border: solid 1px;
     grid-row: 7/8;
-    grid-column: 18/19;
+    grid-column: 19/20;
 
 }
 
@@ -364,13 +364,13 @@
 #caja55{
     border: solid 1px;
     grid-row: 8/9;
-    grid-column: 17/18;
+    grid-column: 17/19;
     background-color: rgb(235, 207, 51);
 }
 #caja56{
     border: solid 1px;
     grid-row: 8/9;
-    grid-column: 18/19;
+    grid-column: 19/20;
     background-color: black
 }
 
@@ -443,19 +443,19 @@
 #caja67{
     border: solid 1px;
     grid-row: 9/10;
-    grid-column: 16/17;
+    grid-column: 16/18;
     background-color: rgb(235, 207, 51);
 }
 #caja68{
     border: solid 1px;
     grid-row: 9/10;
-    grid-column: 17/18;
+    grid-column: 18/19;
     background-color: black;
 }
 #caja69{
     border: solid 1px;
     grid-row: 9/10;
-    grid-column: 18/19;
+    grid-column: 19/20;
 
 }
 
@@ -507,14 +507,14 @@
 #caja77{
     border: solid 1px;
     grid-row: 10/11;
-    grid-column: 15/17;
+    grid-column: 15/18;
     background-color: black;
 
 }
 #caja78{
     border: solid 1px;
     grid-row: 10/11;
-    grid-column: 17/19;
+    grid-column: 18/20;
 
 }
 
@@ -525,12 +525,12 @@
 #caja79{
     border: solid 1px;
     grid-row: 11/12;
-    grid-column: 1/4;
+    grid-column: 1/5;
 }
 #caja80{
     border: solid 1px;
     grid-row: 11/12;
-    grid-column: 4/6;
+    grid-column: 5/6;
     background-color: black;
 }
 #caja81{
@@ -560,7 +560,7 @@
 #caja85{
     border: solid 1px;
     grid-row: 11/12;
-    grid-column: 13/15;
+    grid-column: 13/16;
     background-color: #ffdbc4;
 }
 #caja86{
@@ -573,9 +573,10 @@
 #caja87{
     border: solid 1px;
     grid-row: 11/12;
-    grid-column: 16/19;
+    grid-column: 16/20;
 
 }
+
 
 
 
@@ -584,19 +585,19 @@
 #caja88{
     border: solid 1px;
     grid-row: 12/13;
-    grid-column: 1/5;
+    grid-column: 1/6;
 
 }
 #caja89{
     border: solid 1px;
     grid-row: 12/13;
-    grid-column: 5/6;
+    grid-column: 6/7;
     background-color: black;
 }
 #caja90{
     border: solid 1px;
     grid-row: 12/13;
-    grid-column: 6/14;
+    grid-column: 7/14;
     background-color: #ffdbc4;
 }
 #caja91{
@@ -609,7 +610,7 @@
 #caja92{
     border: solid 1px;
     grid-row: 12/13;
-    grid-column: 15/19;
+    grid-column: 15/20;
 
 }
 
@@ -623,20 +624,20 @@
 #caja93{
     border: solid 1px;
     grid-row: 13/14;
-    grid-column: 1/6;
+    grid-column: 1/7;
 
 }
 #caja94{
     border: solid 1px;
     grid-row: 13/14;
-    grid-column: 6/14;
+    grid-column: 7/14;
     background-color: black;
 
 }
 #caja95{
     border: solid 1px;
     grid-row: 13/14;
-    grid-column: 14/19;
+    grid-column: 14/20;
 
 }
 
@@ -651,46 +652,46 @@
 #caja96{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 1/7;
+    grid-column: 1/8;
 
 }
 #caja97{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 7/8;
+    grid-column: 8/9;
     background-color: black;
 }
 #caja98{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 8/9;
+    grid-column: 9/10;
     background-color: red;
 }
 #caja99{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 9/10;
+    grid-column: 10/11;
     background-color: #ffdbc4;
 
 }
 #caja100{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 10/11;
+    grid-column: 11/12;
     background-color: red;
 
 }
 #caja101{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 11/12;
+    grid-column: 12/13;
     background-color: black;
 
 }
 #caja102{
     border: solid 1px;
     grid-row: 14/15;
-    grid-column: 12/19;
+    grid-column: 13/20;
 
 
 }
