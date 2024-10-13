@@ -22,18 +22,26 @@
             width: 500px;
         }
 
-        button{
+        button {
             height: 40px;
             width: 100px;
         }
-
     </style>
 </head>
 
 <body>
 
     <?php
-    // Función para obtener valores previos o por defecto
+
+    // Mostrar mensaje de cabeceras y datos del servidor
+    echo "<h3>Datos del servidor</h3>";
+    echo "IP remota: " . $_SERVER['REMOTE_ADDR'] . "<br>";
+    echo "Navegador: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
+    $headers = apache_request_headers();
+    echo "Host: " . $headers['Host'] . "<br>";
+    echo " <hr>";
+
+    // Función para obtener valores o por defecto
     function si_existe($clave, $valorPorDefecto = '')
     {
         return isset($_REQUEST[$clave]) ? $_REQUEST[$clave] : $valorPorDefecto;
@@ -72,7 +80,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_POST['confirmar'])) {
-            // Si estamos en la etapa de confirmación final
+            // Si estamos en la etapa de confirmación final, no suele ocurrir
             $etapaConfirmacion = true;
         } else {
             // Validar los datos en la primera etapa
@@ -81,7 +89,7 @@
             $errores['deportes'] = validarDeportes('deportes');
             $errores['dias'] = validarDias('diasSemana');
 
-            $errores = array_filter($errores); // Eliminar errores vacíos
+            $errores = array_filter($errores); // Eliminar errores vacíos (si un elemento tiene '' se elimina)
 
             // Si no hay errores, pasar a la etapa de confirmación
             if (empty($errores)) {
@@ -90,50 +98,44 @@
         }
     }
 
-    // Mostrar mensaje de cabeceras y datos del servidor
-    echo "<h3>Datos del servidor</h3>";
-    echo "IP remota: " . $_SERVER['REMOTE_ADDR'] . "<br>";
-    echo "Navegador: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
-    $headers = apache_request_headers();
-    echo "Host: " . $headers['Host'] . "<br>";
-    echo " <hr>";
+
 
     if (!$etapaConfirmacion) {
     ?>
-    <div>
-        <form method="post" action="">
+        <div>
+            <form method="post" action="">
 
-            <label for="nombre">Nombre (entre 3 y 20 caracteres):</label><br>
-            <input type="text" name="nombre" value="<?= si_existe('nombre') ?>"><br>
-            <span class="error"><?= $errores['nombre'] ?? '' ?></span><br><br>
+                <label for="nombre">Nombre (entre 3 y 20 caracteres):</label><br>
+                <input type="text" name="nombre" value="<?= si_existe('nombre') ?>"><br>
+                <span class="error"><?= $errores['nombre'] ?? '' ?></span><br><br>
 
-            <label>¿Tienes más de 18 años?</label><br>
-            <input type="radio" name="edad" value="si" <?= si_existe('edad') == 'si' ? 'checked' : '' ?>> Sí<br>
-            <input type="radio" name="edad" value="no" <?= si_existe('edad') == 'no' ? 'checked' : '' ?>> No<br>
-            <span class="error"><?= $errores['edad'] ?? '' ?></span><br><br>
+                <label>¿Tienes más de 18 años?</label><br>
+                <input type="radio" name="edad" value="si" <?= si_existe('edad') == 'si' ? 'checked' : '' ?>> Sí<br>
+                <input type="radio" name="edad" value="no" <?= si_existe('edad') == 'no' ? 'checked' : '' ?>> No<br>
+                <span class="error"><?= $errores['edad'] ?? '' ?></span><br><br>
 
-            <label>Deportes (seleccione al menos uno):</label><br>
-            <input type="checkbox" name="deportes[]" value="Fútbol" <?= in_array('Fútbol', si_existe('deportes', [])) ? 'checked' : '' ?>> Fútbol<br>
-            <input type="checkbox" name="deportes[]" value="Baloncesto" <?= in_array('Baloncesto', si_existe('deportes', [])) ? 'checked' : '' ?>> Baloncesto<br>
-            <input type="checkbox" name="deportes[]" value="Tenis" <?= in_array('Tenis', si_existe('deportes', [])) ? 'checked' : '' ?>> Tenis<br>
-            <input type="checkbox" name="deportes[]" value="Natación" <?= in_array('Natación', si_existe('deportes', [])) ? 'checked' : '' ?>> Natación<br>
-            <span class="error"><?= $errores['deportes'] ?? '' ?></span><br><br>
+                <label>Deportes (seleccione al menos uno):</label><br>
+                <input type="checkbox" name="deportes[]" value="Fútbol" <?= in_array('Fútbol', si_existe('deportes', [])) ? 'checked' : '' ?>> Fútbol<br>
+                <input type="checkbox" name="deportes[]" value="Baloncesto" <?= in_array('Baloncesto', si_existe('deportes', [])) ? 'checked' : '' ?>> Baloncesto<br>
+                <input type="checkbox" name="deportes[]" value="Tenis" <?= in_array('Tenis', si_existe('deportes', [])) ? 'checked' : '' ?>> Tenis<br>
+                <input type="checkbox" name="deportes[]" value="Natación" <?= in_array('Natación', si_existe('deportes', [])) ? 'checked' : '' ?>> Natación<br>
+                <span class="error"><?= $errores['deportes'] ?? '' ?></span><br><br>
 
-            <label>Días de la semana (seleccione al menos dos):</label><br>
-            <select name="diasSemana[]" multiple>
-                <option value="Lunes" <?= in_array('Lunes', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Lunes</option>
-                <option value="Martes" <?= in_array('Martes', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Martes</option>
-                <option value="Miércoles" <?= in_array('Miércoles', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Miércoles</option>
-                <option value="Jueves" <?= in_array('Jueves', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Jueves</option>
-                <option value="Viernes" <?= in_array('Viernes', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Viernes</option>
-                <option value="Sábado" <?= in_array('Sábado', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Sábado</option>
-                <option value="Domingo" <?= in_array('Domingo', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Domingo</option>
-            </select><br>
-            <span class="error"><?= $errores['dias'] ?? '' ?></span><br><br>
+                <label>Días de la semana (seleccione al menos dos):</label><br>
+                <select name="diasSemana[]" multiple>
+                    <option value="Lunes" <?= in_array('Lunes', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Lunes</option>
+                    <option value="Martes" <?= in_array('Martes', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Martes</option>
+                    <option value="Miércoles" <?= in_array('Miércoles', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Miércoles</option>
+                    <option value="Jueves" <?= in_array('Jueves', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Jueves</option>
+                    <option value="Viernes" <?= in_array('Viernes', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Viernes</option>
+                    <option value="Sábado" <?= in_array('Sábado', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Sábado</option>
+                    <option value="Domingo" <?= in_array('Domingo', si_existe('diasSemana', [])) ? 'selected' : '' ?>>Domingo</option>
+                </select><br>
+                <span class="error"><?= $errores['dias'] ?? '' ?></span><br><br>
 
-            <button type="submit">Enviar</button>
-            <button type="reset">Borrar</button>
-        </form>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
         </div>
 
     <?php
@@ -146,7 +148,7 @@
         echo "Días seleccionados: " . implode(', ', si_existe('diasSemana', [])) . "<br>";
 
         if (!isset($_POST['confirmar'])) {
-            // Mostrar el botón de confirmación
+            // si no pulsas el botón de confirmación
             echo '<form method="post">';
             echo '<input type="hidden" name="nombre" value="' . si_existe('nombre') . '">';
             echo '<input type="hidden" name="edad" value="' . si_existe('edad') . '">';
