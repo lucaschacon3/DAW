@@ -19,11 +19,18 @@
       function posicionAleatoria() {
         return Math.floor(Math.random() * 1000);
       }
-      for (let i = 0; i < 1000; i++) {
-        document.write(
-          `<div style="background-color: rgb(${aleatorio()},${aleatorio()},${aleatorio()}); left: ${posicionAleatoria()}px; top: ${posicionAleatoria()}px;"></div>`
-        );
+      function generar() {
+        for (let i = 0; i < 1000; i++) {
+          document.write(
+            `<div style="background-color: rgb(${aleatorio()},${aleatorio()},${aleatorio()}); left: ${posicionAleatoria()}px; top: ${posicionAleatoria()}px;"></div>`
+          );
+        }
       }
+
+
+      let id=setInterval(generar,3000)
+      generar()
+
     </script>
   </body>
 </html>
