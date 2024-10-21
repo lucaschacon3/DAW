@@ -10,21 +10,21 @@ div {
 
 #caja1 {
   height: 10px;
-  width: 112px;
+  width: 102px;
   background-color: yellow;
 }
 
 
 #caja2 {
   height: 10px;
-  width: 112px;
+  width: 102px;
   background-color: rgb(230, 164, 21);
 }
 
 
 #caja3 {
   height: 10px;
-  width: 112px;
+  width: 102px;
   background-color: yellow;
 }
 
@@ -37,7 +37,7 @@ div {
 }
 #caja5 {
   height: 10px;
-  width: 20px;
+  width: 15px;
 }
 #caja6 {
   height: 10px;
@@ -56,7 +56,7 @@ div {
 }
 #caja9 {
   height: 10px;
-  width: 20px;
+  width: 15px;
 }
 #caja10 {
   height: 10px;
@@ -74,8 +74,8 @@ div {
 }
 #caja11 {
   height: 10px;
-  width: 48px;
-  background-color: rgb(158, 109, 78);
+  width: 38px;
+  background-color: rgb(117, 85, 65);
 }
 #cajaextra2{
     height: 10px;
@@ -94,7 +94,7 @@ div {
 }
 #caja13 {
   height: 10px;
-  width: 48px;
+  width: 38px;
   background-color: black;
 }
 #caja14 {
@@ -107,26 +107,29 @@ div {
 
 #caja15 {
   height: 10px;
-  width: 112px;
+  width: 102px;
   background-color: rgb(82, 54, 37);
 }
 #caja16 {
   height: 10px;
-  width: 112px;
+  width: 102px;
   background-color: rgb(82, 54, 37);
 }
+
 #caja17 {
   height: 10px;
-  width: 112px;
+  width: 102px;
   background-color: rgb(82, 54, 37);
 }
+
+
 
 
 
 
 #caja18 {
   height: 10px;
-  width: 90px;
+  width: 82px;
   background-color: yellow;
 }
 #caja19 {
@@ -146,7 +149,7 @@ div {
 }
 #caja22 {
   height: 10px;
-  width: 90px;
+  width: 81px;
   background-color: yellow;
 }
 
@@ -155,7 +158,7 @@ div {
 
 #caja23 {
   height: 10px;
-  width: 90px;
+  width: 82px;
 }
 #caja24 {
   height: 10px;
@@ -182,7 +185,7 @@ div {
 }
 #caja29 {
   height: 10px;
-  width: 90px;
+  width: 81px;
 }
 
 
@@ -191,7 +194,7 @@ div {
 
 #caja30 {
   height: 10px;
-  width: 90px;
+  width: 82px;
   background-color: rgb(230, 164, 21);
 }
 #caja31 {
@@ -211,7 +214,7 @@ div {
 }
 #caja34 {
   height: 10px;
-  width: 90px;
+  width: 81px;
   background-color: rgb(230, 164, 21);
 }
 
@@ -220,7 +223,7 @@ div {
 
 #caja35 {
   height: 10px;
-  width: 90px;
+  width: 82px;
   background-color: yellow;
 }
 #caja36 {
@@ -240,7 +243,7 @@ div {
 }
 #caja39 {
   height: 10px;
-  width: 90px;
+  width: 81px;
   background-color: yellow;
 }
 
@@ -249,7 +252,7 @@ div {
 
 #caja40 {
   height: 10px;
-  width: 90px;
+  width: 82px;
 }
 #caja41 {
   height: 10px;
@@ -267,7 +270,7 @@ div {
 }
 #caja44 {
   height: 10px;
-  width: 90px;
+  width: 81px;
 }
 
 
@@ -275,22 +278,22 @@ div {
 
 #caja45 {
   height: 10px;
-  width: 53px;
+  width: 55px;
   background-color: rgb(230, 164, 21);
 }
 #cajaextra3{
   height: 10px;
-  width: 47px;
+  width: 37px;
   background-color: rgb(107, 136, 136);
 }
 #caja46 {
   height: 10px;
-  width: 50px;
+  width: 51px;
   background-color: cyan;
 }
 #cajaextra4{
   height: 10px;
-  width: 47px;
+  width: 37px;
   background-color: rgb(107, 136, 136);
 }
 #caja47 {
@@ -304,7 +307,7 @@ div {
 
 #caja48 {
   height: 10px;
-  width: 53px;
+  width: 55px;
   background-color: yellow;
 }
 #cajaextra5{
@@ -314,7 +317,7 @@ div {
 }
 #caja49 {
   height: 10px;
-  width: 136px;
+  width: 117px;
   background-color: cyan;
 }
 #caja50 {
@@ -329,7 +332,7 @@ div {
 
 #caja51 {
   height: 10px;
-  width: 53px;
+  width: 55px;
 }
 #cajaextra6{
   height: 10px;
@@ -338,7 +341,7 @@ div {
 }
 #caja52 {
   height: 10px;
-  width: 48px;
+  width: 37px;
   background-color: cyan;
 }
 #cajaextra7{
@@ -349,7 +352,7 @@ div {
 }
 #cajaextra8{
   height: 10px;
-  width: 30px;
+  width: 22px;
   background-color: cyan;
 
 }
@@ -372,17 +375,13 @@ div {
 
 #caja56 {
   height: 10px;
-  width: 53px;
+  width: 55px;
   background-color: rgb(230, 164, 21);
 }
-#cajaextra9{
-  height: 10px;
-  width: 10px;
-  background-color: rgb(107, 136, 136);
-}
+
 #caja57 {
   height: 10px;
-  width: 48px;
+  width: 49px;
   background-color: cyan;
 }
 #cajaextra10{
@@ -393,7 +392,7 @@ div {
 }
 #cajaextra11{
   height: 10px;
-  width: 30px;
+  width: 22px;
   background-color: cyan;
 
 }
@@ -420,22 +419,25 @@ div {
 
 #caja61 {
   height: 10px;
-  width: 53px;
+  width: 54px;
   background-color: rgb(82, 54, 37);
 }
+/*
 #caja62 {
   height: 10px;
-  width: 60px;
+  width: 50px;
   background-color: cyan;
 }
+*/
+
 #cajaextra12{
   height: 10px;
-  width: 10px;
+  width: 61px;
   background-color: rgb(107, 136, 136);
 }
 #cajaextra13{
   height: 10px;
-  width: 74px;
+  width: 67px;
   background-color: aqua;
 }
 #caja63 {
@@ -447,20 +449,35 @@ div {
 
 
 
+#cajaextra20 {
+  height: 10px;
+  width: 54px;
+  background-color: rgb(82, 54, 37);
+}
+#cajaextra21 {
+  height: 10px;
+  width: 130px;
+  background-color: cyan;
+}
 
-#caja64 {
+#cajaextra22 {
   height: 10px;
   width: 53px;
   background-color: rgb(82, 54, 37);
 }
-#cajaextra14{
+
+
+
+
+#caja64 {
   height: 10px;
-  width: 60px;
-  background-color: rgb(107, 136, 136);
+  width: 54px;
+  background-color: rgb(82, 54, 37);
 }
+
 #caja65 {
   height: 10px;
-  width: 86px;
+  width: 130px;
   background-color: cyan;
 }
 #caja66 {
@@ -472,14 +489,15 @@ div {
 
 
 
+
 #caja67 {
   height: 10px;
-  width: 53px;
+  width: 54px;
   background-color: rgb(82, 54, 37);
 }
 #caja68 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: cyan;
 }
 #caja69 {
@@ -492,45 +510,36 @@ div {
 
 
 
-#caja70 {
-  height: 10px;
-  width: 53px;
-  background-color: rgb(82, 54, 37);
-}
+
 #caja71 {
   height: 10px;
-  width: 148px;
-  background-color: cyan;
-}
-#caja72 {
-  height: 10px;
-  width: 53px;
-  background-color: rgb(82, 54, 37);
-}
-
-
-
-
-
-#caja73 {
-  height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: cyan;
 }
 
 
 
+
+
+
+/*#caja73 {
+  height: 10px;
+  width: 130px;
+  background-color: cyan;
+}
 #caja74 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: cyan;
 }
+
+*/
 
 
 
 #caja75 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: cyan;
 }
 
@@ -538,7 +547,7 @@ div {
 
 #caja76 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: rgb(155, 255, 255);
 }
 
@@ -546,7 +555,7 @@ div {
 
 #caja77 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: cyan;
 }
 
@@ -566,7 +575,7 @@ div {
 }
 #caja81 {
   height: 10px;
-  width: 114px;
+  width: 96px;
   background-color: cyan;
 }
 
@@ -585,7 +594,7 @@ div {
 }
 #caja84 {
   height: 10px;
-  width: 114px;
+  width: 96px;
   background-color: cyan;
 }
 
@@ -604,7 +613,7 @@ div {
 }
 #caja87 {
   height: 10px;
-  width: 99px;
+  width: 81px;
   background-color: cyan;
 }
 
@@ -613,17 +622,17 @@ div {
 
 #caja88 {
   height: 10px;
-  width: 114px;
+  width: 106px;
   background-color: cyan;
 }
 #caja89 {
   height: 10px;
-  width: 15px;
+  width: 10px;
   background-color: gray;
 }
 #caja90 {
   height: 10px;
-  width: 15px;
+  width: 10px;
   background-color: cyan;
 }
 
@@ -632,17 +641,17 @@ div {
 
 #caja91 {
   height: 10px;
-  width: 114px;
+  width: 106px;
   background-color: cyan;
 }
 #caja92 {
   height: 10px;
-  width: 15px;
+  width: 10px;
   background-color: gray;
 }
 #caja93 {
   height: 10px;
-  width: 15px;
+  width: 10px;
   background-color: cyan;
 }
 
@@ -651,17 +660,17 @@ div {
 
 #caja94 {
   height: 10px;
-  width: 114px;
+  width: 106px;
   background-color: cyan;
 }
 #caja95 {
   height: 10px;
-  width: 15px;
+  width: 10px;
   background-color: gray;
 }
 #caja96 {
   height: 10px;
-  width: 15px;
+  width: 10px;
   background-color: cyan;
 }
 
@@ -670,7 +679,7 @@ div {
 
 #caja97 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: cyan;
 }
 
@@ -678,14 +687,14 @@ div {
 
 #caja98 {
   height: 10px;
-  width: 148px;
+  width: 130px;
 }
 
 
 
 #caja99 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: rgb(82, 54, 37);
 }
 
@@ -693,7 +702,7 @@ div {
 
 #caja100, #caja101 {
   height: 10px;
-  width: 148px;
+  width: 130px;
   background-color: rgb(0, 0, 107);
 }
 
