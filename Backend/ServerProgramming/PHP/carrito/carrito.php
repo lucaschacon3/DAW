@@ -35,13 +35,20 @@
         }
 
         foreach ($precio as $producto => $valor) {
-            echo "<label for=\"$producto\">$producto</label>";
+            echo "<label for=\"$producto\">$producto</label>";// barra / de escape
             echo "<input type=\"number\" name=\"$producto\">";
             echo " Precio: $valor, Stock: {$stock[$producto]}<br>";
         };
         echo "";
 
-        
+        if (($_REQUEST["POST"])) {
+            $stock["pera"]= $stock["pera"]-$_REQUEST["pera"];
+            $stock["manzana"]= $stock["manzana"]-$_REQUEST["manzana"];
+            $stock["platano"]= $stock["platano"]-$_REQUEST["platano"];
+            $stock["kiwi"]= $stock["kiwi"]-$_REQUEST["kiwi"];
+        }
+
+
         ?>
         <button type="submit">ENVIAR</button>
     </form>
