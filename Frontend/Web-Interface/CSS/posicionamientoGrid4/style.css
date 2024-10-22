@@ -7,10 +7,11 @@ div{
 }
 
 #contenedor{
+    margin: auto;
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-columns: 25% 25% 25% 25%;
-    width: 96%; 
+    width: 700px; 
     height: 700px;
     background-image: url(image.png);
 
