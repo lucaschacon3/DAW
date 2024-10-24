@@ -1,0 +1,19 @@
+div{
+    width: 140px;
+    height: 140px;
+    border: solid 1px;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+#contenedor{
+    margin: auto;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 700px; 
+    height: 700px;
+    background-image: url(image.png);
+
+}
+
