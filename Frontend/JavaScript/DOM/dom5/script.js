@@ -4,27 +4,28 @@ function crearElemento(tipo, contenido, padre) {
   hijo.innerHTML = contenido;
   padre.appendChild(hijo);
 
-  hijo.addEventListener(`click`, function () {
-    this.remove();
-  });
+  //hijo.addEventListener(`click`, function () {
+    //this.remove();
+  //});
 }
 
 let elementosCompra = document.getElementById(`idInputCompra`);
 let boton = document.querySelector(`button`);
+let productos=[]
 
 boton.addEventListener(`click`, function agregarElemento() {
   crearElemento(
     `li`,
     elementosCompra.value,
-    document.getElementById(`idElementosCompra`)
+    document.getElementById(`idDivCompra`) //padre
   );
 
-  let productos=[]
 
-  document.querySelectorAll(`div`).forEach((e)=>{
-    productos.push(e.textContent)
-  })
+  productos.push(document.getElementById(`idInputCompra`).value)
+  console.log(productos)
 
-  productos.short
+  document.querySelectorAll(`#idDivCompra`)
 
+
+  elementosCompra.value=` `
 });
