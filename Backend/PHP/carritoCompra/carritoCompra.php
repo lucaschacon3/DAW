@@ -1,163 +1,102 @@
 <?php
+// Ruta del archivo de stock
+$filePath = 'stock.json';
 
-
-$inventario = array(
-    "camiseta" => array(
-        "stock" => 10,
-        "precio" => 11.99
-    ),
-
-    "pantalon" => array(
-        "stock" => 15,
-        "precio" => 17.99
-    ),
-
-    "sudadera" => array(
-        "stock" => 12,
-        "precio" => 15.25
-    ),
-
-    "zapatillas" => array(
-        "stock" => 16,
-        "precio" => 26.55
-    )
-
-);
-
+// Cargar inventario desde el archivo stock.data
+if (file_exists($filePath)) {
+    $inventario = json_decode(file_get_contents($filePath), true);
+} else {
+    echo "Error: el archivo de inventario no existe.";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito Compra</title>
     <style>
-        * {
-            margin: 0.5em;
-            padding: 0.5em;
-        }
-
-        input {
-            height: 20px;
-            width: 30px;
-        }
+        * { margin: 0.5em; padding: 0.5em; }
+        input { height: 20px; width: 30px; }
     </style>
 </head>
-
 <body>
-    <h2>Bienvenido <?php echo $_GET["nombre"] ?>!</h2>
+    <h2>Bienvenido <?php echo htmlspecialchars($_GET["nombre"]); ?>!</h2>
     <form action="" method="post">
+        <?php
+        // Inicializar carrito y valores por defecto
+        $carrito = [];
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["actualizar"])) {
+            foreach ($inventario as $producto => $datos) {
+                $carrito[$producto] = isset($_POST[$producto]) ? intval($_POST[$producto]) : 0;
+            }
+        }
 
-
-
-        <label for="camiseta"> Camiseta: </label>
-        <input type="number" name="camiseta" id="camiseta" value="0">
-        <?php echo $inventario["camiseta"]["precio"] . " €"; ?>
-        <br>
-
-
-        <label for="pantalon"> Pantalon: </label>
-        <input type="number" name="pantalon" id="pantalon" value="0">
-        <?php echo $inventario["pantalon"]["precio"] . " €"; ?>
-        <br>
-
-        <label for="sudadera"> Sudadera: </label>
-        <input type="number" name="sudadera" id="sudadera" value="0">
-        <?php echo $inventario["sudadera"]["precio"] . " €"; ?>
-        <br>
-
-        <label for="zapatillas"> Zapatillas: </label>
-        <input type="number" name="zapatillas" id="zapatillas" value="0">
-        <?php echo $inventario["zapatillas"]["precio"] . " €"; ?>
-        <br>
-
-        <button type="submit" name="actualizar">ACTUALIZAR</button>
+        // Mostrar formulario de productos
+        foreach ($inventario as $producto => $datos) {
+            // Obtener cantidad del carrito o establecer a 0 si no hay
+            $cantidad = isset($carrito[$producto]) ? $carrito[$producto] : 0;
+            echo "<label for='{$producto}'> " . ucfirst($producto) . ": </label>";
+            echo "<input type='number' name='{$producto}' id='{$producto}' value='{$cantidad}' min='0'>";
+            echo $datos["precio"] . " € | Stock: " . $datos["stock"] . "<br>";
+        }
+        ?>
+        <button type='submit' name='actualizar'>ACTUALIZAR</button>
     </form>
 
-
     <?php
-
-/*
-    define('RUTA_FICHERO', "stock.data");
-
-    if (file_exists(RUTA_FICHERO)) {
-        $contenido = file_get_contents(RUTA_FICHERO);
-        $stock = unserialize($contenido);
-    } else {
-        $stock = [
-            $inventario["camiseta"] => $inventario["camiseta"]["stock"],
-            $inventario["pantalon"] => $inventario["pantalon"]["stock"],
-            $inventario["sudadera"] => $inventario["sudadera"]["stock"],
-            $inventario["zapatillas"] => $inventario["zapatillas"]["stock"]
-        ];
-        file_put_contents(RUTA_FICHERO, serialize($stock));
-    }
-    */
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        // ver stock
-        /* 
-        $stockCamiseta = intval($inventario["camiseta"]["stock"]);
-        $inventario["camiseta"]["stock"] = $stockCamiseta - intval($_REQUEST["camiseta"]);
-
-        $stockPantalon = intval($inventario["pantalon"]["stock"]);
-        $inventario["pantalon"]["stock"] = $stockPantalon - intval($_REQUEST["pantalon"]);
-
-        $stockSudadera = intval($inventario["sudadera"]["stock"]);
-        $inventario["sudadera"]["stock"] = $stockSudadera - intval($_REQUEST["sudadera"]);
-
-        $stockZapatillas = intval($inventario["zapatillas"]["stock"]);
-        $inventario["zapatillas"]["stock"] = $stockZapatillas - intval($_REQUEST["zapatillas"]);
-        */
-    }
-
+    // Procesar la actualización del carrito
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["actualizar"])) {
-            // Mostrar resumen antes de confirmar
             echo "<h3>Resumen de pedido:</h3>";
+            $precioTotal = 0;
+            $pedidoValido = true;
 
-            echo "Camiseta: " . $_REQUEST["camiseta"] . " Unidades <br>";
-            echo "Pantalon: " . $_REQUEST["pantalon"] . " Unidades <br>";
-            echo "Sudadera: " . $_REQUEST["sudadera"] . " Unidades <br>";
-            echo "Zapatillas: " . $_REQUEST["zapatillas"] . " Unidades<br>";
-            echo "<br>";
+            foreach ($inventario as $producto => $datos) {
+                $cantidad = intval($_POST[$producto]);
+                if ($cantidad > $datos["stock"]) {
+                    echo "Lo siento, no hay suficiente stock para " . ucfirst($producto) . ".<br>";
+                    $pedidoValido = false;
+                } elseif ($cantidad > 0) { // Mostrar solo si la cantidad es mayor a 0
+                    $carrito[$producto] = $cantidad;
+                    $precioTotal += $cantidad * $datos["precio"];
+                    echo ucfirst($producto) . ": " . $cantidad . " Unidades <br>";
+                }
+            }
 
-            $precioTotal = ($_REQUEST["camiseta"] * $inventario["camiseta"]["precio"]) + ($_REQUEST["pantalon"] * $inventario["pantalon"]["precio"]) + ($_REQUEST["sudadera"] * $inventario["sudadera"]["precio"]) + ($_REQUEST["zapatillas"] * $inventario["zapatillas"]["precio"]);
+            if ($precioTotal > 0) {
+                echo "<br>Precio Total: " . $precioTotal . " €<br>";
 
-            echo "Precio Total: " . $precioTotal;
-            echo "<br>";
-            echo "<form method=post>";
-            echo "<button type=submit name=confirmar >CONFIRMAR PEDIDO</button>";
-            echo "</form>";
-            echo "<br>";
+                if ($pedidoValido) {
+                    echo "<form method='post'>";
+                    echo "<button type='submit' name='confirmar'>CONFIRMAR PEDIDO</button>";
+                    echo "</form><br>";
+                } else {
+                    echo "<p style='color:red;'>Por favor, ajusta las cantidades.</p>";
+                }
+            } else {
+                echo "<p style='color:red;'>No se ha seleccionado ninguna unidad válida para comprar.</p>";
+            }
         }
-        if (!isset($_POST['confirmar'])) {
-            // si no pulsas el botón de confirmación
 
-            echo '<form action="" method="post">';
+        if (isset($_POST['confirmar'])) {
+            // Confirmación del pedido y actualización de stock
+            foreach ($carrito as $producto => $cantidad) {
+                $inventario[$producto]["stock"] = (int)$inventario[$producto]["stock"] - $cantidad;
+            }
 
-            echo '</form>';
-        } else {
-            // Confirmación final, no volver a mostrar formulario
-            echo "<h3>¡Compra realizada!</h3>";
-            echo "<button><a href= >Volver a la tienda</a></button>";
-            echo "<br>";
+            // Guardar el nuevo inventario en stock.data
+            if (file_put_contents($filePath, json_encode($inventario, JSON_PRETTY_PRINT))) {
+                echo "<h3>¡Compra realizada y stock actualizado!</h3>";
+            } else {
+                echo "<p style='color:red;'>Error al actualizar el stock en el archivo.</p>";
+            }
+
+            echo "<button><a href=''>Volver a la tienda</a></button><br>";
         }
     }
-    /* 
-    echo " ----STOCK---- <br>";
-    foreach ($inventario as $producto => $stock) {
-        echo $producto . " =>" . $stock["stock"] . "<br>";
-    }
-    echo " ------------------ <br>";
-    */
-    file_put_contents(RUTA_FICHERO, serialize($stock));
     ?>
-
-
 </body>
-
 </html>
