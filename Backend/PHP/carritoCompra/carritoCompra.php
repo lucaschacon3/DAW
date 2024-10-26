@@ -43,7 +43,7 @@ $carrito = []; // Variable global para el carrito
             // Si no es admin, mostrar formulario de compra
             echo "<h3>Selecciona productos:</h3>";
             foreach ($inventario as $producto => $datos) {
-                echo "<label for='{$producto}'>" . ucfirst($producto) . ": </label>";
+                echo "<label for='{$producto}'>" . ucfirst($producto) . ": </label>";// El ucfirst es para que la primera letra sea mayuscula
                 echo "<input type='number' name='{$producto}' id='{$producto}' value='0' min='0'> ";
                 echo $datos["precio"] . " € | Stock: " . $datos["stock"] . "<br>";
             }
@@ -64,12 +64,12 @@ $carrito = []; // Variable global para el carrito
             }
 
             // Guardar el nuevo inventario en stock.json
-            if (file_put_contents($filePath, json_encode($inventario, JSON_PRETTY_PRINT))) {
+            if (file_put_contents($filePath, json_encode($inventario, JSON_PRETTY_PRINT))) { // El ultimo parametro es para que se imprima tabulado
                 echo "<h3>Inventario actualizado correctamente,<a href= >ACEPTAR</a></h3>";
             } else {
                 echo "<p style='color:red;'>Error al guardar los cambios en el archivo.</p>";
             }
-            // Recargar el archivo para reflejar los cambios de inmediato en el formulario
+            // Recargar el archivo para reflejar los cambios en el formulario
             $inventario = json_decode(file_get_contents($filePath), true);
         }
 
@@ -105,7 +105,7 @@ $carrito = []; // Variable global para el carrito
         // Confirmar la compra y actualizar el stock
         if (isset($_POST['confirmar']) && !$isAdmin) {
             foreach ($carrito as $producto => $cantidad) {
-                $inventario[$producto]["stock"] -= $cantidad;
+                $inventario[$producto]["stock"] = floatval($inventario[$producto]["stock"]) - $cantidad;
             }
 
             // Guardar el nuevo stock en stock.json
