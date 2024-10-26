@@ -1,18 +1,18 @@
 {
     "camiseta": {
-        "stock": 10,
+        "stock": 15,
         "precio": 11.99
     },
     "pantalon": {
-        "stock": 15,
+        "stock": 19,
         "precio": 17.99
     },
     "sudadera": {
-        "stock": 12,
+        "stock": 19,
         "precio": 15.25
     },
     "zapatillas": {
-        "stock": 16,
+        "stock": 18,
         "precio": 26.55
     }
 }
