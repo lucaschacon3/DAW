@@ -18,7 +18,7 @@ list($inventario, $isAdmin, $carrito) = inicializar();// inicializamos las varia
     </style>
 </head>
 <body>
-    <h2>Bienvenido <?php echo htmlspecialchars($_GET["nombre"]); ?>!</h2>
+    <h2>Bienvenido <?php echo htmlspecialchars($_POST["nombre"]);?>!</h2>
     <form action="" method="post">
         <?php
         // Mostrar el formulario dependiendo del rol del usuario

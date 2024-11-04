@@ -23,7 +23,7 @@
 
 <body>
     <div>
-        <form action="carrito.php" method="get">
+        <form action="carrito.php" method="post">
             <h2>Inicio sesion</h2>
             <br>
             <input type="text" placeholder="Usuario" name="nombre">
