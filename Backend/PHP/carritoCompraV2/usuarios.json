@@ -18,5 +18,9 @@
     "": {
         "password": "$2y$10$3RGZRgcYrNTv.M3Yk2OL2uj9PPN1.rCpMOpRJ30TTUjZHvTpSU7rm",
         "role": "user"
+    },
+    "carlos": {
+        "password": "$2y$10$rLdTjzcDRFHWiJyxURzU8eIQCiZc\/QvVq9PYaGZ2\/oeuQAH7jE0Wu",
+        "role": "user"
     }
 }
