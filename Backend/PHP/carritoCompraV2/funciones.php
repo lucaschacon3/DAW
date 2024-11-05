@@ -110,4 +110,24 @@ function confirmarCompra(&$inventario, $carrito) {
     echo "<h3>¡Compra realizada y stock actualizado!</h3>";
 }
 
+function cargarUsuarios() {
+    return json_decode(file_get_contents('usuarios.json'), true);
+}
+
+// Verificar si el usuario está autenticado
+function autenticarUsuario() {
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+        exit();
+    }
+}
+
+// Verificar si el usuario tiene rol de administrador
+function verificarAdmin() {
+    if ($_SESSION['role'] !== 'admin') {
+        echo "Acceso denegado. No tienes permisos de administrador.";
+        exit();
+    }
+}
+
 ?>

@@ -3,6 +3,9 @@
 include 'funciones.php';
 list($inventario, $isAdmin, $carrito) = inicializar();// inicializamos las variables
 
+session_start();
+autenticarUsuario(); // Verifica que esté autenticado
+
 ?>
 
 
@@ -18,7 +21,7 @@ list($inventario, $isAdmin, $carrito) = inicializar();// inicializamos las varia
     </style>
 </head>
 <body>
-    <h2>Bienvenido <?php echo htmlspecialchars($_POST["nombre"]);?>!</h2>
+    <h2>Bienvenido <?php echo htmlspecialchars($_POST["username"]);?>!</h2>
     <form action="" method="post">
         <?php
         // Mostrar el formulario dependiendo del rol del usuario
