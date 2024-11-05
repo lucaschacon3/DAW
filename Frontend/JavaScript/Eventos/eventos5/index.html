@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos5</title>
+    <script src="script.js"  defer></script>
+    <style>
+    div{
+        border: 2px solid black;
+        padding: 0.5em;
+        margin: auto;
+        height: 600px;
+        width: 500px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <label for="autores">Autores: </label>
+        <select name="autores" id="idAutores">
+            <option value="1">Todos</option>
+            <option value="2">Carmen Laforet</option>
+            <option value="3">Juan Rulfo</option>
+            <option value="4">Rosa Montero</option>
+            <option value="5">Pablo Neruda</option>
+            <option value="6">Almudena Grandes</option>
+            <option value="7">Miguel de Cervantes Saavedra</option>
+            <option value="8">Jorge Luis Borges</option>
+            <option value="9">Rosa Chacel</option>
+        </select>
+        <br><br><br>
+        <table border="1">
+            <tr>
+                <td>Título</td>
+                <td>Fecha</td>
+            </tr>
+            <tr>
+                <td id="idTitulo"></td>
+                <td id="idFecha"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
