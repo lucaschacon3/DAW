@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Función para inicializar el inventario y el estado del usuario
 function inicializar() {
     $filePath = 'stock.json';
@@ -12,7 +13,7 @@ function inicializar() {
     }
 
     // Verificar si el usuario es admin
-    $isAdmin = isset($_GET["nombre"]) && $_GET["nombre"] === "admin";
+    $isAdmin = verificarAdmin();
     $carrito = []; // Variable global para el carrito
 
     return [$inventario, $isAdmin, $carrito];
@@ -124,10 +125,10 @@ function autenticarUsuario() {
 
 // Verificar si el usuario tiene rol de administrador
 function verificarAdmin() {
-    if ($_SESSION['role'] !== 'admin') {
-        echo "Acceso denegado. No tienes permisos de administrador.";
-        exit();
+    // Comprueba si la sesión está iniciada y si el rol es 'admin'
+    if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+        return true; // El usuario es administrador
     }
+    return false; // El usuario no es administrador
 }
-
 ?>

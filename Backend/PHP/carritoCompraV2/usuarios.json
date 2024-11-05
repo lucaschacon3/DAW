@@ -1,26 +1,10 @@
 {
-    "admin": {
-        "password": "$2y$10$e.D8cXpZ\/HBIwM.VDhUuTeb9\/JS5XEOWhlP.K9KzYKY.PwI1m6bOy",
-        "role": "admin"
-    },
-    "user1": {
-        "password": "$2y$10$aJ.x4z3\/7pIBUVr5pWLTyeOFJnQOo9pVs.WQ\/7Jx9BWDfRRKv5GOO",
-        "role": "user"
-    },
     "lucas": {
-        "password": "$2y$10$TAujWB28s5wrO7Vru7HbV.cwUqiQgFUWJtUijq6FZG\/uK9b2KnaJu",
-        "role": "user"
-    },
-    "pepe": {
-        "password": "$2y$10$oD112zgCtEdUB7HsbbTrN.DWh01bb6Be\/tWx1xGzh4CNOd0rDgHAq",
-        "role": "user"
-    },
-    "": {
-        "password": "$2y$10$3RGZRgcYrNTv.M3Yk2OL2uj9PPN1.rCpMOpRJ30TTUjZHvTpSU7rm",
+        "password": "$2y$10$Mi0tZR1sd90XXp\/N2RnC8u\/m8Cb6DoUPEk1U9RxQC2ihM8Vsybcee",
         "role": "user"
     },
     "carlos": {
-        "password": "$2y$10$rLdTjzcDRFHWiJyxURzU8eIQCiZc\/QvVq9PYaGZ2\/oeuQAH7jE0Wu",
-        "role": "user"
+        "password": "$2y$10$aJe5KOx7W2nFcUzaB6JHx.mZWh710r2MezDbwtlVhCUJJ5P8jxHdW",
+        "role": "admin"
     }
 }

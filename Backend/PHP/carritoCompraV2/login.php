@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // Iniciar la sesión al comienzo
 include 'funciones.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,29 +23,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <style>
-        * {
-            padding: 0.3em;
-            margin: 0.3em;
-        }
-
-        div {
-            margin: auto;
-            text-align: center;
-            border: solid 1px;
-            height: 300px;
-            width: 300px;
-        }
+        * { padding: 0.3em; margin: 0.3em; }
+        div { margin: auto; text-align: center; border: solid 1px; height: 300px; width: 300px; }
     </style>
 </head>
-
 <body>
     <div>
-        <form method="post" action="carrito.php">
+        <!-- El action se deja vacío para enviar el formulario a esta misma página -->
+        <form method="post" action="">
             <input type="text" name="username" placeholder="Usuario">
             <br>
             <input type="password" name="password" placeholder="Contraseña">
@@ -55,7 +44,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br><br>
         <a href="index.html">Volver al inicio</a>
     </div>
-
 </body>
-
 </html>
