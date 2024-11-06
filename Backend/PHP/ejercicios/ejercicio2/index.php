@@ -32,7 +32,6 @@ iniciarSesion();
 
 <?php 
 ganar();
-traza();
 
 ?>
 

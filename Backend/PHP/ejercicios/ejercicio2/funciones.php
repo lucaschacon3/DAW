@@ -1,15 +1,6 @@
 <?php
 
 session_start();
-
-function traza()
-{
-    echo "<br><br><br>";
-    echo "Numero aleatorio: " . $_SESSION["numAleatorio"];
-    echo "<br>";
-    echo "Numero usuario: " . $_REQUEST["numero"];
-}
-
 function iniciarSesion()
 {
     if (!isset($_SESSION["numAleatorio"])) {
@@ -40,7 +31,10 @@ function ganar()
         if (intval($_SESSION["numAleatorio"]) === intval($_REQUEST["numero"])) {
             echo "Has acertado! ";
             session_destroy();
-        } else {
+        }elseif(intval($_SESSION["intentos"])==0){
+            echo "Has perdido";
+            session_destroy();
+        }else {
             $_SESSION["intentos"] = $_SESSION["intentos"] - 1;
             echo "Incorrecto, te quedan " . $_SESSION["intentos"] . " intentos";
         }
