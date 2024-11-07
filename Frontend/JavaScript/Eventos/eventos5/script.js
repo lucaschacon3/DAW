@@ -22,10 +22,10 @@ autor.addEventListener(`change`, tabla)
  
 
 function tabla() {
-    
+
     let eliminar= document.querySelectorAll(`td`)
     eliminar.forEach(e=>{
-        e.remove
+        e.innerHTML=""
     })
 
     if(autor.value==1){
