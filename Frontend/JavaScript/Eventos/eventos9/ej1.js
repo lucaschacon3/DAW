@@ -38,12 +38,16 @@ function anadirDatos() {
   autores.forEach((clave, valor) => {
 
     // Si el autor coincide con el valor seleccionado, añadir la fila
-    if (clave === selectAutores.value) {
-      let fila = crearElemento("tr", "", tbodyAutores);
+    if (valor === selectAutores.value) {
 
-      let info= valor.split(`,`)
-      crearElemento("td", info[0], fila);
-      crearElemento("td", info[1], fila);
+      clave.forEach((e)=>{
+        let fila = crearElemento("tr", "", tbodyAutores);
+        let info=e.split(`,`)
+        crearElemento("td", info[0], fila);
+        crearElemento("td", info[1], fila);
+      })
+      
+
     }
   });
 }
