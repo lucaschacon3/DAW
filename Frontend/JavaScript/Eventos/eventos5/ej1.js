@@ -14,48 +14,43 @@ autores=[
     {"Autor": "Jorge Luis Borges", "Titulo": "El sur", "Fecha": "1953"},
     {"Autor": "Pablo Neruda", "Titulo": "Confieso que he vivido", "Fecha": "2010"}
 ];
-let cuerpoAutores = document.getElementById("idAutores");
-let cuerpoAutoress = document.getElementById("campoAutores");
-let inputAutores = document.getElementById("idautores");
+
+let selectAutores = document.getElementById("idSelectAutores");
+let tbodyAutores = document.getElementById("idTbodyAutores");
 
 
-function crearElemento(tipo, contenido, padre) {
-    // Crear el elemento del tipo especificado
-    let hijo = document.createElement(tipo)
-    // Indicamos el contenido
-    hijo.innerHTML = contenido
-    //añadir el nodo al documento
-    padre.appendChild(hijo)
+let autoresNombre= new Array()
+autores.forEach((e)=>{
+    autoresNombre.push(e.Autor)
+    
+})
+let autoresNoRepetidos = new Set(autoresNombre)
 
-    // hijo.addEventListener("click", function () {
-    //     this.remove()
-    // })
-    return hijo
-}
-
-
-let setArray=new Set();
-autores.forEach((e) => setArray.add(e.Autor));
 
 haceroption();
-
 function haceroption(){
-    setArray.forEach(function(e){ 
-        crearElemento("option",e,inputAutores);
+    autoresNoRepetidos.forEach((e)=>{ 
+        crearElemento("option",e,selectAutores);
     })
 
 }
 
 
-inputAutores.addEventListener("change", autore2s);
-function autore2s(e){
-    cuerpoAutoress.innerHTML="";
-    //console.log("funciona");
-    //console.log(inputAutores.value);
+function crearElemento(tipo, contenido, padre) {
+    let hijo = document.createElement(tipo)
+    hijo.innerHTML = contenido
+    padre.appendChild(hijo)
+    return hijo
+}
+
+
+selectAutores.addEventListener("change", anadirDatos);
+function anadirDatos(e){
+    tbodyAutores.innerHTML="";
     autores.forEach(function(e){  
         
-        if(inputAutores.value===e.Autor) {
-            let creado = crearElemento("tr",``,cuerpoAutoress)
+        if(selectAutores.value===e.Autor) {
+            let creado = crearElemento("tr",``,tbodyAutores)
             crearElemento("td",`${e.Titulo}`,creado)
             crearElemento("td",`${e.Fecha}`,creado)
         }
