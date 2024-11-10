@@ -1,0 +1,36 @@
+#idPerro {
+    position: relative; /* este contenedor para los hijos absolutos */
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-image: url(perro.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#idIcono {
+    width: 60px;
+    height: 60px;
+    float: right;
+    background-image: url(icono.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#idTexto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+}
+
+h2, h3 {
+    color: white;
+}
