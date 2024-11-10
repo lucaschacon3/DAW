@@ -1,0 +1,18 @@
+{
+    "lucas": {
+        "password": "$2y$10$Mi0tZR1sd90XXp\/N2RnC8u\/m8Cb6DoUPEk1U9RxQC2ihM8Vsybcee",
+        "rol": "user"
+    },
+    "carlos": {
+        "password": "$2y$10$aJe5KOx7W2nFcUzaB6JHx.mZWh710r2MezDbwtlVhCUJJ5P8jxHdW",
+        "rol": "admin"
+    },
+    "bea": {
+        "password": "$2y$10$w0u62t8KqzhgHk.9A0om\/.52J4YiOX7D.p9BirBnRuZ9fStxv9TE.",
+        "rol": "usuario"
+    },
+    "pepe": {
+        "password": "$2y$10$ejrq.HXaSFGS1KkEdeNhee3f8fbzp5ILIeDmrzoLIDyWF38VtTbP6",
+        "rol": "usuario"
+    }
+}
