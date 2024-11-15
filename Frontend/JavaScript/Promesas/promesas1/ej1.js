@@ -14,6 +14,12 @@ fetch(ruta)
     const p = document.createElement("p");
     p.appendChild(document.createTextNode(`Error: ${error.message}`));
     document.body.insertBefore(p, document.body.firstChild); // Si myList no está definido, evitamos el error.
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+      footer: '<a href="#">Why do I have this issue?</a>'
+    });
   });
 
 function main(autores) {
