@@ -12,15 +12,17 @@
 2. Windows.
 3. Apache.
 4. Docker.
-5. AWS-Azure.
+5. AWS.
 
 ## [Frontend](https:Enlace)
 1. UX-UI
-2. CSS.
-3. SaaS.
-4. TailWind.
-5. JavaScript
-6. ReactJS
+2. HTML
+3. CSS.
+4. SaaS.
+5. TailWind.
+6. Bootstrap.
+7. JavaScript
+8. ReactJS
 
 
 ## [Iniciación](https:Enlace)
