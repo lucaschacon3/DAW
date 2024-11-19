@@ -35,12 +35,12 @@ selectAutores.addEventListener("change", anadirDatos);
 function anadirDatos() {
   tbodyAutores.innerHTML = "";
 
-  autores.forEach((clave, valor) => {
+  autores.forEach((valor, clave) => {
 
     // Si el autor coincide con el valor seleccionado, añadir la fila
-    if (valor === selectAutores.value) {
+    if (clave === selectAutores.value) {
 
-      clave.forEach((e)=>{
+      valor.forEach((e)=>{
         let fila = crearElemento("tr", "", tbodyAutores);
         let info=e.split(`,`)
         crearElemento("td", info[0], fila);
