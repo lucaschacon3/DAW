@@ -46,16 +46,25 @@ function main(data) {
           informacion
         );
       }
+
+      let losP = document.querySelectorAll(`p`);
+      losP.forEach((e) => {
+        if (activo === `Activo`) {
+          e.classList.add(`verde`);
+        } else {
+          e.classList.add(`rojo`);
+        }
+      });
     });
   }
 
-  //creamos el evento deñl boton
+  //creamos el evento del boton
   let cargarUsuarios = document.getElementById(`idBoton`);
 
   cargarUsuarios.addEventListener(`click`, crearTabla);
   function crearTabla() {
-    let tabla=document.getElementById(`idTabla`)
-    tabla.innerHTML=``
+    let tabla = document.getElementById(`idTabla`);
+    tabla.innerHTML = ``;
     data.forEach((e) => {
       let activo = ``;
       if (e.activo) {
@@ -68,6 +77,15 @@ function main(data) {
         `<td>${e.id}</td> <td>${e.nombre}</td> <td>${e.edad}</td> <td>${activo}</td>`,
         tabla
       );
+
+      let losTd = document.querySelectorAll(`td`);
+      losTd.forEach((e) => {
+        if (activo === `Activo`) {
+          e.classList.add(`verde`);
+        } else {
+          e.classList.add(`rojo`);
+        }
+      });
     });
   }
 }
