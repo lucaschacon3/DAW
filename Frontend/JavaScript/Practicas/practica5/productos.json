@@ -1,0 +1,7 @@
+[
+    { "id": 1, "nombre": "Laptop", "precio": 800, "stock": 10, "disponible": true },
+    { "id": 2, "nombre": "Teléfono", "precio": 500, "stock": 5, "disponible": true },
+    { "id": 3, "nombre": "Auriculares", "precio": 50, "stock": 0, "disponible": false },
+    { "id": 4, "nombre": "Monitor", "precio": 200, "stock": 3, "disponible": true }
+  ]
+  
