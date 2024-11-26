@@ -1,13 +1,13 @@
-package daw.goya.formulario;
+package com.example.servingwebcontent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FormularioApplication {
+public class ServingwebcontentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FormularioApplication.class, args);
+		SpringApplication.run(ServingwebcontentApplication.class, args);
 	}
 
 }
