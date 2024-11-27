@@ -9,6 +9,26 @@
             "projectName": "servingwebcontent",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ImcApplication<servingwebcontent>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.imc.ImcApplication",
+            "projectName": "servingwebcontent",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ImcApplication<IMC>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.imc.ImcApplication",
+            "projectName": "IMC",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
