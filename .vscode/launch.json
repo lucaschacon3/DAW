@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ImcApplication",
+            "request": "launch",
+            "mainClass": "com.example.imc.ImcApplication",
+            "projectName": "imc"
+        },
+        {
+            "type": "java",
             "name": "AltaususarioApplication",
             "request": "launch",
             "mainClass": "com.example.altaususario.AltaususarioApplication",

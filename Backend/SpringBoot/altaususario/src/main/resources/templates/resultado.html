@@ -7,13 +7,14 @@
 </head>
 <body>
     <h1>Datos recibidos</h1>
-    <p><strong>Nombre:</strong> ${nombre}</p>
-    <p><strong>Primer Apellido:</strong> ${primerApellido}</p>
-    <p><strong>Segundo Apellido:</strong> ${segundoApellido}</p>
-    <p><strong>Email:</strong> ${correo}</p>
-    <p><strong>Sexo:</strong> ${sexo}</p>
-    <p><strong>Dirección:</strong> ${direccion}</p>
-    <p><strong>Estudios:</strong> ${estudios}</p>
+    <p><strong>Nombre:</strong> <span th:text="${nombre}"></span></p>
+    <p><strong>Primer Apellido:</strong> <span th:text="${primerApellido}"></span></p>
+    <p><strong>Segundo Apellido:</strong> <span th:text="${segundoApellido}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${correo}"></span></p>
+    <p><strong>Sexo:</strong> <span th:text="${sexo}"></span></p>
+    <p><strong>Dirección:</strong> <span th:text="${direccion}"></span></p>
+    <p><strong>Estudios:</strong> <span th:text="${estudios}"></span></p>
+    
     <h3>Temas de interés seleccionados:</h3>
     <ul>
         <li th:each="tema : ${temas}" th:text="${tema}"></li>

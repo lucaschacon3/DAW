@@ -11,18 +11,18 @@ public class UsuarioController {
 
     @RequestMapping("/")
     public String mostrarFormulario() {
-        return "formulario"; // Nombre del archivo HTML (formulario.html) en la carpeta templates
+        return "index"; // Nombre del archivo HTML (formulario.html) en la carpeta templates
     }
 
     @PostMapping("/procesarFormulario")
     public String procesarFormulario(
-            @RequestParam("nombre") String nombre,
-            @RequestParam("primerApellido") String primerApellido,
-            @RequestParam("segundoApellido") String segundoApellido,
-            @RequestParam("correo") String correo,
-            @RequestParam("sexo") String sexo,
-            @RequestParam("direccion") String direccion,
-            @RequestParam("estudios") String estudios,
+            @RequestParam(name="nombre", defaultValue = "", required = false) String nombre,
+            @RequestParam(name="primerApellido", defaultValue = "", required = false) String primerApellido,
+            @RequestParam(name="segundoApellido", defaultValue = "", required = false) String segundoApellido,
+            @RequestParam(name="correo", defaultValue = "", required = false) String correo,
+            @RequestParam(name="sexo", defaultValue = "", required = false) String sexo,
+            @RequestParam(name="direccion", defaultValue = "", required = false) String direccion,
+            @RequestParam(name="estudios", defaultValue = "", required = false) String estudios,
             @RequestParam(required = false, value = "musica") String musica,
             @RequestParam(required = false, value = "deportes") String deportes,
             @RequestParam(required = false, value = "cine") String cine,
