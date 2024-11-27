@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta usuario</title>
+    <style>
+        *{
+            padding: 0.3em;
+            margin: 0.3em;
+        }
+    </style>
+</head>
+<body>
+    <form action="procesarFormulario" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="">
+            <br>
+    
+            <label for="primerApellido">Primer Apellido: </label>
+            <input type="text" name="primerApellido" id="">
+            <br>
+    
+            <label for="segundoApellido">Segundo Apellido: </label>
+            <input type="text" name="segundoApellido" id="">
+            <br>
+    
+            <label for="correo">E-mail: </label>
+            <input type="email" name="correo" id="" placeholder="email@email.com">
+            <br>
+    
+            <label for="fecha">Fecha nacimiento: </label>
+            <input type="date">
+            <br>
+    
+            <label for="">Sexo</label>
+            <label><input type="radio" name="sexo" value="varon">Varon</label>
+            <label><input type="radio" name="sexo" value="mujer">Mujer</label>
+            <br>
+    
+            <label for="direccion">Direccion: </label>
+            <input type="text" name="direccion" id="" placeholder="calle o plaza, numero y piso">
+    
+        </fieldset>
+    
+        <fieldset>
+            <legend>Nivel de estudios e intereses</legend>
+            
+            <label for="">Nivel de estudios</label><br>
+            <label><input type="radio" name="estudios" value="certificadoEscolar">Certificado escolar </label><br>
+            <label><input type="radio" name="estudios" value="graduadoESO">Graduado en ESO </label><br>
+            <label><input type="radio" name="estudios" value="bachillerFP">Bachiller - Formación Profesional </label><br>
+            <label><input type="radio" name="estudios" value="diplomado">Diplomado</label><br>
+            <label><input type="radio" name="estudios" value="licenciadoDoctorado">Licenciado o Doctorado</label><br>
+            <br>
+    
+            <label for="articulos">Recibir articulos sobre los siguientes temas: </label><br>
+            <label for="musica"><input type="checkbox" name="musica" id="">Musica</label><br>
+            <label for="deportes"><input type="checkbox" name="deportes" id="">Deportes</label><br>
+            <label for="cine"><input type="checkbox" name="cine" id="">Cine</label><br>
+            <label for="libros"><input type="checkbox" name="libros" id="">Libros</label><br>
+            <label for="ciencia"><input type="checkbox" name="ciencia" id="">Ciencia</label>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Enviar formulario</legend>
+            
+            <p>¿Los datos esta correctos?</p>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

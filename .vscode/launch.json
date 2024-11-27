@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AltaususarioApplication",
+            "request": "launch",
+            "mainClass": "com.example.altaususario.AltaususarioApplication",
+            "projectName": "altaususario"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-ServingwebcontentApplication<servingwebcontent>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
