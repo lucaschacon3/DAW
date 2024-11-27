@@ -11,7 +11,7 @@ public class UsuarioController {
 
     @RequestMapping("/")
     public String mostrarFormulario() {
-        return "index"; // Nombre del archivo HTML (formulario.html) en la carpeta templates
+        return "index"; 
     }
 
     @PostMapping("/procesarFormulario")
