@@ -1,21 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Formulario con Validación</title>
+    <title>Formulario de Validación</title>
+    <meta charset="UTF-8">
 </head>
 <body>
-    <h1>Formulario con Validación</h1>
-    <form action="#" th:action="@{/validacion}" th:object="${datosFormulario}" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" th:field="*{nombre}">
-        <div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
-        
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" th:field="*{mensaje}"></textarea>
-        <div th:if="${#fields.hasErrors('mensaje')}" th:errors="*{mensaje}"></div>
-        
-        <button type="submit">Enviar</button>
+    <h1>Formulario de Validación</h1>
+    <form action="#" th:action="@{/}" th:object="${formularioPersona}" method="post">
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" th:field="*{nombre}" /></td>
+                <td th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Error en el campo nombre</td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td><input type="text" th:field="*{edad}" /></td>
+                <td th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}">Error en el campo edad</td>
+            </tr>
+            <tr>
+                <td><button type="submit">Enviar</button></td>
+            </tr>
+        </table>
     </form>
-    
+
+    <!-- Resultado -->
+    <div th:if="${resultado != null}">
+        <h2>Resultado:</h2>
+        <p th:text="${resultado}"></p>
+    </div>
 </body>
 </html>
