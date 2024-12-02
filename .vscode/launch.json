@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ValidacionformularioApplication",
+            "request": "launch",
+            "mainClass": "com.example.validacionformulario.ValidacionformularioApplication",
+            "projectName": "validacionformulario"
+        },
+        {
+            "type": "java",
+            "name": "ManejarformularioApplication",
+            "request": "launch",
+            "mainClass": "com.example.manejarformulario.ManejarformularioApplication",
+            "projectName": "manejarformulario"
+        },
+        {
+            "type": "java",
+            "name": "ServidorewebApplication",
+            "request": "launch",
+            "mainClass": "com.example.servidoreweb.ServidorewebApplication",
+            "projectName": "servidoreweb"
+        },
+        {
+            "type": "java",
             "name": "ImcApplication",
             "request": "launch",
             "mainClass": "com.example.imc.ImcApplication",
