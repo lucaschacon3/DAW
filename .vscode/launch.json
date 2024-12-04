@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuizzApplication",
+            "request": "launch",
+            "mainClass": "com.example.quizz.QuizzApplication",
+            "projectName": "quizz"
+        },
+        {
+            "type": "java",
             "name": "ValidacionformularioApplication",
             "request": "launch",
             "mainClass": "com.example.validacionformulario.ValidacionformularioApplication",

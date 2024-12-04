@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario</title>
+    <link rel="stylesheet" th:href="@{css/style.css}" />
+</head>
+
+<body>
+    <form action="#" th:action="@{/}" th:object="${datosFormulario}" method="post">
+        <input type="text" id="nombre" name="nombre" th:field="*{nombre}" placeholder="Nombre">
+        <br>
+        <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
