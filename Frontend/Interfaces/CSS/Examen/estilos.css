@@ -1,0 +1,199 @@
+/*pantalla movil*/
+@media only screen and (max-width: 768px) {
+
+    #tituloVidaPerruna, #tituloPlanComidas, #tituloHumanos{
+        border: solid 2px black;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    #contenedorVidaPerruna{
+        border: solid 2px black;
+        width: 100%;
+        height: 820px;
+    }
+    #imgVidaPerruna{
+        padding: 0.2em;
+        margin: 0.3em;
+        border-radius: 5%;
+        background-image: url(yuuki.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 96%;
+        height: 450px;
+        float: left;
+        position: relative;
+    }
+    #textoYuuki{
+        z-index: 0;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    #textoVidaPerruna{
+        width: 100%;
+        flex-direction: row;
+        float: right;
+    }
+    
+    #contenedorPlannigComidas{
+        border: solid 2px black;
+        width: 100%;
+        height: 470px;
+        display: flex;
+    }
+    #tabla{
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    #contenedorHumanos{
+        border: solid 2px black;
+        width: 100%;
+        height: 1400px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+    }
+    
+    .imagenes{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 7%;
+        height: 30%;
+        height: 450px;
+        margin: 0.3em;
+    }
+    #img1{
+        background-image: url(viaje1.png);
+    }
+    
+    #img2{
+        background-image: url(viaje2.png);
+    
+    }
+    #img3{
+        background-image: url(viaje3.png);
+    
+    }
+    #img4{
+        background-image: url(viaje4.png);
+    
+    }
+    #img5{
+        background-image: url(viaje5.png);
+    
+    }
+    #img6{
+        background-image: url(viaje6.png);
+    
+    }
+
+}
+
+
+/*pantalla grande*/
+@media only screen and (min-width: 768px){
+    #tituloVidaPerruna, #tituloPlanComidas, #tituloHumanos{
+        border: solid 2px black;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    #contenedorVidaPerruna{
+        border: solid 2px black;
+        width: 100%;
+        height: 470px;
+    }
+    #imgVidaPerruna{
+        padding: 0.2em;
+        margin: 0.3em;
+        border-radius: 5%;
+        background-image: url(yuuki.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 46%;
+        height: 450px;
+        float: left;
+        position: relative;
+    }
+    #textoYuuki{
+        z-index: 0;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    #textoVidaPerruna{
+        width: 46%;
+        display: flex;
+        flex-direction: row;
+        float: right;
+    }
+    
+    #contenedorPlannigComidas{
+        border: solid 2px black;
+        width: 100%;
+        height: 470px;
+        display: flex;
+    }
+    #tabla{
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+        height: 400px;
+        width: 600px;
+    }
+    
+    #contenedorHumanos{
+        border: solid 2px black;
+        width: 100%;
+        height: 950px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
+    }
+    
+    .imagenes{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 7%;
+        height: 30%;
+        height: 450px;
+        margin: 0.3em;
+    }
+    #img1{
+        background-image: url(viaje1.png);
+    }
+    
+    #img2{
+        background-image: url(viaje2.png);
+    
+    }
+    #img3{
+        background-image: url(viaje3.png);
+    
+    }
+    #img4{
+        background-image: url(viaje4.png);
+    
+    }
+    #img5{
+        background-image: url(viaje5.png);
+    
+    }
+    #img6{
+        background-image: url(viaje6.png);
+    
+    }
+}
