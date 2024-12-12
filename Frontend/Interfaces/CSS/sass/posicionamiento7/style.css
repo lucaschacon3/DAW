@@ -1,0 +1,67 @@
+body {
+  margin: auto;
+  width: 1000px;
+  height: 600px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.classPerro {
+  position: relative; /* este contenedor para los hijos absolutos */
+  width: 400px;
+  height: 200px;
+  background-image: url(perro.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.classIcono {
+  width: 60px;
+  height: 60px;
+  float: right;
+  background-image: url(icono.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.classTexto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  z-index: 1;
+}
+
+h2, h3 {
+  color: white;
+}
+
+#caja1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#caja2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#caja3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#caja4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=style.css.map */

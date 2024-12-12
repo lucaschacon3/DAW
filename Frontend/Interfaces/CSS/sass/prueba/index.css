@@ -10,9 +10,8 @@ body {
   margin: auto;
   color: rgb(149, 91, 204);
   background-color: white;
-  font-size: 16px;
-  padding: 20px;
   font-size: 25px;
+  padding: 20px;
 }
 .encabezado p {
   color: black;
@@ -35,8 +34,9 @@ article h2 {
 .boton {
   font-size: 16px;
   margin: 20px;
-  border-radius: 10%;
+  border-radius: 40%;
   background-color: black;
+  transition: background-color 0.3s ease;
 }
 .boton:hover {
   background-color: #e74c3c;
