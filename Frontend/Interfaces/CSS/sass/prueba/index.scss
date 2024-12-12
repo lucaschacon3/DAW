@@ -1,0 +1,54 @@
+// Definición de variables
+$color-primario: white;
+$color-secundario: #e74c3c;
+$tamano-fuente: 16px;
+$espaciado: 20px;
+
+// Uso de variables
+body {
+    background-color: black;
+}
+
+.encabezado {
+    text-align: center;
+    height: 300px;
+    width: 400px;
+    border-radius: 10%;
+    margin: auto;
+    color: rgb(149, 91, 204);
+    background-color: $color-primario;
+    font-size: $tamano-fuente;
+    padding: $espaciado;
+    font-size: 25px;
+
+    p {
+        color: black;
+        font-size: 35px;
+    }
+}
+
+article {
+    background-color: $color-primario;
+    margin: auto;
+    text-align: center;
+    height: 150px;
+    width: 200px;
+    border-radius: 10%;
+
+    h2 {
+        font-size: 20px;
+        color: rgb(68, 66, 66);
+    }
+}
+
+.boton {
+
+    font-size: $tamano-fuente;
+    margin: $espaciado;
+    border-radius: 10%;
+    background-color: black;
+
+    &:hover {
+        background-color: $color-secundario;
+    }
+}
