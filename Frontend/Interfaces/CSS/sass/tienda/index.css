@@ -80,7 +80,7 @@ button {
   cursor: pointer;
   border-radius: 5px;
   background-color: white;
-  border: 2px solid #283655;
+  border: 2px solid #1e1f26;
 }
 button:hover {
   background: #1e1f26;
@@ -107,7 +107,18 @@ button:hover {
   grid-template-rows: 50% 50%;
 }
 #paginaProducto div {
-  border: solid 1px black;
+  border: 1px solid black;
+}
+#paginaProducto #carrusel {
+  grid-row: 1/3;
+  background-image: url(img/guantillas.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#paginaProducto #comprar {
+  align-content: center;
+  text-align: center;
 }
 
 .producto {
@@ -121,7 +132,7 @@ button:hover {
 
 .precio {
   background-color: green;
-  border: rgb(2, 26, 2) solid 2px;
+  border: 2px solid rgb(2, 26, 2);
   border-radius: 5px;
   color: white;
   width: 65px;
