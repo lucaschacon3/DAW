@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado del Quiz</title>
+    <link rel="stylesheet" th:href="@{css/index.css}">
+
+</head>
+<body>
+    <h1>Resultado</h1>
+    <h1>¡Gracias por participar, <span th:text="${name}"></span>!</h1>
+    <p>Tu puntaje es: <strong th:text="${score}"></strong> de 3.</p>
+
+    <p>
+        <span th:if="${score == 3}">¡Excelente! Sabes mucho de MMA.</span>
+        <span th:if="${score == 2}">¡Buen trabajo! Tienes buenos conocimientos sobre MMA.</span>
+        <span th:if="${score == 1}">¡Puedes mejorar! Sigue aprendiendo sobre MMA.</span>
+        <span th:if="${score == 0}">¡Ups! Parece que necesitas repasar más sobre MMA.</span>
+    </p>
+
+    <a href="/">Volver a intentarlo</a>
+</body>
+</html>

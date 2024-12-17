@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 1</title>
+    <link rel="stylesheet" th:href="@{css/index.css}">
+
+</head>
+<body>
+    <h1>Pregunta 1: ¿Quién es considerado el mejor luchador de MMA de todos los tiempos?</h1>
+    <form action="/pregunta2" method="post">
+        <input type="radio" id="q1a" name="q1" value="a" required> 
+        <label for="q1a">Conor McGregor</label><br>
+        
+        <input type="radio" id="q1b" name="q1" value="b"> 
+        <label for="q1b">Jon Jones</label><br>
+        
+        <input type="radio" id="q1c" name="q1" value="c"> 
+        <label for="q1c">Khabib Nurmagomedov</label><br>
+        
+        <button type="submit">Siguiente</button>
+    </form>
+</body>
+</html>

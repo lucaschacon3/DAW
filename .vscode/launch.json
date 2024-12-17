@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuizApplication",
+            "request": "launch",
+            "mainClass": "com.example.quiz.QuizApplication",
+            "projectName": "quiz"
+        },
+        {
+            "type": "java",
             "name": "QuizzApplication",
             "request": "launch",
             "mainClass": "com.example.quizz.QuizzApplication",
