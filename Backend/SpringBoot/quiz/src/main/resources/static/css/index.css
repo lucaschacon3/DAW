@@ -19,7 +19,8 @@ body {
 }
 
 /* Contenedor principal del formulario */
-.form-container {
+form {
+    margin: auto;
     background-color: #ffffff;
     border-radius: 8px;
     padding: 40px;

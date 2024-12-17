@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 7</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Pregunta 7: ¿Quié es "mighty mouse"?</h1>
+        <form action="/pregunta8" method="post">
+            <input type="radio" id="q7a" name="q7" value="a" required>
+            <label for="q7a">Demetrious Johnson</label><br>
+            <input type="radio" id="q7b" name="q7" value="b">
+            <label for="q7b">Georges St-Pierre</label><br>
+            <input type="radio" id="q7c" name="q7" value="c">
+            <label for="q7c">Michael Bisping</label><br>
+            <button type="submit">Siguiente</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Resultado del Quiz</title>
-    <link rel="stylesheet" th:href="@{css/index.css}">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resultado</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Resultado del Quiz</h1>
+      <p th:text="'¡Felicidades ' + ${nombre} + '!'"></p>
+      <p th:text="'Tu puntuación es: ' + ${score} + ' / 8'"></p>
+      <h2 th:text="${categoria}"></h2>
 
-</head>
-<body>
-    <h1>Resultado</h1>
-    <h1>¡Gracias por participar, <span th:text="${name}"></span>!</h1>
-    <p>Tu puntaje es: <strong th:text="${score}"></strong> de 3.</p>
+      <div>
+        <!-- Jon Jones (Mejor puntuación) -->
+        <img
+          th:if="${score == 8}"
+          th:src="@{/img/jon_jones.png}"
+          alt="Jon Jones"
+          width="300"
+        />
 
-    <p>
-        <span th:if="${score == 3}">¡Excelente! Sabes mucho de MMA.</span>
-        <span th:if="${score == 2}">¡Buen trabajo! Tienes buenos conocimientos sobre MMA.</span>
-        <span th:if="${score == 1}">¡Puedes mejorar! Sigue aprendiendo sobre MMA.</span>
-        <span th:if="${score == 0}">¡Ups! Parece que necesitas repasar más sobre MMA.</span>
-    </p>
+        <!-- Khabib (Puntuación alta) -->
+        <img
+          th:if="${score >= 6 and score < 8}"
+          th:src="@{/img/khabib.jpg}"
+          alt="Khabib Nurmagomedov"
+          width="300"
+        />
 
-    <a href="/">Volver a intentarlo</a>
-</body>
+        <!-- Georges St-Pierre (Puntuación media-alta) -->
+        <img
+          th:if="${score >= 4 and score < 6}"
+          th:src="@{/img/st-pierre.png}"
+          alt="Georges St-Pierre"
+          width="300"
+        />
+
+        <!-- Nate Diaz (Puntuación media) -->
+        <img
+          th:if="${score >= 2 and score < 4}"
+          th:src="@{/img/nate.png}"
+          alt="Nate Diaz"
+          width="300"
+        />
+
+        <!-- CM Punk (Puntuación baja) -->
+        <img
+          th:if="${score >= 1 and score < 2}"
+          th:src="@{/img/cm.jpg}"
+          alt="CM Punk"
+          width="300"
+        />
+
+        <!-- Luchador Amateur (Puntuación muy baja) -->
+        <img
+          th:if="${score == 0}"
+          th:src="@{/img/leo.jpg}"
+          alt="Luchador Amateur"
+          width="300"
+        />
+      </div>
+
+      <a href="/">Volver a empezar</a>
+    </div>
+  </body>
 </html>
