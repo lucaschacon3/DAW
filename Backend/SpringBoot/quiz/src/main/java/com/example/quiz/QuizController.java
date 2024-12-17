@@ -1,5 +1,8 @@
 package com.example.quiz;
 
+import java.io.*;
+import java.util.*;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpSession;
-
 
 @Controller
 public class QuizController {
@@ -71,27 +73,14 @@ public class QuizController {
         session.setAttribute("q8", q8);
 
         // Obtener las respuestas de las sesiones
-        String q1 = (String) session.getAttribute("q1");
-        String q2 = (String) session.getAttribute("q2");
-        String q3 = (String) session.getAttribute("q3");
-        String q4 = (String) session.getAttribute("q4");
-        String q5 = (String) session.getAttribute("q5");
-        String q6 = (String) session.getAttribute("q6");
-        String q7 = (String) session.getAttribute("q7");
-        String q8Saved = (String) session.getAttribute("q8");
-
         String nombre = (String) session.getAttribute("nombre");
+        List<String> respuestas = getRespuestasFromSession(session);
 
         // Evaluar las respuestas
-        int score = 0;
-        if ("b".equals(q1)) score++;
-        if ("b".equals(q2)) score++;
-        if ("c".equals(q3)) score++;
-        if ("a".equals(q4)) score++;
-        if ("b".equals(q5)) score++;
-        if ("c".equals(q6)) score++;
-        if ("a".equals(q7)) score++;
-        if ("b".equals(q8Saved)) score++;
+        int score = calculateScore(respuestas);
+
+        // Guardar el nombre y la puntuación en el archivo
+        saveScoreToFile(nombre, score);
 
         // Obtener la categoría usando el enum
         CategoriaLuchador categoria = CategoriaLuchador.getCategoria(score);
@@ -99,6 +88,87 @@ public class QuizController {
         model.addAttribute("nombre", nombre);
         model.addAttribute("score", score);
         model.addAttribute("categoria", categoria.getMensaje());
+        model.addAttribute("leaderboard", getLeaderboard()); // Mostrar el leaderboard
         return "result";
+    }
+
+    // Método para obtener las respuestas de las sesiones
+    private List<String> getRespuestasFromSession(HttpSession session) {
+        List<String> respuestas = new ArrayList<>();
+        respuestas.add((String) session.getAttribute("q1"));
+        respuestas.add((String) session.getAttribute("q2"));
+        respuestas.add((String) session.getAttribute("q3"));
+        respuestas.add((String) session.getAttribute("q4"));
+        respuestas.add((String) session.getAttribute("q5"));
+        respuestas.add((String) session.getAttribute("q6"));
+        respuestas.add((String) session.getAttribute("q7"));
+        respuestas.add((String) session.getAttribute("q8"));
+        return respuestas;
+    }
+
+    // Método para calcular la puntuación
+    private int calculateScore(List<String> respuestas) {
+        String[] correctAnswers = {"b", "b", "c", "a", "b", "c", "a", "b"};
+        int score = 0;
+        for (int i = 0; i < respuestas.size(); i++) {
+            if (correctAnswers[i].equals(respuestas.get(i))) {
+                score++;
+            }
+        }
+        return score;
+    }
+
+    // Método para guardar los resultados en un archivo
+    private void saveScoreToFile(String nombre, int score) {
+        // Usar la ruta relativa basada en el directorio raíz del proyecto
+        String filePath = "Backend/SpringBoot/quiz/src/main/resources/static/data/scores.txt"; // Esta es una ruta relativa desde el directorio raíz del proyecto
+        File file = new File(filePath);
+
+        // Crear el directorio si no existe
+        file.getParentFile().mkdirs();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            writer.write(nombre + ": " + score);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Método para leer los resultados y mostrarlos en el tablón
+    private List<String> getLeaderboard() {
+        List<String> leaderboard = new ArrayList<>();
+        String filePath = "Backend/SpringBoot/quiz/src/main/resources/static/data/scores.txt"; // Ruta relativa desde el directorio raíz del proyecto
+        File file = new File(filePath);
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+
+            // Leemos el archivo línea por línea
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(":");
+                if (parts.length == 2) {
+                    String name = parts[0].trim();
+                    String scoreStr = parts[1].trim();
+                    try {
+                        int score = Integer.parseInt(scoreStr);
+                        leaderboard.add(name + ": " + score);
+                    } catch (NumberFormatException e) {
+                        System.err.println("Error al convertir la puntuación de " + name);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Ordenar el leaderboard por puntuación de mayor a menor
+        leaderboard.sort((entry1, entry2) -> {
+            int score1 = Integer.parseInt(entry1.split(":")[1].trim());
+            int score2 = Integer.parseInt(entry2.split(":")[1].trim());
+            return Integer.compare(score2, score1);
+        });
+
+        return leaderboard;
     }
 }
