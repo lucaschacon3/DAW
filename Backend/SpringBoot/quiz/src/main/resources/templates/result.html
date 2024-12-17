@@ -21,11 +21,15 @@
         <img th:if="${score == 1}" th:src="@{/img/cm.jpg}" alt="CM Punk" width="300" />
         <img th:if="${score == 0}" th:src="@{/img/leo.jpg}" alt="Amateur" width="300" />
       </div>
+      <hr>
+      <br>
+      <a href="/">Volver al inicio</a>
 
       <h3>Tablón de Puntuaciones</h3>
       <ul>
         <li th:each="score : ${leaderboard}" th:text="${score}"></li>
       </ul>
     </div>
+    
   </body>
 </html>

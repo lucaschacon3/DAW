@@ -1,2 +1,2 @@
-lucas: 4
-lucas: 4
+Lucas Chacon: 2
+pepe: 8
