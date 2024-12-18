@@ -1,3 +1,8 @@
 Lucas Chacon: 2
 pepe: 8
 Lucas Chacon: 4
+lorena: 5
+Hicham: 4
+JP: 5
+lucas: 6
+Sergio: 7
