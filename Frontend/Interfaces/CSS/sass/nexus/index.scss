@@ -1,0 +1,104 @@
+body{
+    background-color: rgb(22, 19, 19);
+}
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+#lateral{
+    height: 1000px;
+    width: 34%;
+    background-color: rgb(49, 49, 49);
+    float: left;
+    border-radius: 5px;
+    text-align: center;
+
+    #cajaLogo{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #logo{
+            background-image: url(logo.png);
+            height: 100px;
+            width: 100px;
+            background-repeat: no-repeat;  /* No repetir la imagen */
+            background-size: cover;       /* La imagen cubre toda el área de la caja */
+            background-position: center;  /* Centra la imagen en la caja */
+        }
+        h4{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+    
+    }  
+    #cajaUsuario{
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        #imagenUsuario{
+            margin: auto;
+            border: solid 3px rgb(117, 247, 247);;
+            border-radius: 50px;
+            background-image: url(perfil.png);
+            height: 100px;
+            width: 100px;
+            background-repeat: no-repeat;  /* No repetir la imagen */
+            background-size: cover;       /* La imagen cubre toda el área de la caja */
+            background-position: center;  /* Centra la imagen en la caja */
+        }
+        #infoUsuario{
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+            #publicaciones, #seguidores, #seguidos{
+                color: white;
+                width: 33%;
+            }
+        }
+    }
+
+    #cajaAccesos{
+        button{
+            height: 40px;
+            width: 80%;
+            border-radius: 15px;
+            background-color: rgb(117, 247, 247);
+        }
+    }
+
+}
+
+
+#principal{
+    height: 1000px;
+    width: 64%;
+    background-color: rgb(49, 49, 49);
+    float: right;
+    border-radius: 5px;
+    
+    header{
+        border: solid white 2px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        input{
+            height: 30px;
+            width: 60%;
+            border-radius: 15px;
+            background-color: rgb(22, 19, 19);
+            padding: 0.2em;
+        }
+        button{
+            height: 40px;
+            width: 30%;
+            border-radius: 15px;
+            background-color: rgb(117, 247, 247);
+        }
+    }
+}
+
+
