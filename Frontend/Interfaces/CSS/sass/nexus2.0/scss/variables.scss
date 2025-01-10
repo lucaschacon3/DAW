@@ -1,0 +1,22 @@
+// Listas de colores
+$modo-claro: (
+  fondo: #f5f5f5,
+  texto: #333333,
+  fondo-acento: #e0e0e0,
+  acento: #00bcd4
+);
+
+$modo-oscuro: (
+  fondo: #121212,
+  texto: #ffffff,
+  fondo-acento: #1f1f1f,
+  acento: #76ffff
+);
+
+// Variables globales
+$modo-claro-fondo: map-get($modo-claro, fondo);
+$modo-claro-texto: map-get($modo-claro, texto);
+$modo-oscuro-fondo: map-get($modo-oscuro, fondo);
+$modo-oscuro-texto: map-get($modo-oscuro, texto);
+
+$fuente-principal: 'Arial, sans-serif';

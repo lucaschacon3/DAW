@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="scss/estilos.css">
 </head>
 <body>
     <div id="lateral">
@@ -92,6 +92,15 @@
         </div>
          
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const toggleTheme = () => {
+            document.documentElement.classList.toggle('modo-claro');
+          };
+          document.body.addEventListener('click', toggleTheme);
+        });
+      </script>
+      
     
 </body>
 </html>

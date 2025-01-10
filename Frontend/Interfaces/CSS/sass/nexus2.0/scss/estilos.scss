@@ -1,0 +1,17 @@
+@use 'variables';
+@use 'mixins';
+@use 'lateral';
+@use 'principal';
+@use 'footer';
+
+body {
+  background-color: variables.$modo-oscuro-fondo;
+  color: variables.$modo-oscuro-texto;
+  margin: 0;
+  font-family: variables.$fuente-principal;
+}
+
+html.modo-claro {
+  background-color: variables.$modo-claro-fondo;
+  color: variables.$modo-claro-texto;
+}

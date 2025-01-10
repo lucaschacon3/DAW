@@ -1,0 +1,63 @@
+#lateral {
+    height: 1150px;
+    width: 34%;
+    background-color: variables.$modo-oscuro-fondo;
+    float: left;
+    border-radius: 5px;
+    text-align: center;
+  
+    #cajaLogo {
+      height: 200px;
+      @include mixins.centrar;
+  
+      #logo {
+        background-image: url(../img/logo.png);
+        height: 100px;
+        width: 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+  
+      h4 {
+        color: variables.$modo-oscuro-texto;
+      }
+    }
+  
+    #cajaUsuario {
+      height: 300px;
+      color: variables.$modo-oscuro-texto;
+  
+      #imagenUsuario {
+        margin: auto;
+        border: solid 3px map-get($modo-oscuro, acento);
+        border-radius: 50px;
+        background-image: url(../img/perfil.png);
+        height: 100px;
+        width: 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+  
+      #infoUsuario {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+  
+        #publicaciones,
+        #seguidores,
+        #seguidos {
+          color: variables.$modo-oscuro-texto;
+          width: 33%;
+        }
+      }
+    }
+  
+    #cajaAccesos {
+      button {
+        @include mixins.boton(map-get($modo-oscuro, acento), variables.$modo-oscuro-texto);
+      }
+    }
+  }
+  
