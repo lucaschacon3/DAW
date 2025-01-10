@@ -15,7 +15,6 @@ class ServicioAficiones {
   }
 
   update(id, data) {
-    console.log(id,data)
     return http.put(`/aficiones/${id}`, data);
   }
 
