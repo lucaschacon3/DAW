@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Cuestionario MMA</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+</head>
+<body>
+    <h1>Bienvenido al Cuestionario de MMA</h1>
+    <form action="/pregunta1" method="post">
+        <label for="nombre">¿Cuál es tu nombre?</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Comenzar</button>
+    </form>
+</body>
+</html>

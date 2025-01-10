@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuizBbddApplication",
+            "request": "launch",
+            "mainClass": "com.example.quiz_bbdd.QuizBbddApplication",
+            "projectName": "quiz_bbdd"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMysqlApplication",
+            "request": "launch",
+            "mainClass": "com.example.ejemplo_mysql.EjemploMysqlApplication",
+            "projectName": "ejemplo_mysql"
+        },
+        {
+            "type": "java",
             "name": "AccessingdatajpaApplication",
             "request": "launch",
             "mainClass": "com.example.accessingdatajpa.AccessingdatajpaApplication",

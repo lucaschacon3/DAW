@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 2</title>
+    <link rel="stylesheet" th:href="@{css/index.css}">
+
+</head>
+<body>
+    <h1>Pregunta 2: ¿Qué organización es la más importante en MMA?</h1>
+    <form action="/pregunta3" method="post">
+        <input type="radio" id="q2a" name="q2" value="a" required> <label for="q2a">Bellator</label><br>
+        <input type="radio" id="q2b" name="q2" value="b"> <label for="q2b">UFC</label><br>
+        <input type="radio" id="q2c" name="q2" value="c"> <label for="q2c">ONE Championship</label><br>
+        <button type="submit">Siguiente</button>
+    </form>
+</body>
+</html>
