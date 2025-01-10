@@ -9,6 +9,11 @@
       "id": "4d16",
       "nombre": "beisbol",
       "descripcion": "Sacando la bola de pista, si se puede"
+    },
+    {
+      "id": "7b74",
+      "nombre": "lucas",
+      "descripcion": "el rey del front"
     }
   ]
 }
