@@ -4,14 +4,15 @@
 @use 'principal';
 @use 'footer';
 
+@import 'variables';
 body {
-  background-color: variables.$modo-oscuro-fondo;
-  color: variables.$modo-oscuro-texto;
+  background-color: lighten($modo-oscuro-fondo, 10%);
+  color: $modo-oscuro-texto;
   margin: 0;
-  font-family: variables.$fuente-principal;
+  font-family: $fuente-principal;
 }
 
 html.modo-claro {
-  background-color: variables.$modo-claro-fondo;
-  color: variables.$modo-claro-texto;
+  background-color: $modo-claro-fondo;
+  color: $modo-claro-texto;
 }

@@ -1,14 +1,22 @@
+@import 'variables';
+@import 'mixins';
 #lateral {
     height: 1150px;
     width: 34%;
-    background-color: variables.$modo-oscuro-fondo;
+    background-color: $modo-oscuro-fondo;
     float: left;
     border-radius: 5px;
     text-align: center;
   
     #cajaLogo {
       height: 200px;
-      @include mixins.centrar;
+      @include centrar;
+      #claro-oscuro{
+        background-color: #76ffff;
+        border-radius: 5px;
+        height: 30px;
+        width: 100px;
+      }
   
       #logo {
         background-image: url(../img/logo.png);
@@ -20,13 +28,13 @@
       }
   
       h4 {
-        color: variables.$modo-oscuro-texto;
+        color: $modo-oscuro-texto;
       }
     }
   
     #cajaUsuario {
       height: 300px;
-      color: variables.$modo-oscuro-texto;
+      color: $modo-oscuro-texto;
   
       #imagenUsuario {
         margin: auto;
@@ -48,7 +56,7 @@
         #publicaciones,
         #seguidores,
         #seguidos {
-          color: variables.$modo-oscuro-texto;
+          color: $modo-oscuro-texto;
           width: 33%;
         }
       }
@@ -56,7 +64,7 @@
   
     #cajaAccesos {
       button {
-        @include mixins.boton(map-get($modo-oscuro, acento), variables.$modo-oscuro-texto);
+        @include boton(map-get($modo-claro, acento), $modo-claro-texto);
       }
     }
   }

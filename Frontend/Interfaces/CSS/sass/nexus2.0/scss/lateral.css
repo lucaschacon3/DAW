@@ -1,0 +1,69 @@
+#lateral {
+  height: 1150px;
+  width: 34%;
+  background-color: #121212;
+  float: left;
+  border-radius: 5px;
+  text-align: center;
+}
+#lateral #cajaLogo {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lateral #cajaLogo #claro-oscuro {
+  background-color: #76ffff;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+}
+#lateral #cajaLogo #logo {
+  background-image: url(../img/logo.png);
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#lateral #cajaLogo h4 {
+  color: #ffffff;
+}
+#lateral #cajaUsuario {
+  height: 300px;
+  color: #ffffff;
+}
+#lateral #cajaUsuario #imagenUsuario {
+  margin: auto;
+  border: solid 3px #76ffff;
+  border-radius: 50px;
+  background-image: url(../img/perfil.png);
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#lateral #cajaUsuario #infoUsuario {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+}
+#lateral #cajaUsuario #infoUsuario #publicaciones,
+#lateral #cajaUsuario #infoUsuario #seguidores,
+#lateral #cajaUsuario #infoUsuario #seguidos {
+  color: #ffffff;
+  width: 33%;
+}
+#lateral #cajaAccesos button {
+  background-color: #76ffff;
+  color: #333333;
+  border-radius: 15px;
+  height: 50px;
+  width: 60%;
+  border: none;
+  cursor: pointer;
+}
+#lateral #cajaAccesos button:hover {
+  background-color: #43ffff;
+}/*# sourceMappingURL=lateral.css.map */

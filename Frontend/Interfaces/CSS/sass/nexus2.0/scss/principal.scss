@@ -1,57 +1,62 @@
+@import 'variables';
+@import 'mixins';
+
 #principal {
-    height: 1150px;
-    width: 64%;
-    background-color: variables.$modo-oscuro-fondo;
-    float: right;
-    border-radius: 5px;
-  
-    header {
-      height: 150px;
-      @include mixins.centrar;
-  
-      input {
-        height: 30px;
-        width: 60%;
-        border-radius: 15px;
-        background-color: variables.$modo-oscuro-fondo;
-        padding: 0.2em;
-        color: variables.$modo-oscuro-texto;
-        border: none;
-      }
-  
-      button {
-        @include mixins.boton(map-get($modo-oscuro, acento), variables.$modo-oscuro-texto);
-      }
+  height: 1150px;
+  width: 64%;
+  background-color: $modo-oscuro-fondo;
+  float: right;
+  border-radius: 5px;
+
+  header {
+    height: 150px;
+    width: 90%;
+    margin: auto;
+    @include centrar;
+
+    input {
+      height: 40px;
+      width: 70%;
+      border-radius: 15px;
+      background-color: lighten($modo-oscuro-fondo, 10%);
+      padding: 0.2em;
+      color: $modo-oscuro-texto;
+      border: none;
     }
-  
-    #publicaciones {
-      display: grid;
-      grid-template-rows: 33% 33% 33%;
-      grid-template-columns: 33% 33% 33%;
-      gap: 10px;
-  
-      .publicacion {
-        margin: auto;
-        width: 90%;
-        height: 300px;
-        border-radius: 5px;
-        text-align: center;
-        background-color: lighten(variables.$modo-oscuro-fondo, 10%);
-      }
-  
-      // Generar publicaciones con @for
-      @for $i from 1 through 9 {
-        #imagen#{$i} {
-          background-image: url(img/#{$i}.jpeg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          border-radius: 5px;
-          width: 90%;
-          height: 250px;
-          margin: auto;
-        }
-      }
+
+    button {
+      @include boton(map-get($modo-oscuro, acento), $modo-claro-texto);
     }
   }
-  
+
+  #publicaciones {
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+    gap: 10px;
+
+    .publicacion {
+      margin: auto;
+      width: 90%;
+      height: 300px;
+      border-radius: 5px;
+      text-align: center;
+      background-color: lighten($modo-oscuro-fondo, 10%);
+    }
+
+    // Generar publicaciones con @for
+    @for $i from 1 through 9 {
+      #imagen#{$i} {
+        background-image: url('../img/#{$i}.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        width: 90%;
+        height: 250px;
+        margin: auto;
+      }
+    }
+
+  }
+}

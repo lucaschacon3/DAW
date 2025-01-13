@@ -9,6 +9,7 @@
 <body>
     <div id="lateral">
         <div id="cajaLogo">
+            <button id="claro-oscuro">Claro/oscuro</button>
             <div id="logo"></div>
             <h4>Nexus</h4>
         </div>
@@ -24,8 +25,8 @@
             </div>
         </div>
         <div id="cajaAccesos">
-            <button>🏠​ Inicio</button>
-            <button>📤​ Mensajes directos</button>
+            <button>🏠​ Inicio</button><br><br>
+            <button>📤​ Mensajes directos</button><br><br>
             <button>🔎​ Explora</button>
             <br><br><br><br><br>
             <hr>
@@ -97,7 +98,8 @@
           const toggleTheme = () => {
             document.documentElement.classList.toggle('modo-claro');
           };
-          document.body.addEventListener('click', toggleTheme);
+          let boton= document.getElementById("claro-oscuro")
+          boton.addEventListener('click', toggleTheme);
         });
       </script>
       
