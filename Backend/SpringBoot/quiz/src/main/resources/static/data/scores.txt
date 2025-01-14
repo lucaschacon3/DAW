@@ -6,3 +6,4 @@ lucas: 6
 Sergio: 7
 natalia: 7
 leo: 0
+Pedro: 2

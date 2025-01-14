@@ -90,6 +90,8 @@ public class QuizController {
         model.addAttribute("score", score);
         model.addAttribute("categoria", categoria.getMensaje());
 
+        userRepository.save(new User(nombre,score));
+
         model.addAttribute("users", userRepository.findAll());
         return "result";
     }
