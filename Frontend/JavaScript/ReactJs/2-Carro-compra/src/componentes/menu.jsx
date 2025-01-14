@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../estilos/menu.css";
+import { Link } from 'react-router-dom';
 
 // Componente MenuSuperior
 const MenuSuperior = ({ total, productos }) => {
@@ -17,7 +18,8 @@ const MenuSuperior = ({ total, productos }) => {
         alt="Supermercado"
         className="icono-supermercado"
       />
-
+      <Link to={"/"}>Detalles</Link>
+      <Link to={"/detalles"}>Detalles</Link>
       {/* Texto a la derecha */}
       <span className="carrito-texto">{productos.length} : {total}Є</span>
 
