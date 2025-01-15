@@ -17,6 +17,7 @@ public class QuizController {
     @Autowired
     private UserRepository userRepository;
 
+
     // Página de inicio, donde se solicita el nombre
     @GetMapping("/")
     public String showStartPage() {
