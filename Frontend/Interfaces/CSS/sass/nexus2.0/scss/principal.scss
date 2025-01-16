@@ -20,12 +20,12 @@
       border-radius: 15px;
       background-color: lighten($modo-oscuro-fondo, 10%);
       padding: 0.2em;
-      color: $modo-oscuro-texto;
+      color: $modo-oscuro-texto-blanco;
       border: none;
     }
 
     button {
-      @include boton(map-get($modo-oscuro, acento), $modo-claro-texto);
+      @include boton(map-get($modo-oscuro, acento), $modo-claro-texto-negro);
     }
   }
 

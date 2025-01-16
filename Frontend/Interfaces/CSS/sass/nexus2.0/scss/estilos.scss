@@ -7,12 +7,14 @@
 @import 'variables';
 body {
   background-color: lighten($modo-oscuro-fondo, 10%);
-  color: $modo-oscuro-texto;
+  color: $modo-oscuro-texto-blanco;
   margin: 0;
   font-family: $fuente-principal;
 }
 
 html.modo-claro {
   background-color: $modo-claro-fondo;
-  color: $modo-claro-texto;
+  color: $modo-claro-texto-negro;
+  margin: 0;
+  font-family: $fuente-principal;
 }

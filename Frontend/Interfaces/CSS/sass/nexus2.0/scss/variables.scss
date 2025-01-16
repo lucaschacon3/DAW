@@ -1,23 +1,33 @@
 // Listas de colores
 $modo-claro: (
-  fondo: #e0c0c0,
-  texto: #333333,
-  fondo-acento: #e0e0e0,
+  fondo: #ffffff,
+  fondo-secundario: #c2bbbb,
+  texto-negro: #000000,
+  texto-blanco: #ffffff,
   acento: #76ffff
 );
 
 $modo-oscuro: (
-  fondo: #121212,
-  texto: #ffffff,
-  fondo-acento: #1f1f1f,
+  fondo: #000000,
+  fondo-secundario: #646060,
+  texto-negro: #000000,
+  texto-blanco: #ffffff,
   acento: #76ffff
 );
 
-// Variables globales
+// Modo claro
 $modo-claro-fondo: map-get($modo-claro, fondo);
-$modo-claro-texto: map-get($modo-claro, texto);
-$modo-oscuro-fondo: map-get($modo-oscuro, fondo);
-$modo-oscuro-texto: map-get($modo-oscuro, texto);
-$modo-oscuro-acento: map-get($modo-oscuro, fondo-acento);
+$modo-claro-fondo-secundario: map-get($modo-claro, fondo-secundario);
+$modo-claro-texto-negro: map-get($modo-claro, texto-negro);
+$modo-claro-texto-blanco: map-get($modo-claro, texto-blanco);
+$modo-claro-acento: map-get($modo-claro, acento);
 
-$fuente-principal: 'system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifs';
+// Modo oscuro
+$modo-oscuro-fondo: map-get($modo-oscuro, fondo);
+$modo-oscuro-fondo-secundario: map-get($modo-oscuro, fondo-secundario);
+$modo-oscuro-texto-negro: map-get($modo-oscuro, texto-negro);
+$modo-oscuro-texto-blanco: map-get($modo-oscuro, texto-blanco);
+$modo-oscuro-acento: map-get($modo-oscuro, acento);
+
+
+$fuente-principal: 'system-ui, -apple-system, BlinkMacSystemFont, ' Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, ' Open Sans', ' Helvetica Neue', sans-serifs';

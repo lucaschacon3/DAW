@@ -28,13 +28,13 @@
       }
   
       h4 {
-        color: $modo-oscuro-texto;
+        color: $modo-oscuro-texto-blanco;
       }
     }
   
     #cajaUsuario {
       height: 300px;
-      color: $modo-oscuro-texto;
+      color: $modo-oscuro-texto-blanco;
   
       #imagenUsuario {
         margin: auto;
@@ -56,7 +56,7 @@
         #publicaciones,
         #seguidores,
         #seguidos {
-          color: $modo-oscuro-texto;
+          color: $modo-oscuro-texto-blanco;
           width: 33%;
         }
       }
@@ -64,7 +64,7 @@
   
     #cajaAccesos {
       button {
-        @include boton(map-get($modo-claro, acento), $modo-claro-texto);
+        @include boton(map-get($modo-claro, acento), $modo-claro-texto-negro);
       }
     }
   }

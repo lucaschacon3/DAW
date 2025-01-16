@@ -1,7 +1,7 @@
 #lateral {
   height: 1150px;
   width: 34%;
-  background-color: #121212;
+  background-color: #000000;
   float: left;
   border-radius: 5px;
   text-align: center;
@@ -57,7 +57,7 @@
 }
 #lateral #cajaAccesos button {
   background-color: #76ffff;
-  color: #333333;
+  color: #000000;
   border-radius: 15px;
   height: 50px;
   width: 60%;
@@ -71,7 +71,7 @@
 #principal {
   height: 1150px;
   width: 64%;
-  background-color: #121212;
+  background-color: #000000;
   float: right;
   border-radius: 5px;
 }
@@ -87,14 +87,14 @@
   height: 40px;
   width: 70%;
   border-radius: 15px;
-  background-color: #2c2c2c;
+  background-color: #1a1a1a;
   padding: 0.2em;
   color: #ffffff;
   border: none;
 }
 #principal header button {
   background-color: #76ffff;
-  color: #333333;
+  color: #000000;
   border-radius: 15px;
   height: 50px;
   width: 60%;
@@ -116,7 +116,7 @@
   height: 300px;
   border-radius: 5px;
   text-align: center;
-  background-color: #2c2c2c;
+  background-color: #1a1a1a;
 }
 #principal #publicaciones #imagen1 {
   background-image: url("../img/1.jpeg");
@@ -218,7 +218,6 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   text-align: center;
-  color: #ffffff;
 }
 #footer #logoF {
   grid-row: 1/2;
@@ -241,17 +240,19 @@
 }
 #footer #copyright hr {
   border: none;
-  border-top: 1px solid #454545;
+  border-top: 1px solid #333333;
 }
 
 body {
-  background-color: #2c2c2c;
+  background-color: #1a1a1a;
   color: #ffffff;
   margin: 0;
   font-family: "system-ui, -apple-system, BlinkMacSystemFont, " Segoe UI ", Roboto, Oxygen, Ubuntu, Cantarell, " Open Sans ", " Helvetica Neue ", sans-serifs";
 }
 
 html.modo-claro {
-  background-color: #e0c0c0;
-  color: #333333;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  font-family: "system-ui, -apple-system, BlinkMacSystemFont, " Segoe UI ", Roboto, Oxygen, Ubuntu, Cantarell, " Open Sans ", " Helvetica Neue ", sans-serifs";
 }/*# sourceMappingURL=estilos.css.map */

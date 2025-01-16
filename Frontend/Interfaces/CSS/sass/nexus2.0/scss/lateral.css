@@ -1,7 +1,7 @@
 #lateral {
   height: 1150px;
   width: 34%;
-  background-color: #121212;
+  background-color: #000000;
   float: left;
   border-radius: 5px;
   text-align: center;
@@ -57,7 +57,7 @@
 }
 #lateral #cajaAccesos button {
   background-color: #76ffff;
-  color: #333333;
+  color: #000000;
   border-radius: 15px;
   height: 50px;
   width: 60%;
