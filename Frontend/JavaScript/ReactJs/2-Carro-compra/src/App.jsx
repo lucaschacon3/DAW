@@ -3,6 +3,7 @@ import MenuSuperior from "./componentes/menu";
 import ListaImagenes from "./componentes/cuerpo";
 import Pagina404 from "./componentes/Pagina404";
 import Detalles from "./componentes/detalles";
+import DetallesProducto from "./componentes/detallesProducto";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const [productos, setProductos] = useState([]); // Lista de productos del carrrito
 
   // Datos de imágenes
-  const imageUrls = [
+  const informacion = [
     { url: "./imagenes/manzana.jpg", nombre: "Manzana", precio: 5 },
     { url: "./imagenes/pera.jpg", nombre: "Pera", precio: 7 },
     { url: "./imagenes/platano.jpg", nombre: "Platano", precio: 4 },
@@ -37,7 +38,8 @@ function App() {
                 />
               }
             ></Route>
-            <Route path="/detalles" element={<Detalles imageUrls={imageUrls} />}></Route>
+            <Route path="/detalles" element={<Detalles productos={productos} informacion={informacion} />}></Route>
+            <Route path="/detalle-producto/:nombre" element={<DetallesProducto productos={productos} informacion={informacion}/>}></Route>
           </Routes>
         </main>
       </div>

@@ -1,0 +1,16 @@
+
+body{
+    background-color: rgb(185, 190, 194);
+    text-align: center;
+}
+li{
+    background-color: white;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+
+}

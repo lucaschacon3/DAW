@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import "../estilos/detalles.css";
 
 // Componente MenuSuperior
-const Detalles = ({ productos, informacion }) => {
+const DetallesProducto = ({ productos, informacion }) => {
 
   function buscarProductos(nombre) {
     return informacion.find(producto => producto.nombre===nombre)
@@ -14,8 +13,7 @@ const Detalles = ({ productos, informacion }) => {
         {
           productos.map((producto,indice) =>{
             let productoInformacion=buscarProductos(producto)
-            return <Link to={`/detalle-producto/:nombre ${producto}`}><li key={indice}>{productoInformacion.nombre} - {`${productoInformacion.precio} $`} <img src={productoInformacion.url} alt="" width="70px" /></li></Link>
-            
+            return <li key={indice}>{productoInformacion.nombre} - {`${productoInformacion.precio} $`} <img src={productoInformacion.url} alt="" width="70px" /></li>
           })
         }
       </ul>
@@ -23,4 +21,4 @@ const Detalles = ({ productos, informacion }) => {
   );
 };
 
-export default Detalles;
+export default DetallesProducto;
