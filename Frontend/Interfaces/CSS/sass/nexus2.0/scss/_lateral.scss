@@ -11,11 +11,18 @@
     #cajaLogo {
       height: 200px;
       @include centrar;
-      #claro-oscuro{
+      #toggle-modo{
         background-color: #76ffff;
         border-radius: 5px;
-        height: 30px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+
+        #icono-modo{
+          height: 20px;
+          width: 20px;
+          margin: auto;
+        }
       }
   
       #logo {

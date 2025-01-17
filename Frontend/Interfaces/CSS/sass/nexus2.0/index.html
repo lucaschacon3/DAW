@@ -1,108 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexus</title>
-    <link rel="stylesheet" href="scss/estilos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="scss/estilos.css" />
+  </head>
+  <body>
     <div id="lateral">
-        <div id="cajaLogo">
-            <button id="claro-oscuro">Claro/oscuro</button>
-            <div id="logo"></div>
-            <h4>Nexus</h4>
+      <div id="cajaLogo">
+        <div id="toggle-modo">
+            <img id="icono-modo" src="img/luna.png" alt="Modo Oscuro" />
+          </div>
+        <div id="logo"></div>
+        <h4>Nexus</h4>
+      </div>
+      <div id="cajaUsuario">
+        <div id="imagenUsuario"></div>
+        <h4>Conor McGregor</h4>
+        <h5>@conor_official</h5>
+        <br /><br />
+        <div id="infoUsuario">
+          <div id="publicaciones">
+            Publicaciones <br />
+            100
+          </div>
+          <div id="seguidores">
+            Seguidores <br />
+            1.2M
+          </div>
+          <div id="seguidos">Seguidos <br />104</div>
         </div>
-        <div id="cajaUsuario">
-            <div id="imagenUsuario"></div>
-            <h4>Conor McGregor</h4>
-            <h5>@conor_official</h5>
-            <br><br>
-            <div id="infoUsuario">
-                <div id="publicaciones">Publicaciones <br> 100</div>
-                <div id="seguidores">Seguidores <br> 1.2M</div>
-                <div id="seguidos">Seguidos <br>104 </div>
-            </div>
-        </div>
-        <div id="cajaAccesos">
-            <button>🏠​ Inicio</button><br><br>
-            <button>📤​ Mensajes directos</button><br><br>
-            <button>🔎​ Explora</button>
-            <br><br><br><br><br>
-            <hr>
-            <button>💨 Salir</button>
-
-        </div>
-
+      </div>
+      <div id="cajaAccesos">
+        <button>🏠​ Inicio</button><br /><br />
+        <button>📤​ Mensajes directos</button><br /><br />
+        <button>🔎​ Explora</button>
+        <br /><br /><br /><br /><br />
+        <hr />
+        <button>💨 Salir</button>
+      </div>
     </div>
     <div id="principal">
-        <header>
-            <input type="text" name="" id="" placeholder="🔎 Buscar">
-            <button> ⊕ Añadir foto</button>
-        </header>
-        <div id="publicaciones">
-            <div class="publicacion">
-                <div id="imagen1" class="imagenes"></div>
-                <h5> 🤍23k 💬8k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen2" class="imagenes"></div>
-                <h5> 🤍32k 💬8.3k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen3" class="imagenes"></div>
-                <h5> 🤍43k 💬9.6k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen4" class="imagenes"></div>
-                <h5> 🤍13k 💬10k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen5" class="imagenes"></div>
-                <h5> 🤍25k 💬5.9k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen6" class="imagenes"></div>
-                <h5> 🤍34k 💬7.1k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen7" class="imagenes"></div>
-                <h5> 🤍56k 💬8.3k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen8" class="imagenes"></div>
-                <h5> 🤍7.5k 💬6.2k</h5>
-            </div>
-            <div class="publicacion">
-                <div id="imagen9" class="imagenes"></div>
-                <h5> 🤍12k 💬9.4k</h5>
-            </div>
+      <header>
+        <input type="text" name="" id="" placeholder="🔎 Buscar" />
+        <button>⊕ Añadir foto</button>
+      </header>
+      <div id="publicaciones">
+        <div class="publicacion">
+          <div id="imagen1" class="imagenes"></div>
+          <h5>🤍23k 💬8k</h5>
         </div>
+        <div class="publicacion">
+          <div id="imagen2" class="imagenes"></div>
+          <h5>🤍32k 💬8.3k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen3" class="imagenes"></div>
+          <h5>🤍43k 💬9.6k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen4" class="imagenes"></div>
+          <h5>🤍13k 💬10k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen5" class="imagenes"></div>
+          <h5>🤍25k 💬5.9k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen6" class="imagenes"></div>
+          <h5>🤍34k 💬7.1k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen7" class="imagenes"></div>
+          <h5>🤍56k 💬8.3k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen8" class="imagenes"></div>
+          <h5>🤍7.5k 💬6.2k</h5>
+        </div>
+        <div class="publicacion">
+          <div id="imagen9" class="imagenes"></div>
+          <h5>🤍12k 💬9.4k</h5>
+        </div>
+      </div>
     </div>
     <div id="footer">
-        <div id="logoF"></div>
-        <div id="legal">
-            <h3>Legal</h3>
-            <p>Imprint</p>
-            <p>Privacy Policy</p>
-            <p>Terms of Use</p>
-        </div>
-        <div id="copyright">
-            <br><hr>
-            <p>© 2025 Your Companys - All rights reserved.</p>
-        </div>
-         
+      <div id="logoF"></div>
+      <div id="legal">
+        <h3>Legal</h3>
+        <p>Imprint</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Use</p>
+      </div>
+      <div id="copyright">
+        <br />
+        <hr />
+        <p>© 2025 Your Companys - All rights reserved.</p>
+      </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const toggleTheme = () => {
-            document.documentElement.classList.toggle('modo-claro');
-          };
-          let boton= document.getElementById("claro-oscuro")
-          boton.addEventListener('click', toggleTheme);
-        });
-      </script>
-      
-    
-</body>
+      // Seleccionar elementos
+      const html = document.documentElement;
+      const toggle = document.getElementById("toggle-modo");
+      const icono = document.getElementById("icono-modo");
+
+      // Evento de clic para alternar entre modos
+      toggle.addEventListener("click", () => {
+        if (html.classList.contains("modo-claro")) {
+          // Cambiar a modo oscuro
+          html.classList.remove("modo-claro");
+          html.classList.add("modo-oscuro");
+          icono.src = "img/luna.png"; // Cambia al icono de luna
+          icono.alt = "Modo Oscuro";
+        } else {
+          // Cambiar a modo claro
+          html.classList.remove("modo-oscuro");
+          html.classList.add("modo-claro");
+          icono.src = "img/sol.png"; // Cambia al icono de sol
+          icono.alt = "Modo Claro";
+        }
+      });
+    </script>
+  </body>
 </html>
