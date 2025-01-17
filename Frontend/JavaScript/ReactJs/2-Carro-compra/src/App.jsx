@@ -35,6 +35,7 @@ function App() {
                   setTotal={setTotal}
                   productos={productos}
                   setProductos={setProductos}
+                  informacion={informacion}
                 />
               }
             ></Route>
