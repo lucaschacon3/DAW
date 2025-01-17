@@ -4,36 +4,36 @@
 #principal {
   height: 1150px;
   width: 64%;
-  background-color: $modo-oscuro-fondo;
-  float: right;
+  background-color: $modo-oscuro-fondo; 
+  float: right; // Hace que el contenedor vaya a la derecha.
   border-radius: 5px;
 
   header {
     height: 150px;
     width: 90%;
     margin: auto;
-    @include centrar;
+    @include centrar; // Centra el contenido dentro del header.
 
     input {
       height: 40px;
       width: 70%;
       border-radius: 15px;
-      background-color: lighten($modo-oscuro-fondo, 10%);
+      background-color: lighten($modo-oscuro-fondo, 10%); // Pone un color de fondo más claro al input.
       padding: 0.2em;
       color: $modo-oscuro-texto-blanco;
       border: none;
     }
 
     button {
-      @include boton(map-get($modo-oscuro, acento), $modo-claro-texto-negro);
+      @include boton(map-get($modo-oscuro, acento), $modo-claro-texto-negro); // Usa el mixin para el botón con los colores definidos.
     }
   }
 
   #publicaciones {
-    display: grid;
+    display: grid; // Grid para organizar las publicaciones.
     grid-template-rows: 33% 33% 33%;
-    grid-template-columns: 33% 33% 33%;
-    gap: 10px;
+    grid-template-columns: 33% 33% 33%; // Define la estructura de las filas y columnas.
+    gap: 10px; // El espacio entre los elementos de la cuadrícula.
 
     .publicacion {
       margin: auto;
@@ -41,22 +41,21 @@
       height: 300px;
       border-radius: 5px;
       text-align: center;
-      background-color: lighten($modo-oscuro-fondo, 10%);
+      background-color: lighten($modo-oscuro-fondo, 10%); // Aplica un color de fondo mas claro 
     }
 
-    // Generar publicaciones con @for
-    @for $i from 1 through 9 {
+    // Generar publicaciones con for, ya que cada foto se llama [numero].jpeg
+    @for $i from 1 through 9 { 
       #imagen#{$i} {
-        background-image: url('../img/#{$i}.jpeg');
+        background-image: url('../img/#{$i}.jpeg'); // Asigna una imagen de fondo a cada publicación.
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-size: cover; // Hace que la imagen cubra todo el espacio disponible.
+        background-position: center; // Centra la imagen.
         border-radius: 5px;
         width: 90%;
         height: 250px;
         margin: auto;
       }
     }
-
   }
 }

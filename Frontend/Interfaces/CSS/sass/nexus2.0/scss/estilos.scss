@@ -1,24 +1,27 @@
-@use 'variables';
-@use 'mixins';
-@use 'lateral';
-@use 'principal';
-@use 'footer';
+// pega cada fichero en este fichero (el principal)
+@use 'variables'; 
+@use 'mixins'; 
+@use 'lateral'; 
+@use 'principal'; 
+@use 'footer'; 
 
-@import 'variables';
+@import 'variables'; // importar las variables para usar.
+
 body {
-  background-color: lighten($modo-oscuro-fondo, 10%);
-  color: $modo-oscuro-texto-blanco;
+  background-color: lighten($modo-oscuro-fondo, 10%); // Pone un fondo más claro para el modo oscuro.
+  color: $modo-oscuro-texto-blanco; 
   margin: 0;
-  font-family: $fuente-principal;
+  font-family: $fuente-principal; 
 }
 
+// Para el cambio de modo, la clase modo-claro 
 html.modo-claro {
-  background-color: $modo-claro-fondo;
-  color: $modo-claro-texto-negro;
+  background-color: $modo-claro-fondo; 
+  color: $modo-claro-texto-negro; 
   margin: 0;
-  font-family: $fuente-principal;
+  font-family: $fuente-principal; 
 
   #footer{
-    color: $modo-claro-texto-negro;
+    color: $modo-claro-texto-negro; 
   }
 }

@@ -1,22 +1,21 @@
 // Mixin para centrar elementos
 @mixin centrar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center; // Centra horizontal.
+  align-items: center; // Centra vertical.
+}
+
+// Mixin para botón reutilizable
+@mixin boton($color-fondo, $color-texto) {
+  background-color: $color-fondo; 
+  color: $color-texto; 
+  border-radius: 15px; // Redondea las esquinas del botón.
+  height: 50px;
+  width: 60%; 
+  border: none; // Elimina el borde del botón.
+  cursor: pointer; // Cambia el cursor a mano cuando se pasa sobre el botón.
+
+  &:hover {
+    background-color: darken($color-fondo, 10%); // Oscurece el color de fondo al pasar el raton.
   }
-  
-  // Mixin para botón reutilizable
-  @mixin boton($color-fondo, $color-texto) {
-    background-color: $color-fondo;
-    color: $color-texto;
-    border-radius: 15px;
-    height: 50px;
-    width: 60%;
-    border: none;
-    cursor: pointer;
-  
-    &:hover {
-      background-color: darken($color-fondo, 10%);
-    }
-  }
-  
+}

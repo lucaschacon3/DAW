@@ -1,78 +1,80 @@
-@import 'variables';
-@import 'mixins';
-#lateral {
-    height: 1150px;
-    width: 34%;
-    background-color: $modo-oscuro-fondo;
-    float: left;
-    border-radius: 5px;
-    text-align: center;
-  
-    #cajaLogo {
-      height: 200px;
-      @include centrar;
-      #toggle-modo{
-        background-color: #76ffff;
-        border-radius: 5px;
-        height: 50px;
-        width: 50px;
-        display: flex;
+@import 'variables'; // Importa las variables para usarse.
+@import 'mixins'; // igual que el anterior pero de mixins
 
-        #icono-modo{
-          height: 20px;
-          width: 20px;
-          margin: auto;
-        }
-      }
-  
-      #logo {
-        background-image: url(../img/logo.png);
-        height: 100px;
-        width: 100px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-  
-      h4 {
-        color: $modo-oscuro-texto-blanco;
-      }
-    }
-  
-    #cajaUsuario {
-      height: 300px;
-      color: $modo-oscuro-texto-blanco;
-  
-      #imagenUsuario {
-        margin: auto;
-        border: solid 3px map-get($modo-oscuro, acento);
-        border-radius: 50px;
-        background-image: url(../img/perfil.png);
-        height: 100px;
-        width: 100px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-  
-      #infoUsuario {
-        display: flex;
-        flex-direction: row;
-        height: 60px;
-  
-        #publicaciones,
-        #seguidores,
-        #seguidos {
-          color: $modo-oscuro-texto-blanco;
-          width: 33%;
-        }
+#lateral {
+  height: 1150px; 
+  width: 34%; 
+  background-color: $modo-oscuro-fondo; 
+  float: left; // Hace que el lateral vaya a la izquierda.
+  border-radius: 5px; // Redondea las esquinas del lateral.
+  text-align: center; // Centra el contenido dentro del lateral.
+
+  #cajaLogo {
+    height: 200px;
+    @include centrar; // Centra el contenido dentro de la caja del logo.
+
+    #toggle-modo {
+      background-color: #76ffff; 
+      border-radius: 30px; 
+      height: 50px;
+      width: 50px;
+      display: flex; // Flexbox para alinear los elementos dentro del botón.
+
+      #icono-modo {
+        height: 20px;
+        width: 20px;
+        margin: auto; // Centra el icono dentro del botón.
       }
     }
-  
-    #cajaAccesos {
-      button {
-        @include boton(map-get($modo-claro, acento), $modo-claro-texto-negro);
+
+    #logo {
+      background-image: url(../img/logo.png); 
+      height: 100px;
+      width: 100px;
+      background-repeat: no-repeat; // La imagen no se repite.
+      background-size: cover; // La imagen cubre todo.
+      background-position: center; // Centra la imagen.
+    }
+
+    h4 {
+      color: $modo-oscuro-texto-blanco; 
+    }
+  }
+
+  // Aqui se pone toda informacion del usuario, foto, nombre, seguidores
+  #cajaUsuario {
+    height: 300px;
+    color: $modo-oscuro-texto-blanco; 
+
+    #imagenUsuario {
+      margin: auto;
+      border: solid 3px map-get($modo-oscuro, acento); // Aplica un borde con color de acento del modo oscuro.
+      border-radius: 50px; // Hace que la imagen sea circular.
+      background-image: url(../img/perfil.png); // Asigna la imagen de perfil como fondo.
+      height: 100px;
+      width: 100px;
+      background-repeat: no-repeat; // La imagen no se repite.
+      background-size: cover; // La imagen cubre todo.
+      background-position: center; // Centra la imagen.
+    }
+
+    #infoUsuario {
+      display: flex; // Flexbox para alinear los elementos horizontalmente.
+      flex-direction: row;
+      height: 60px;
+
+      #publicaciones,
+      #seguidores,
+      #seguidos {
+        color: $modo-oscuro-texto-blanco; 
+        width: 33%; // Para poner los 3 elementos seguidos
       }
     }
   }
-  
+
+  #cajaAccesos {
+    button {
+      @include boton(map-get($modo-claro, acento), $modo-claro-texto-negro); // Crea un boton con el fondo y el color de texto
+    }
+  }
+}
