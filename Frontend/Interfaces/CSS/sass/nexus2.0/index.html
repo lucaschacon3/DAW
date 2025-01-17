@@ -100,24 +100,24 @@
       </div>
     </div>
     <script>
-      // Seleccionar elementos
+      // Selecciona elementos
       const html = document.documentElement;
       const toggle = document.getElementById("toggle-modo");
       const icono = document.getElementById("icono-modo");
 
-      // Evento de clic para alternar entre modos
+      // Evento de clikc para cambiar entre modos
       toggle.addEventListener("click", () => {
         if (html.classList.contains("modo-claro")) {
           // Cambiar a modo oscuro
           html.classList.remove("modo-claro");
           html.classList.add("modo-oscuro");
-          icono.src = "img/luna.png"; // Cambia al icono de luna
+          icono.src = "img/luna.png"; // Cambia al icono de la luna
           icono.alt = "Modo Oscuro";
         } else {
           // Cambiar a modo claro
           html.classList.remove("modo-oscuro");
           html.classList.add("modo-claro");
-          icono.src = "img/sol.png"; // Cambia al icono de sol
+          icono.src = "img/sol.png"; // Cambia al icono del sol
           icono.alt = "Modo Claro";
         }
       });
