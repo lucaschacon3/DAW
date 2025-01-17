@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../estilos/menu.css";
+import "../styles/menu.css";
 import { Link } from 'react-router-dom';
 
 // Componente MenuSuperior

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../estilos/detalles.css";
+import "../styles/detalles.css";
 
 // Componente MenuSuperior
 const Detalles = ({ productos, informacion }) => {

@@ -1,4 +1,4 @@
-import "../estilos/detalles.css";
+import "../styles/detalles.css";
 
 // Componente MenuSuperior
 const DetallesProducto = ({ productos, informacion }) => {

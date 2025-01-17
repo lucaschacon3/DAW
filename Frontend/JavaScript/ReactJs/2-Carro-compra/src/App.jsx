@@ -1,9 +1,9 @@
 import { useState } from "react";
-import MenuSuperior from "./componentes/menu";
-import ListaImagenes from "./componentes/cuerpo";
-import Pagina404 from "./componentes/Pagina404";
-import Detalles from "./componentes/detalles";
-import DetallesProducto from "./componentes/detallesProducto";
+import Menu from "./components/Menu";
+import Cuerpo from "./components/Cuerpo";
+import Pagina404 from "./components/Pagina404";
+import Detalles from "./components/Detalles";
+import DetallesProducto from "./components/DetallesProducto";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           {/* Pasar el total al menú superior */}
-          <MenuSuperior total={total} productos={productos} />
+          <Menu total={total} productos={productos} />
         </header>
         <main>
           <Routes>
@@ -30,7 +30,7 @@ function App() {
             <Route
               path="/"
               element={
-                <ListaImagenes
+                <Cuerpo
                   total={total}
                   setTotal={setTotal}
                   productos={productos}

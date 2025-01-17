@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../estilos/pagina404.css";
+import "../styles/pagina404.css";
 
 // Componente MenuSuperior
 const MenuSuperior = ({ total, productos }) => {

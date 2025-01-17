@@ -1,4 +1,4 @@
-import '../estilos/cuerpo.css';
+import '../styles/cuerpo.css';
 
 // Componente ListaImagenes
 const ListaImagenes = ({ total, setTotal , productos, setProductos, informacion }) => {
