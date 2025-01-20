@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado Final</title>
+</head>
+<body>
+    <h1>¡Gracias por completar el formulario!</h1>
+    <h2>Datos del Usuario:</h2>
+    <p>Nombre: <span th:text="${usuario.nombre}"></span></p>
+    <p>Email: <span th:text="${usuario.email}"></span></p>
+    <p>Edad: <span th:text="${usuario.edad}"></span></p>
+
+    <h2>Respuestas:</h2>
+    <p>Opción seleccionada: <span th:text="${opcion}"></span></p>
+    <p>Preferencias seleccionadas:</p>
+    <ul>
+        <li th:each="preferencia : ${preferencias}" th:text="${preferencia}"></li>
+    </ul>
+    <a th:href="@{/}">Volver al inicio</a>
+</body>
+</html>

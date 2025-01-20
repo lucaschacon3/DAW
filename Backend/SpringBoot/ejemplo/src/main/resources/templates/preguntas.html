@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Preguntas</title>
+</head>
+<body>
+    <h1>Responde las siguientes preguntas</h1>
+    <form th:action="@{/preguntas}" method="post">
+        <h2>1. Selecciona tu opción favorita:</h2>
+        <label>
+            <input type="radio" name="opcion" value="Opción 1" required /> Opción 1
+        </label>
+        <label>
+            <input type="radio" name="opcion" value="Opción 2" /> Opción 2
+        </label>
+        <label>
+            <input type="radio" name="opcion" value="Opción 3" /> Opción 3
+        </label>
+
+        <h2>2. Selecciona tus preferencias:</h2>
+        <label>
+            <input type="checkbox" name="preferencias" value="Preferencia 1" /> Preferencia 1
+        </label>
+        <label>
+            <input type="checkbox" name="preferencias" value="Preferencia 2" /> Preferencia 2
+        </label>
+        <label>
+            <input type="checkbox" name="preferencias" value="Preferencia 3" /> Preferencia 3
+        </label>
+
+        <button type="submit">Enviar Respuestas</button>
+    </form>
+</body>
+</html>

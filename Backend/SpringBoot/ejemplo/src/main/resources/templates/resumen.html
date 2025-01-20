@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resumen</title>
+    <script>
+        function showModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+    <style>
+        #modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        #modal button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body onload="showModal()">
+    <div id="modal">
+        <h1>Resumen de Respuestas</h1>
+        <p>Opción seleccionada: <span th:text="${opcion}"></span></p>
+        <p>Preferencias seleccionadas:</p>
+        <ul>
+            <li th:each="preferencia : ${preferencias}" th:text="${preferencia}"></li>
+        </ul>
+        <form th:action="@{/resultado}" method="post">
+            <button type="submit">Confirmar</button>
+        </form>
+        <button onclick="closeModal()">Cerrar</button>
+    </div>
+</body>
+</html>
