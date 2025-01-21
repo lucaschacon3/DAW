@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "../styles/menu.css";
-import { Link } from 'react-router-dom';
+import "../estilos/menu.css";
+import { Link } from "react-router-dom";
+import { obtenerCantidadTotal } from "../herramientas/buscarProducto";
 
 // Componente MenuSuperior
-const MenuSuperior = ({ total, productos }) => {
+const Menu = ({ total, productosJson }) => {
   const [carritoVisible, setCarritoVisible] = useState(false);
 
   const toggleCarrito = () => {
@@ -18,10 +19,10 @@ const MenuSuperior = ({ total, productos }) => {
         alt="Supermercado"
         className="icono-supermercado"
       />
-      <Link to={"/"}>Inicio</Link>
-      <Link to={"/detalles"}>Detalles</Link>
+      <Link to="/"> Inicio</Link>
+      <Link to="/detalle-carrito"> Detalle</Link>
       {/* Texto a la derecha */}
-      <span className="carrito-texto">{productos.length} : {total}Є</span>
+      <span className="carrito-texto">{obtenerCantidadTotal(productosJson)} : {total}Є</span>
 
       {/* Botón para mostrar/ocultar carrito */}
       <button className="toggle-carrito" onClick={toggleCarrito}>
@@ -32,10 +33,10 @@ const MenuSuperior = ({ total, productos }) => {
       {carritoVisible && (
         <div className="carrito-productos">
           <h4>Carrito</h4>
-          { productos.length > 0 ? (
+          { productosJson.length > 0 ? (
             <ul>
-              { productos.map((producto, index) => (
-                <li key={index}>{producto}</li>
+              { productosJson.map((producto, index) => (
+                <li key={index}>{producto.nombre}{producto.cantidad}</li>
               ))}
             </ul>
           ) : (
@@ -47,4 +48,4 @@ const MenuSuperior = ({ total, productos }) => {
   );
 };
 
-export default MenuSuperior;
+export default Menu;
