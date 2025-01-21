@@ -1,10 +1,10 @@
-package com.example.accessingdatajpa;
+package com.example.examenud4;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AccessingdatajpaApplicationTests {
+class Examenud4ApplicationTests {
 
 	@Test
 	void contextLoads() {

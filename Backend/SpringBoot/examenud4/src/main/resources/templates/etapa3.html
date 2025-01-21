@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MiniQuizz etapa 3</title>
+</head>
+<body>
+    <form method="post" th:action="@{/etapa3}" th:object="${usuario}">
+        <p>
+            <label>Aficciones:</label>
+            <ol>
+                <li>
+                    <input type="checkbox" id="aficcionDeportes" name="aficciones" value="Deportes" />
+                    <label for="aficcionDeportes">Deportes</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="aficcionJuerga" name="aficciones" value="Juerga" />
+                    <label for="aficcionJuerga">Juerga</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="aficcionLectura" name="aficciones" value="Lectura" />
+                    <label for="aficcionLectura">Lectura</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="aficcionRelaciones" name="aficciones" value="Relaciones_Sociales" />
+                    <label for="aficcionRelaciones">Relaciones sociales</label>
+                </li>
+            </ol>
+        </p>
+
+        <!-- Mostrar errores relacionados con las aficciones -->
+        <p th:if="${#fields.hasErrors('aficciones')}" th:errors="*{aficciones}">Error en las aficciones</p>
+
+        <input type="submit" name="enviar" value="Siguiente" />
+    </form>
+
+</body>
+</html>

@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Examenud4Application",
+            "request": "launch",
+            "mainClass": "com.example.examenud4.Examenud4Application",
+            "projectName": "examenud4"
+        },
+        {
+            "type": "java",
             "name": "QuizBbddApplication",
             "request": "launch",
             "mainClass": "com.example.quiz_bbdd.QuizBbddApplication",

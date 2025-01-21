@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado del MiniQuizz</title>
+</head>
+<body>
+    <h1>Resultado del MiniQuizz</h1>
+    <h2 th:text="${nombre}">[Nombre del usuario]</h2>
+    <h2>Tu categoría es:</h2>
+    <h3 th:text="${categoria}">[Categoría generada]</h3>
+
+    <h2>Tus aficciones seleccionadas:</h2>
+    <ol>
+        <li th:each="aficcion : ${aficciones}" th:text="${aficcion}">[Aficción]</li>
+    </ol>
+
+    <a href="/">Volver a empezar</a>
+</body>
+</html>
