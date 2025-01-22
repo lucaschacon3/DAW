@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Resultado</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+</head>
+<body>
+    <div>
+        <h1>Resultado del Quiz</h1>
+        <p th:text="'¡Felicidades ' + ${nombre} + '!'"></p>
+        <p th:text="'Tu puntuación es: ' + ${score} + ' / 8'"></p>
+        <h2 th:text="${categoria}"></h2>
+
+        <div>
+            <!-- Mostrar imágenes según la puntuación -->
+            <img th:if="${score == 8}" th:src="@{/img/jon_jones.png}" alt="Jon Jones" width="300" />
+            <img th:if="${score >= 6 and score < 8}" th:src="@{/img/khabib.jpg}" alt="Khabib" width="300" />
+            <img th:if="${score >= 4 and score < 6}" th:src="@{/img/st-pierre.png}" alt="GSP" width="300" />
+            <img th:if="${score >= 2 and score < 4}" th:src="@{/img/nate.png}" alt="Nate Diaz" width="300" />
+            <img th:if="${score == 1}" th:src="@{/img/cm.jpg}" alt="CM Punk" width="300" />
+            <img th:if="${score == 0}" th:src="@{/img/leo.jpg}" alt="Amateur" width="300" />
+        </div>
+        <hr>
+        <br>
+        <a th:href="@{/}">Volver al inicio</a>
+
+        <h3>Tablón de Puntuaciones</h3>
+        <ul>
+            <!-- Usar sintaxis Thymeleaf para iterar -->
+            <li th:each="puntuacion : ${puntuaciones}" 
+                th:text="${puntuacion.puntuacion} + ' puntos - ' + ${puntuacion.fecha}"></li>
+        </ul>
+    </div>
+</body>
+</html>
