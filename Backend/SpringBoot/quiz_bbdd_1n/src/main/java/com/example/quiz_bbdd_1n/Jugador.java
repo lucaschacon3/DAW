@@ -21,6 +21,9 @@ public class Jugador {
         this.nombre = nombre;
     }
 
+    public Jugador() {
+    }
+
     public Long getId() {
         return id;
     }
