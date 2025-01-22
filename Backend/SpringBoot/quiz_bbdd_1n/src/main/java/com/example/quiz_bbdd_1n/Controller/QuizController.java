@@ -1,4 +1,4 @@
-package com.example.quiz_bbdd_1n;
+package com.example.quiz_bbdd_1n.Controller;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -9,6 +9,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.quiz_bbdd_1n.Entities.CategoriaLuchador;
+import com.example.quiz_bbdd_1n.Entities.Jugador;
+import com.example.quiz_bbdd_1n.Entities.Puntuacion;
+import com.example.quiz_bbdd_1n.Repositories.PuntuacionRepository;
+import com.example.quiz_bbdd_1n.Services.QuizService;
 
 import jakarta.servlet.http.HttpSession;
 

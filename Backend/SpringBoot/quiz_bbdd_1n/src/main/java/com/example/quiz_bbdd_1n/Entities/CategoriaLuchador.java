@@ -1,4 +1,4 @@
-package com.example.quiz_bbdd_1n;
+package com.example.quiz_bbdd_1n.Entities;
 
 
 public enum CategoriaLuchador {

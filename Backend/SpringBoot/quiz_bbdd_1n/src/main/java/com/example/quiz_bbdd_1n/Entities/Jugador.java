@@ -1,5 +1,5 @@
 // Jugador.java (en package model)
-package com.example.quiz_bbdd_1n;
+package com.example.quiz_bbdd_1n.Entities;
 
 import jakarta.persistence.*;
 import java.util.List;

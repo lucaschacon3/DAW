@@ -1,7 +1,12 @@
-package com.example.quiz_bbdd_1n;
+package com.example.quiz_bbdd_1n.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.quiz_bbdd_1n.Entities.Jugador;
+import com.example.quiz_bbdd_1n.Entities.Puntuacion;
+import com.example.quiz_bbdd_1n.Repositories.JugadorRepository;
+import com.example.quiz_bbdd_1n.Repositories.PuntuacionRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
