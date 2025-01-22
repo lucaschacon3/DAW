@@ -11,4 +11,6 @@ public interface PuntuacionRepository extends JpaRepository<Puntuacion, Long> {
 
     // Método para obtener puntuaciones por jugador ordenadas por puntuación descendente (por id)
     List<Puntuacion> findByJugadorIdOrderByPuntuacionDesc(Long jugadorId);
+
+    List<Puntuacion> findAllByOrderByPuntuacionDesc();
 }

@@ -29,7 +29,7 @@
         <ul>
             <!-- Usar sintaxis Thymeleaf para iterar -->
             <li th:each="puntuacion : ${puntuaciones}" 
-                th:text="${puntuacion.puntuacion} + ' puntos - ' + ${puntuacion.fecha}"></li>
+                th:text="${puntuacion.jugador.nombre} + ' - ' + ${puntuacion.puntuacion} + ' puntos - ' + ${puntuacion.fecha}"></li>
         </ul>
     </div>
 </body>

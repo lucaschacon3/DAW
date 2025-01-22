@@ -81,27 +81,26 @@ public class QuizController {
     public String showResult(@RequestParam("q8") String q8, HttpSession session, Model model) {
         // Obtener el nombre del jugador desde la sesión
         String nombre = (String) session.getAttribute("nombre");
-
+    
         // Obtener o crear el jugador
         Jugador jugador = quizService.getOrCreateJugador(nombre);
-
+    
         // Obtener las respuestas desde la sesión y calcular la puntuación
         List<String> respuestas = getRespuestasFromSession(session);
         int score = calculateScore(respuestas);
-
+    
         // Guardar la puntuación en la base de datos (relacionada con el jugador)
         Puntuacion puntuacion = new Puntuacion(score, LocalDateTime.now(), jugador);
         puntuacionRepository.save(puntuacion);
-
+    
         // Mostrar la información al usuario
         model.addAttribute("nombre", nombre);
         model.addAttribute("score", score);
         model.addAttribute("categoria", CategoriaLuchador.getCategoria(score).getMensaje());
-
-        // Listar las puntuaciones del jugador (en orden descendente)
-        List<Puntuacion> puntuaciones = quizService.getTopPuntuacionesByJugador(jugador.getId(), 5);
-        model.addAttribute("puntuaciones", puntuaciones);
-
+    
+        // Listar todas las puntuaciones de todos los jugadores
+        model.addAttribute("puntuaciones", puntuacionRepository.findAllByOrderByPuntuacionDesc());
+    
         return "result"; // Vista del resultado
     }
 
