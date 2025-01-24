@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Pagina404 from './componentes/Pagina404';
 import DetalleCarrito from './componentes/DetalleCarrito';
 import DetalleProducto from './componentes/DetalleProducto';
-
+import { LocalStorageServicio } from './servicios/localStorageServicio';
 
 
 function App() {
