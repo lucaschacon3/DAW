@@ -87,6 +87,13 @@ public class MiniQuizzController {
         // Guardar las aficiones en la sesión
         sesion.setAttribute("aficciones", aficciones);
 
+        String nombre = (String) sesion.getAttribute("nombre");
+        Integer signo = (Integer) sesion.getAttribute("signo");
+        String aficiones = (String) sesion.getAttribute("aficiones");
+        String categoria= generaCategoría(nombre,signo,aficiones);
+
+        sesion.setAttribute("categoria", categoria);
+
         // Redirigir a la siguiente etapa
         return "resultado";
     }
