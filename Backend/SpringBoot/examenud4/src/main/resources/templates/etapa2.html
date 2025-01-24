@@ -4,10 +4,11 @@
     <title>MiniQuizz etapa 2</title>
 </head>
 <body>
-    <form method="post" th:action="@{/etapa2}" th:object="${usuario}">
+    <form method="post" th:action="@{/etapa2}">
         <p>
             <label for="signo">Signo:</label>
-            <select id="signo" th:field="*{signo}">
+            <!-- Añadido el atributo 'name="signo"' -->
+            <select id="signo" name="signo">
                 <option value="1">Aries</option>
                 <option value="2">Tauro</option>
                 <option value="3">Géminis</option>

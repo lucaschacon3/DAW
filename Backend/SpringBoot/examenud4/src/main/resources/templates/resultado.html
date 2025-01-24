@@ -5,14 +5,16 @@
 </head>
 <body>
     <h1>Resultado del MiniQuizz</h1>
-    <h2 th:text="${nombre}">[Nombre del usuario]</h2>
-    <h2>Tu categoría es:</h2>
-    <h3 th:text="${categoria}">[Categoría generada]</h3>
 
-    <h2>Tus aficciones seleccionadas:</h2>
-    <ol>
+    <!-- Mostrar la categoría -->
+    <h2>Tu categoría es:</h2>
+    <h3 th:text="${categoria}">[Categoría]</h3>
+
+    <!-- Mostrar las aficiones seleccionadas -->
+    <h2>Tus aficiones seleccionadas:</h2>
+    <ul>
         <li th:each="aficcion : ${aficciones}" th:text="${aficcion}">[Aficción]</li>
-    </ol>
+    </ul>
 
     <a href="/">Volver a empezar</a>
 </body>

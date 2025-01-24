@@ -4,7 +4,7 @@
     <title>MiniQuizz etapa 3</title>
 </head>
 <body>
-    <form method="post" th:action="@{/etapa3}" th:object="${usuario}">
+    <form method="post" th:action="@{/etapa3}">
         <p>
             <label>Aficciones:</label>
             <ol>
@@ -28,10 +28,9 @@
         </p>
 
         <!-- Mostrar errores relacionados con las aficciones -->
-        <p th:if="${#fields.hasErrors('aficciones')}" th:errors="*{aficciones}">Error en las aficciones</p>
+        <p th:if="${error}" th:text="${error}" style="color: red;"></p>
 
         <input type="submit" name="enviar" value="Siguiente" />
     </form>
-
 </body>
 </html>
