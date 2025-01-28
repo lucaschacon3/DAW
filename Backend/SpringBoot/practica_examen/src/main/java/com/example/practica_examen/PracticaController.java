@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 
+
 @Controller
 public class PracticaController {
     
@@ -41,14 +42,27 @@ public class PracticaController {
         }
  
         sesion.setAttribute("apellido", apellido);
+        return "aficiones";
+    }
+
+    @PostMapping("/aficiones")
+    public String procesarAficiones(@RequestParam(value="aficiones", required = false) String[] aficiones, Model modelo, HttpSession sesion) {
+        
+        if (aficiones==null || aficiones.length==0) {
+            modelo.addAttribute("error", "Selecciona almenos una");
+            return "aficiones";
+        }
 
         String nombre=(String)sesion.getAttribute("nombre");
+        String apellido=(String)sesion.getAttribute("apellido");
+
         modelo.addAttribute("nombre", nombre);
         modelo.addAttribute("apellido", apellido);
-        
+        modelo.addAttribute("aficiones", aficiones);
 
         return "resultado";
     }
+    
     
 
     

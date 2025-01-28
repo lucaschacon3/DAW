@@ -8,6 +8,10 @@
 <body>
     <h2>Tu nombre es <span th:text="*{nombre}"></span></h2>
     <h2>Tu apellido es <span th:text="*{apellido}"></span></h2>
+    <h2>Tus aficiones</h2>
+    <ul th:each=" aficion : ${aficiones}">
+        <li th:text="*{aficion}"></li>
+    </ul>
     
 </body>
 </html>
