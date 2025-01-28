@@ -5,14 +5,11 @@ import { buscarProducto,incrementarCantidad } from '../herramientas/buscarProduc
 
 
 // Componente Cuerpo
-const Cuerpo = ({ total, setTotal , productos, setProductos, informacion, productosJson, setProductosJson }) => {
+const Cuerpo = ({ total, setTotal, informacion, productosJson, setProductosJson }) => {
   
   const AnadirProducto = (nombre, precio) => {
     
     setTotal(total + precio); // Actualiza el total
-
-    
-    setProductos([...productos, nombre]);
 
     if(buscarProducto(nombre,productosJson) === null){
       setProductosJson([...productosJson, {"nombre" : nombre, "cantidad":1}])
@@ -21,8 +18,7 @@ const Cuerpo = ({ total, setTotal , productos, setProductos, informacion, produc
      
        setProductosJson(incrementarCantidad(productosJson,nombre))
       
-    }     
-      
+    }       
 
   };
 

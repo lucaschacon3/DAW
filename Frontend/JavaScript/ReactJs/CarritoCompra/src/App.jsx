@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Menu from './componentes/Menu'
 import Cuerpo from './componentes/Cuerpo'
 import { Routes, Route } from 'react-router-dom';
-import Pagina404 from './componentes/Pagina404';
 import DetalleCarrito from './componentes/DetalleCarrito';
 import DetalleProducto from './componentes/DetalleProducto';
 
@@ -16,7 +15,6 @@ function App() {
   ];
   //const [total, setTotal] = useState(0);  Estado para el importe total
   const [total, setTotal] = useState(0)
-  const [productos, setProductos] = useState([]); // Lista de productos del carrrito
   const [productosJson, setProductosJson] = useState([]); 
 
   return (
@@ -34,12 +32,11 @@ function App() {
       <main>
         <Routes>
           <Route path='/'
-            element={<Cuerpo total={total} setTotal={setTotal} productos={productos} setProductos={setProductos} informacion={informacion} productosJson={productosJson} setProductosJson={setProductosJson}/>} />
+            element={<Cuerpo total={total} setTotal={setTotal} informacion={informacion} productosJson={productosJson} setProductosJson={setProductosJson}/>} />
 
-          <Route path='/detalle-carrito' element={<DetalleCarrito productos={productos} informacion={informacion} productosJson={productosJson}/>}/>
+          <Route path='/detalle-carrito' element={<DetalleCarrito informacion={informacion} productosJson={productosJson} setProductosJson={setProductosJson}/>}/>
 
           <Route path='/detalle-producto/:nombre' element={<DetalleProducto informacion={informacion} />} />
-          <Route path='*' element={<Pagina404 />} />
 
         </Routes>
 

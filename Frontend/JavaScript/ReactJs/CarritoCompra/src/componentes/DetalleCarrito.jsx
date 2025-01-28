@@ -25,13 +25,13 @@ const DetalleCarrito = ({ productosJson, setProductosJson, informacion }) => {
   };
 
   // Función para modificar la cantidad del producto
-  const modificarCantidadProducto = (nombreProducto, nuevaCantidad) => {
-    if (nuevaCantidad <= 0) return; // Evita cantidades negativas o cero
-
+  const modificarCantidadProducto = (nombreProducto) => {
+    let cantidad=parseInt(prompt("Introduce cantidad: "))
     setProductosJson(prevProductos => {
       return prevProductos.map(producto => {
         if (producto.nombre === nombreProducto) {
-          return { ...producto, cantidad: nuevaCantidad };
+          // Incrementamos la cantidad del producto
+          return { ...producto, cantidad: producto.cantidad + cantidad };
         }
         return producto;
       });
