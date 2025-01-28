@@ -1,11 +1,6 @@
 {
   "contactos": [
     {
-      "nombre": "Lucas",
-      "numero": "67334",
-      "id": "ccd"
-    },
-    {
       "id": "d",
       "nombre": "Natalia",
       "numero": "736653543"
