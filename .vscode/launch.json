@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PracticaExamenApplication",
+            "request": "launch",
+            "mainClass": "com.example.practica_examen.PracticaExamenApplication",
+            "projectName": "practica_examen"
+        },
+        {
+            "type": "java",
             "name": "QuizBbdd1nApplication",
             "request": "launch",
             "mainClass": "com.example.quiz_bbdd_1n.QuizBbdd1nApplication",
