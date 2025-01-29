@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuizPuntuacionApplication",
+            "request": "launch",
+            "mainClass": "com.example.quiz_puntuacion.QuizPuntuacionApplication",
+            "projectName": "quiz_puntuacion"
+        },
+        {
+            "type": "java",
             "name": "PracticaExamenApplication",
             "request": "launch",
             "mainClass": "com.example.practica_examen.PracticaExamenApplication",

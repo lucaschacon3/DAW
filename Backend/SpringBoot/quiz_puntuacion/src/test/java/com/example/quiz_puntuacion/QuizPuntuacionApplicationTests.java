@@ -1,10 +1,10 @@
-package com.example.practica_examen;
+package com.example.quiz_puntuacion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PracticaExamenApplicationTests {
+class QuizPuntuacionApplicationTests {
 
 	@Test
 	void contextLoads() {

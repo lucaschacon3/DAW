@@ -1,13 +1,13 @@
-package com.example.practica_examen;
+package com.example.quiz_puntuacion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PracticaExamenApplication {
+public class QuizPuntuacionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PracticaExamenApplication.class, args);
+		SpringApplication.run(QuizPuntuacionApplication.class, args);
 	}
 
 }
