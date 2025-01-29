@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form th:action="@{/apellidos}" method="post">
+        <span th:text="*{error}"></span>
+        <label for="apellido"> Apellido: 
+            <input type="text" name="apellido" id="apellido">
+        </label>
+        <button type="submit">Siguiente</button>
+    </form>
+</body>
+</html>
