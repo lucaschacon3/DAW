@@ -6,10 +6,6 @@ export function buscarProducto(nombre, informacion) {
   );
 }
 
-export function saludar(nombre) {
-  console.log(`Hola ${nombre}`);
-}
-
 export function incrementarCantidad(informacion, nombre) {
   return informacion.map((producto) => {
     if (producto.nombre === nombre) {

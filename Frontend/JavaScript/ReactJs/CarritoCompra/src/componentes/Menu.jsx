@@ -13,10 +13,17 @@ const Menu = ({ total,setTotal, productosJson, setProductosJson }) => {
 
   // Función para eliminar un producto por su nombre (puedes cambiarla para usar un id único)
   const eliminarProducto = (nombreProducto) => {
-    setProductosJson((prevProductos) =>
-      prevProductos.filter((producto) => producto.nombre !== nombreProducto)
-    );
+    // Filtrar el producto a eliminar
+    const nuevosProductos = productosJson.filter((c) => c.nombre !== nombreProducto);
+    
+    // Calcular el nuevo total sumando los precios de los productos restantes
+    const nuevoTotal = nuevosProductos.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+  
+    // Actualizar el estado con los nuevos productos y el nuevo total
+    setProductosJson(nuevosProductos);
+    setTotal(nuevoTotal);
   };
+  
 
   return (
     <div className="menu-superior">
