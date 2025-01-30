@@ -1,0 +1,29 @@
+{
+  "productos": [
+    {
+      "url": "/imagenes/ajos.jpeg",
+      "nombre": "Ajos",
+      "precio": 7.15,
+      "id": "037c"
+    },
+    {
+      "url": "/imagenes/aceitunas.jpeg",
+      "nombre": "Aceitunas",
+      "precio": 8.99,
+      "id": "83a2"
+    },
+    {
+      "url": "/imagenes/calabacin.jpg",
+      "nombre": "Calabacin",
+      "precio": 1.99,
+      "id": "ab75"
+    },
+    {
+      "url": "/imagenes/calabaza.jpg",
+      "nombre": "Calabaza",
+      "precio": 3.17,
+      "id": "d0ce"
+    }
+
+  ]
+}
