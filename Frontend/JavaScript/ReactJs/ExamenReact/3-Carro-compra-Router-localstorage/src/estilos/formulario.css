@@ -1,3 +1,4 @@
+
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -7,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
 }
 
 /* Form Container */
@@ -67,5 +68,5 @@ button:hover {
 /* Error Message Styles */
 .error-message {
     color: #D8000C; /* Rojo para mensajes de error */
-    backgr
-
+    background-color: gainsboro
+}

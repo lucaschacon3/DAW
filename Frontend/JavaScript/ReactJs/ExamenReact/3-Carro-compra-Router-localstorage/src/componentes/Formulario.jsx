@@ -1,6 +1,7 @@
 import React from "react";
 import servicioProductos from "../servicios/servicioProductos";
 import { useState } from "react";
+import '../estilos/formulario.css'
 
 const Formulario = ({ productos, setProductos }) => {
   const [form, setForm] = useState({
