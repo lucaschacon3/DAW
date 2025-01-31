@@ -14,20 +14,20 @@ const DetalleCarrito = ({ productos, setProductos , total, setTotal}) => {
     setTotal(total + producto.precio);    
   
   }
-  function seleccionarCantidad(nombreProducto) {
+  function seleccionarCantidad(producto) {
     let cantidad = parseInt(prompt("Introduce cantidad: "));
-    if (cantidad > 10) {
-      alert("Error: Introduce cantidad menor a 10: ");
-    }else if(cantidad<1){
-      alert("Error: Introduce cantidad mayor a 0: ");
+    if (cantidad+producto.cantidad > 10 ) {
+      alert(`Error: Introduce cantidad menor a 10, solo puedes añadir ${10-producto.cantidad}: `);
+    }else if(cantidad<1 || isNaN(cantidad)){
+      alert("Error: Introduce cantidad valida ");
     }else{
       setProductos((prevProductos) => {
-        return prevProductos.map((producto) => {
-          if (producto.nombre === nombreProducto) {
+        return prevProductos.map((productoM) => {
+          if (productoM.nombre === producto.nombre) {
             // Incrementamos la cantidad del producto
-            return { ...producto, cantidad: producto.cantidad + cantidad };
+            return { ...productoM, cantidad: productoM.cantidad + cantidad };
           }
-          return producto;
+          return productoM;
         });
       });
     }
@@ -62,7 +62,7 @@ const DetalleCarrito = ({ productos, setProductos , total, setTotal}) => {
                 <button
                   className="btn-incrementar"
                   onClick={() =>
-                    seleccionarCantidad(producto.nombre)
+                    seleccionarCantidad(producto)
                   }
                 >
                   *
