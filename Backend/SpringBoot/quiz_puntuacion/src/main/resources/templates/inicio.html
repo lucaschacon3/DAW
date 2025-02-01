@@ -7,7 +7,7 @@
 </head>
 <body>
     <form th:action="@{/inicio}" method="post">
-        <span th:text="*{error}"></span>
+        <span th:text="${error}"></span>
         <label for="nombre"> Nombre: 
             <input type="text" name="nombre" id="nombre">
         </label>
