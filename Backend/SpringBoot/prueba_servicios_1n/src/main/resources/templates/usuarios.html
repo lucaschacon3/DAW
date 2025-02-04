@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Usuarios y Puntos</title>
+</head>
+<body>
+    <h2>Registrar Usuario</h2>
+    <form action="/usuarios/guardar" method="post">
+        <input type="text" name="nombre" placeholder="Nombre del usuario" required>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>Lista de Usuarios</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Puntos</th>
+            <th>Acciones</th>
+        </tr>
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario.id}"></td>
+            <td th:text="${usuario.nombre}"></td>
+            <td>
+                <ul>
+                    <li th:each="punto : ${usuario.puntos}" th:text="${punto.valor}"></li>
+                </ul>
+            </td>
+            <td>
+                <form th:action="@{/usuarios/puntos/{id}(id=${usuario.id})}" method="post">
+                    <input type="number" name="valor" placeholder="Añadir puntos" required>
+                    <button type="submit">Agregar</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

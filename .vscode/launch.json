@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PruebaServicios1nApplication",
+            "request": "launch",
+            "mainClass": "com.example.prueba_servicios_1n.PruebaServicios1nApplication",
+            "projectName": "prueba_servicios_1n"
+        },
+        {
+            "type": "java",
             "name": "QuizPuntuacionApplication",
             "request": "launch",
             "mainClass": "com.example.quiz_puntuacion.QuizPuntuacionApplication",
