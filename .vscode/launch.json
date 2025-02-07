@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ApiRestApplication",
+            "request": "launch",
+            "mainClass": "com.example.api_rest.ApiRestApplication",
+            "projectName": "api_rest"
+        },
+        {
+            "type": "java",
             "name": "PruebaServicios1nApplication",
             "request": "launch",
             "mainClass": "com.example.prueba_servicios_1n.PruebaServicios1nApplication",
