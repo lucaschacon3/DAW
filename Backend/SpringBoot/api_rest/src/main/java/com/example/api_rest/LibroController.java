@@ -11,38 +11,23 @@ import java.util.Optional;
 public class LibroController {
 
     @Autowired
-    private LibroRepository libroRepository;
+    private LibroService libroService;
 
     @GetMapping
     public List<Libro> getAllLibros() {
-        return libroRepository.findAll();
-    }
-
-    @GetMapping("/{id}")
-    public Libro getLibroById(@PathVariable Long id) {
-        Optional<Libro> libro = libroRepository.findById(id);
-        return libro.orElse(null);  // Si no se encuentra el libro, devolverá null, lo que generará un 404
+        return libroService.getAllUsers();
     }
 
     @PostMapping
-    public Libro createLibro(@RequestBody Libro libro) {
-        return libroRepository.save(libro);
+    public Libro saveLibro(@RequestBody Libro libro) {
+        return libroService.saveLibro(libro);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteLibro(@PathVariable Long id) {
-        libroRepository.deleteById(id);
+    @GetMapping(path="/{id}")
+    public Optional<Libro> getLibroById(@PathVariable(name="id") Long id) {
+        
+        return libroService.getById(id);  // Si no se encuentra el libro, devolverá null, lo que generará un 404
     }
 
-    @PutMapping("/{id}")
-    public Libro updateLibro(@RequestBody Libro libro, @PathVariable Long id) {
-        libro.setId(id);
-        return libroRepository.save(libro);
-    }
 
-    @PatchMapping("/{id}")
-    public Libro partiallyUpdateLibro(@RequestBody Libro libro, @PathVariable Long id) {
-        libro.setId(id);
-        return libroRepository.save(libro);
-    }
 }

@@ -1,5 +1,6 @@
 package com.example.api_rest;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,10 +12,15 @@ public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String titulo;
+
+    @Column
     private String autor;
+
+    @Column
     private int año;
-    private String genero;
 
     public Libro(){
 
@@ -24,8 +30,8 @@ public class Libro {
         this.titulo = titulo;
         this.autor = autor;
         this.año = año;
-        this.genero = genero;
     }
+
     public Long getId() {
         return id;
     }
@@ -50,12 +56,7 @@ public class Libro {
     public void setAño(int año) {
         this.año = año;
     }
-    public String getGenero() {
-        return genero;
-    }
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+
 
     
 }
