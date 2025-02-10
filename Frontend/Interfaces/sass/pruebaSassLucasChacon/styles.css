@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+  --primary-blue: #074167; /* Azul */
+  --dark-blue: #143548; /* Azul oscuro */
+  --background-light: #ffebd9; /* Crema */
+  --hover-light: #ffffff; /* Marrón */
+  --gravel: #595959; /* Color gris oscuro */
+ 
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--dark-blue);
+}
+
+header .menu,
+header .logo,
+header .search {
+  display: flex;
+  align-items: center;
+}
+
+header .menu li {
+  list-style: none;
+}
+
+header .menu a {
+  text-decoration: none;
+  color: var(--background-light);
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.25s linear;
+}
+
+header .menu a:hover, footer a:hover {
+  color: var(--hover-light);
+}
+
+header .logo {
+  width: 100%;
+  justify-content: center;
+}
+
+header .logo a {
+  transition: transform 0.25s linear;
+}
+
+header .logo a:hover {
+  transform: rotate(360deg);
+}
+
+header .search {
+  justify-content: flex-end;
+}
+
+header .search input {
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 4px;
+  background-color: var(--background-light);
+  color: var(--dark-blue);
+  border: none;
+  transition: transform 0.25s linear;
+}
+
+header .search input:hover {
+  transform: scale(1.1);
+}
+
+header .search input::placeholder {
+  color: var(--dark-blue);
+}
+
+header .search button {
+  background-color: transparent;
+  color: var(--background-light);
+  border: none;
+  font-size: 24px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: transform 0.25s linear, color 0.25s linear;
+}
+
+header .search button:hover {
+  transform: scale(1.3);
+  color: var(--hover-light);
+}
+
+header .hamburger,
+header .search-mobile {
+  display: none;
+  background-color: var(--gravel);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cta-container {
+  background-image: url("https://cdn.royalcanin-weshare-online.io/RVaO8noBBKJuub5qUrpq/v3/bp-lot-2-rottweiler-couleur-portrait"); 
+  filter: sepia(30%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9;
+  text-align: center;
+  padding: 170px;
+}
+
+h1 {
+  color: var(--hover-light);
+  text-shadow: var(--hover-light) 8px 4px 6px;
+  font-size: 48px;
+}
+
+.cta-text {
+  font-size: 24px;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--background-light);
+}
+
+footer a {
+  color: var(--background-light);
+  display: block;
+  text-decoration: none;
+}
+
+.footer-copy {
+  padding: 20px;
+  background-color: var(--primary-blue);
+  text-align: center;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 34px 0;
+}
+
+.footer-menu h3 {
+  padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+  header nav,
+  header .search input {
+    display: none;
+  }
+  
+  header .hamburger,
+  header .search-mobile {
+    display: block;
+  }
+  
+  header .logo {
+    justify-content: left;
+  }
+  
+  .footer-menu {
+    flex-direction: column;
+  }
+  
+  .footer-menu div {
+    text-align: center;
+  }
+  
+  .cta-container {
+    padding: 100px 20px;
+    background-attachment: scroll; 
+    background-size: cover;
+  }
+}
