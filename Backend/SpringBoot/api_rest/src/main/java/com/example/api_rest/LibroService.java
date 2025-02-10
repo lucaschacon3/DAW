@@ -23,5 +23,24 @@ public class LibroService {
     public Optional<Libro> getById(Long id){
         return libroRepository.findById(id);
     }
+
+    public Libro updateById(Libro request, Long id){
+        Libro libro= libroRepository.findById(id).get();
+
+        libro.setTitulo(request.getTitulo());
+        libro.setAutor(request.getAutor());
+        libro.setAño(request.getAño());
+
+        return libro;
+    }
+
+    public Boolean deleteLibro(Long id){
+        try {
+            libroRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
     
 }
