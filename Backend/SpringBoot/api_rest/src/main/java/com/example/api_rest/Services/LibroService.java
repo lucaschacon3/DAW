@@ -7,6 +7,7 @@ import com.example.api_rest.Entities.Libro;
 import com.example.api_rest.Repositories.LibroRepository;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -40,6 +41,22 @@ public class LibroService {
         libro.setTitulo(request.getTitulo());
         libro.setAutor(request.getAutor());
         libro.setAño(request.getAño());
+        return libroRepository.save(libro);
+    }
+
+    public Libro partialUpdateById(Long id, Map<String, Object> updates) {
+        Libro libro = libroRepository.findById(id).orElseThrow(() -> new RuntimeException("Libro no encontrado"));
+
+        if (updates.containsKey("titulo")) {
+            libro.setTitulo((String) updates.get("titulo"));
+        }
+        if (updates.containsKey("autor")) {
+            libro.setAutor((String) updates.get("autor"));
+        }
+        if (updates.containsKey("año")) {
+            libro.setAño((Integer) updates.get("año"));
+        }
+
         return libroRepository.save(libro);
     }
 

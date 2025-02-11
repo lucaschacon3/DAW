@@ -8,6 +8,7 @@ import com.example.api_rest.Entities.Libro;
 import com.example.api_rest.Services.LibroService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/libros")
@@ -42,6 +43,14 @@ public class LibroController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(libroService.updateById(libro, id));
+    }
+
+    @PatchMapping(path = "/{id}")
+    public ResponseEntity<?> partialUpdateLibro(@PathVariable (name="id") Long id, @RequestBody Map<String, Object> updates) {
+        if (!libroService.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(libroService.partialUpdateById(id, updates));
     }
 
     @DeleteMapping(path = "/{id}")
