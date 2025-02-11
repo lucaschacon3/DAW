@@ -1,4 +1,6 @@
-package com.example.api_rest;
+package com.example.api_rest.Entities;
+
+import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,7 +24,7 @@ public class Libro {
     @Column
     private int año;
 
-    public Libro(){
+    public Libro() {
 
     }
 
@@ -35,28 +37,48 @@ public class Libro {
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getTitulo() {
         return titulo;
     }
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
     public String getAutor() {
         return autor;
     }
+
     public void setAutor(String autor) {
         this.autor = autor;
     }
+
     public int getAño() {
         return año;
     }
+
     public void setAño(int año) {
         this.año = año;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Libro libro = (Libro) o;
+        return Objects.equals(titulo, libro.titulo) && Objects.equals(autor, libro.autor);
+    }
 
-    
+    @Override
+    public int hashCode() {
+        return Objects.hash(titulo, autor);
+    }
+
 }
