@@ -28,14 +28,6 @@ public class LibroService {
         return libroRepository.findById(id);
     }
 
-    public boolean existsById(Long id) {
-        return libroRepository.existsById(id);
-    }
-
-    public boolean existsByTitulo(String titulo) {
-        return libroRepository.findByTitulo(titulo).isPresent();
-    }
-
     public Libro updateById(Libro request, Long id) {
         Libro libro = libroRepository.findById(id).orElseThrow();
         libro.setTitulo(request.getTitulo());
@@ -63,4 +55,14 @@ public class LibroService {
     public void deleteLibro(Long id) {
         libroRepository.deleteById(id);
     }
+
+    public boolean existsById(Long id) {
+        return libroRepository.existsById(id);
+    }
+
+    public boolean existsByTitulo(String titulo) {
+        return libroRepository.findByTitulo(titulo).isPresent();
+    }
+
+    
 }
