@@ -88,11 +88,14 @@ public class MiniQuizzController {
         sesion.setAttribute("aficciones", aficciones);
 
         String nombre = (String) sesion.getAttribute("nombre");
-        Integer signo = (Integer) sesion.getAttribute("signo");
-        String aficiones = (String) sesion.getAttribute("aficiones");
-        String categoria= generaCategoría(nombre,signo,aficiones);
+        String signo = (String) sesion.getAttribute("signo");
+ 
+        //String categoria= generaCategoría(nombre,signo,aficiones);
 
-        sesion.setAttribute("categoria", categoria);
+        modelo.addAttribute("nombre", nombre);
+        modelo.addAttribute("signo", signo);
+        modelo.addAttribute("aficciones", aficciones);
+
 
         // Redirigir a la siguiente etapa
         return "resultado";

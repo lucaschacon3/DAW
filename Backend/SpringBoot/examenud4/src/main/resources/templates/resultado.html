@@ -6,11 +6,9 @@
 <body>
     <h1>Resultado del MiniQuizz</h1>
 
-    <!-- Mostrar la categoría -->
-    <h2>Tu categoría es:</h2>
-    <h3 th:text="${categoria}">[Categoría]</h3>
+    <h3 th:text="|Tu nombre es ${nombre}|"></h3>
+    <h3 th:text="|Tu signo es ${signo}|"></h3>
 
-    <!-- Mostrar las aficiones seleccionadas -->
     <h2>Tus aficiones seleccionadas:</h2>
     <ul>
         <li th:each="aficcion : ${aficciones}" th:text="${aficcion}">[Aficción]</li>
