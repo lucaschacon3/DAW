@@ -1,24 +1,14 @@
 import React, { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 
-const Header = ({agregarAlCarrito,cryptos, balances, setBalances}) => {
+const Header = ({cryptos, balances, setBalances, carrito, setcarrito}) => {
   const [cartOpen, setCartOpen] = useState(false);
-
-  function calculaCantidadTotal() {
-    return balances.BTC+balances.ETH+balances.BNB+ balances.ADA
-  }
-
-  function calculaPrecioTotal() {
-    return cryptos.reduce((total, crypto) => {
-      return total + balances[crypto.symbol] * crypto.price;
-    }, 0);
-  }
   
 
   return (
     <header className="bg-gray-900 p-4 flex justify-between items-center">
       <h1 className="text-xl font-bold text-white">NextMarket</h1>
-      <h3 className="text-white">Cantidad: {calculaCantidadTotal()} - Balance: {calculaPrecioTotal()} $</h3>
+      <h3 className="text-white">Cantidad:  - Balance:  $</h3>
       <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
         Logout
       </button>
