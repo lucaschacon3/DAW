@@ -29,7 +29,7 @@ public class LibroService {
     }
 
     public Libro updateById(Libro request, Long id) {
-        Libro libro = libroRepository.findById(id).orElseThrow();
+        Libro libro = libroRepository.findById(id).orElseThrow(() -> new RuntimeException("Libro no encontrado"));
         libro.setTitulo(request.getTitulo());
         libro.setAutor(request.getAutor());
         libro.setAño(request.getAño());
