@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "lucas",
+        "password": "$2b$12$tutS0bo5qr2Sk63ZB6CePO3/pntgCqtltCmMpylQ/YJzA/WGMiBUe"
+      }
+    ]
+  }
+  
