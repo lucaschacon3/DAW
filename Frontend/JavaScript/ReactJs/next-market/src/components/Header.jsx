@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ cryptos, balances, setBalances, carrito, setcarrito }) => {
+const Header = ({ balances, carrito }) => {
   const [cartOpen, setCartOpen] = useState(false);
 
   // Calcular la cantidad total de productos en el carrito

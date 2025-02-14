@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Body = ({ cryptos, balances, setBalances, carrito, setCarrito }) => {
+const Body = ({ cryptosInfo, balances, setBalances, carrito, setCarrito }) => {
   
   const anadirProducto = (name, precio) => {
     setBalances((prevBalance) => prevBalance + precio); // Sumar al balance
@@ -54,9 +54,9 @@ const Body = ({ cryptos, balances, setBalances, carrito, setCarrito }) => {
 
   
   return (
-    <div className="p-8">
+    <div className="p-8 h-screen" id="body">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {cryptos.map((crypto) => (
+        {cryptosInfo.map((crypto) => (
           <div
             key={crypto.id}
             className="bg-gray-900 text-white p-6 rounded-lg shadow-md text-center"
