@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthProvider';
 import ServicioUsuario from '../servicios/ServicioUsuario';
+import bcrypt from "bcryptjs"; // Importar bcryptjs;
 // import axios from 'axios';
 
 const Login = () => {
@@ -58,6 +59,7 @@ const Login = () => {
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <button type="submit">Login</button>
       </form>
+
     </div>
   );
 };

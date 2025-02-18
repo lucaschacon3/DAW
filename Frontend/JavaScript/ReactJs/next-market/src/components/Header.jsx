@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { ShoppingCart } from "lucide-react";
+import { LogOut, ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import { useAuth } from "./loginComponents/AuthProvider";
 
 const Header = ({ balance, carrito }) => {
   const [cartOpen, setCartOpen] = useState(false);
+  const { logout } = useAuth();
 
   // Calcular la cantidad total de productos en el carrito
   const totalCantidad = carrito.reduce(
@@ -14,6 +16,7 @@ const Header = ({ balance, carrito }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    logout()
     navigate("/login");
   };
 

@@ -70,9 +70,9 @@ const Login = () => {
           >
             Login
           </button>
-          <button className="text-white bg-cyan-300 p-2 rounded-md">
-            <Link to={"/admin"}>Admin</Link>
-          </button>
+          <p className="text-white underline">
+            <Link to={"/register"}>No tienes cuenta todavía?</Link>
+          </p>
         </form>
       </div>
     </div>

@@ -1,16 +1,40 @@
 {
-    "usuarios": [
-      {
-        "id": 1,
-        "nombre": "lucas",
-        "password": "$2b$12$tutS0bo5qr2Sk63ZB6CePO3/pntgCqtltCmMpylQ/YJzA/WGMiBUe"
-      }
-    ],
-     "cryptos": [
-      { "id":"1", "nombre": "Bitcoin", "precio": 45000, "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png" },
-      { "id":"2","nombre": "Ethereum", "precio": 3200, "url": "https://cryptologos.cc/logos/ethereum-eth-logo.png" },
-      { "id":"3","nombre": "Binance Coin", "precio": 400, "url":"https://cryptologos.cc/logos/bnb-bnb-logo.png" },
-      { "id":"4","nombre": "Cardano", "precio": 1.25, "url":"https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/cardano_ada-512.png" }
-    ]
-  }
-  
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "lucas",
+      "password": "$2b$12$tutS0bo5qr2Sk63ZB6CePO3/pntgCqtltCmMpylQ/YJzA/WGMiBUe"
+    },
+    {
+      "id": "5c4b",
+      "nombre": "agustin",
+      "password": "$2a$10$h4bmLklAJIhZxq/ga8s2Oe1ool90WIGNH.2LIS6QcL5B4sSbU1hpu"
+    }
+  ],
+  "cryptos": [
+    {
+      "id": "1",
+      "nombre": "Bitcoin",
+      "precio": 45000,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png"
+    },
+    {
+      "id": "2",
+      "nombre": "Ethereum",
+      "precio": 3200,
+      "url": "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+    },
+    {
+      "id": "3",
+      "nombre": "Binance Coin",
+      "precio": 400,
+      "url": "https://cryptologos.cc/logos/bnb-bnb-logo.png"
+    },
+    {
+      "id": "4",
+      "nombre": "Cardano",
+      "precio": 1.25,
+      "url": "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/cardano_ada-512.png"
+    }
+  ]
+}

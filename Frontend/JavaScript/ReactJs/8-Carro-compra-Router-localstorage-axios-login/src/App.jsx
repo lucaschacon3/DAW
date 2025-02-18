@@ -12,6 +12,8 @@ import Login from './Login/login';
 import RutasProtegidas from './Login/RutasProtegidas';
 import ServicioUsuario from './servicios/ServicioUsuario';
 
+import Register from "./Login/Resgister";
+
 
 function App() {
 
@@ -65,7 +67,7 @@ function App() {
               path="/login"
               element={<Login/>}
             />
-
+            <Route path="/register" element={<Register />} />
           
             
             <Route path="/detalle-carrito" element={

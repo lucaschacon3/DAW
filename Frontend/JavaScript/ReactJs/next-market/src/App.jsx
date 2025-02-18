@@ -9,9 +9,11 @@ import ServicioCryptos from "./service/servicioCryptos";
 import DetalleCarrito from "./components/DetalleCarrito";
 import DetalleProducto from "./components/DetalleProducto";
 import Admin from "./components/Admin";
+import Register from "./components/Register";
 
 function App() {
   const [balance, setBalance] = useState(0);
+  // carrito se podria guardar en localstorage
   const [carrito, setCarrito] = useState([]);
   const [cryptosInfo, setCryptosInfo] = useState([]);
 
@@ -68,6 +70,7 @@ function App() {
             }
           />
 
+          <Route path="/register" element={<Register/>}/>
           <Route
             path="/admin"
             element={<Admin carrito={carrito} setCarrito={setCarrito}/>}
