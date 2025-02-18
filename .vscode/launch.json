@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConsumoApiApplication",
+            "request": "launch",
+            "mainClass": "com.example.consumo_api.ConsumoApiApplication",
+            "projectName": "consumo_api"
+        },
+        {
+            "type": "java",
             "name": "ApiRestBasicaApplication",
             "request": "launch",
             "mainClass": "com.example.api_rest_basica.ApiRestBasicaApplication",
