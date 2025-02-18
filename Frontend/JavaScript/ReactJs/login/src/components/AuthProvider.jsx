@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useState } from "react";
+import UseStorageState from "../service/UseStorageState";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = UseStorageState("user",null);
 
   const login = (userData) => setUser(userData); // Ahora almacena el objeto completo
   const logout = () => setUser(null);
