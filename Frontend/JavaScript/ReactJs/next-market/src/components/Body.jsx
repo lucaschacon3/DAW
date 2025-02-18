@@ -1,53 +1,53 @@
 import React, { useState } from "react";
 
-const Body = ({ cryptosInfo, balances, setBalances, carrito, setCarrito }) => {
+const Body = ({ cryptosInfo, setBalance, carrito, setCarrito }) => {
   
-  const anadirProducto = (name, precio) => {
-    setBalances((prevBalance) => prevBalance + precio); // Sumar al balance
+  const anadirProducto = (nombre, precio) => {
+    setBalance((prevBalance) => prevBalance + precio); // Sumar al balance
 
-    if (buscarProducto(name, carrito) === null) {
-      setCarrito([...carrito, { name: name, cantidad: 1 }]);
+    if (buscarProducto(nombre, carrito) === null) {
+      setCarrito([...carrito, { nombre: nombre, cantidad: 1 }]);
     } else {
-      setCarrito(incrementarCantidad(carrito, name));
+      setCarrito(incrementarCantidad(carrito, nombre));
     }
   };
 
-  const borrarProducto = (name, precio) => {
-    const productoEncontrado = buscarProducto(name, carrito);
+  const borrarProducto = (nombre, precio) => {
+    const productoEncontrado = buscarProducto(nombre, carrito);
 
     if (productoEncontrado !== null && productoEncontrado.cantidad > 0) {
-      setBalances((prevBalance) => prevBalance - precio); // Restar del balance
+      setBalance((prevBalance) => prevBalance - precio); // Restar del balance
 
       if (productoEncontrado.cantidad > 1) {
-        setCarrito(decrementarCantidad(carrito, name));
+        setCarrito(decrementarCantidad(carrito, nombre));
       } else {
-        setCarrito(carrito.filter((producto) => producto.name !== name));
+        setCarrito(carrito.filter((producto) => producto.nombre !== nombre));
       }
     }
   };
 
-  function decrementarCantidad(informacion, nombre) {
-    return informacion.map((producto) => {
-      if (producto.name === nombre && producto.cantidad > 0) {
+  function decrementarCantidad(carrito, nombre) {
+    return carrito.map((producto) => {
+      if (producto.nombre === nombre && producto.cantidad > 0) {
         return { ...producto, cantidad: producto.cantidad - 1 };
       }
       return producto;
     });
   }
 
-  function incrementarCantidad(informacion, nombre) {
-    return informacion.map((producto) => {
-      if (producto.name === nombre) {
+  function incrementarCantidad(carrito, nombre) {
+    return carrito.map((producto) => {
+      if (producto.nombre === nombre) {
         return { ...producto, cantidad: producto.cantidad + 1 };
       }
       return producto;
     });
   }
 
-  function buscarProducto(nombre, informacion) {
+  function buscarProducto(nombre, carrito) {
     return (
-      informacion.find(
-        (producto) => producto.name.toLowerCase() === nombre.toLowerCase()
+      carrito.find(
+        (producto) => producto.nombre.toLowerCase() === nombre.toLowerCase()
       ) || null
     );
   }
@@ -62,25 +62,26 @@ const Body = ({ cryptosInfo, balances, setBalances, carrito, setCarrito }) => {
             className="bg-gray-900 text-white p-6 rounded-lg shadow-md text-center"
           >
             <h3 className="text-xl font-semibold">
-              {crypto.name}
+              {crypto.nombre}
             </h3>
-            <p className="text-gray-400">${crypto.price.toLocaleString()}</p>
-            <img src={crypto.url} alt={crypto.name} width="150px" className="mx-auto" />
+            <p className="text-gray-400">${crypto.precio.toLocaleString()}</p>
+            <img src={crypto.url} alt={crypto.nombre} width="150px" className="mx-auto" />
 
             <div className="flex justify-center mt-4 space-x-2">
               <button
                 className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
-                onClick={() => anadirProducto(crypto.name, crypto.price)}
+                onClick={() => anadirProducto(crypto.nombre, crypto.precio)}
               >
                 Comprar
               </button>
               <button
                 className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
-                onClick={() => borrarProducto(crypto.name, crypto.price)}
+                onClick={() => borrarProducto(crypto.nombre, crypto.precio)}
               >
                 Vender
               </button>
             </div>
+            
           </div>
         ))}
       </div>

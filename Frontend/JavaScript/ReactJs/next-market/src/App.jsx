@@ -1,13 +1,19 @@
 import { useState, useEffect } from "react";
 import Login from "./components/loginComponents/Login";
 import { AuthProvider } from "./components/loginComponents/AuthProvider";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import RutaProtegidas from "./components/loginComponents/RutasProtegidas";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RutasProtegidas from "./components/loginComponents/RutasProtegidas";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import ServicioCryptos from "./service/servicioCryptos";
+import DetalleCarrito from "./components/DetalleCarrito";
+import DetalleProducto from "./components/DetalleProducto";
+import Admin from "./components/Admin";
 
 function App() {
+  const [balance, setBalance] = useState(0);
+  const [carrito, setCarrito] = useState([]);
+  const [cryptosInfo, setCryptosInfo] = useState([]);
 
   useEffect(() => {
     ServicioCryptos.getAll()
@@ -15,34 +21,57 @@ function App() {
         setCryptosInfo(response.data);
       })
       .catch((error) => {
-        alert("Tienes internet?")
+        alert("Tienes internet?");
       });
   }, []);
-
-  const [balances, setBalances] = useState(0);
-  const [carrito, setCarrito] = useState([]);
-  const [cryptosInfo, setCryptosInfo]=useState([]);
-
- 
 
   return (
     <>
       <AuthProvider>
         <Routes>
           <Route
-          path="/"
-          element={<RutaProtegidas>
-            <Header  balances={balances} carrito={carrito}/>
-            <Body cryptosInfo={cryptosInfo} balances={balances} setBalances={setBalances} carrito={carrito} setCarrito={setCarrito}/>
-          </RutaProtegidas>}>
-            
-          </Route>
+            path="/"
+            element={
+              <RutasProtegidas>
+                <Header balance={balance} carrito={carrito} />
+                <Body
+                  cryptosInfo={cryptosInfo}
+                  setBalance={setBalance}
+                  carrito={carrito}
+                  setCarrito={setCarrito}
+                />
+              </RutasProtegidas>
+            }
+          />
 
-          <Route 
-          path="/login"
-          element={<Login/>}>
-            
-          </Route>
+          <Route path="/login" element={<Login />} />
+
+          <Route
+            path="/detalle-carrito"
+            element={
+              <RutasProtegidas>
+                <DetalleCarrito
+                  carrito={carrito}
+                  setCarrito={setCarrito}
+                  informacion={cryptosInfo}
+                />
+              </RutasProtegidas>
+            }
+          />
+
+          <Route
+            path="/detalle-producto/:nombre"
+            element={
+              <RutasProtegidas>
+                <DetalleProducto informacion={cryptosInfo} />
+              </RutasProtegidas>
+            }
+          />
+
+          <Route
+            path="/admin"
+            element={<Admin carrito={carrito} setCarrito={setCarrito}/>}
+          />
         </Routes>
       </AuthProvider>
     </>

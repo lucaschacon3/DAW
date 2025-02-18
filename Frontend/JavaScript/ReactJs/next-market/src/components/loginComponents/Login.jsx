@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "./AuthProvider";
 import ServicioUsuario from "../../service/ServicioUsuario";
 import bcrypt from "bcryptjs";
@@ -33,9 +34,14 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100" id="body">
+    <div
+      className="flex items-center justify-center min-h-screen bg-gray-100"
+      id="body"
+    >
       <div className="bg-[#1E1E1E] p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-2xl font-semibold text-center mb-4 text-white">Login</h2>
+        <h2 className="text-2xl font-semibold text-center mb-4 text-white">
+          Login
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-10">
           <div>
             <label className="block text-white">Usuario</label>
@@ -64,7 +70,9 @@ const Login = () => {
           >
             Login
           </button>
-
+          <button className="text-white bg-cyan-300 p-2 rounded-md">
+            <Link to={"/admin"}>Admin</Link>
+          </button>
         </form>
       </div>
     </div>
