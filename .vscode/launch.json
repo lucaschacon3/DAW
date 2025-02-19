@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BobEsponjaApiRestApplication",
+            "request": "launch",
+            "mainClass": "ies.goya.examen.ud6.BobEsponjaApiRestApplication",
+            "projectName": "api_bob-esponja"
+        },
+        {
+            "type": "java",
             "name": "ConsumoApiApplication",
             "request": "launch",
             "mainClass": "com.example.consumo_api.ConsumoApiApplication",
