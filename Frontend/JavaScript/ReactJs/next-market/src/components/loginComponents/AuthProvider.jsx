@@ -4,7 +4,7 @@ import UseStorageState from "../../service/UseStorageState";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] =  UseStorageState("user", null)//useState(null);
+  const [user, setUser] =  UseStorageState("user", null)// para que no guarde: useState(null);
 
   const login = (userData) => setUser(userData); // Ahora almacena el objeto completo
   const logout = () => setUser(null);

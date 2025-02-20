@@ -12,8 +12,9 @@ import Admin from "./components/Admin";
 import Register from "./components/Register";
 
 function App() {
+  // balance se puede meter en localstorage: UseStorageState("balance", 0)
   const [balance, setBalance] = useState(0);
-  // carrito se podria guardar en localstorage
+  // carrito se podria guardar en localstorage: UseStorageState("carrito", [])
   const [carrito, setCarrito] = useState([]);
   const [cryptosInfo, setCryptosInfo] = useState([]);
 
