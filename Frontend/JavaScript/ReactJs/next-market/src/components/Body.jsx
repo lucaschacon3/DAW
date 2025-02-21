@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const Body = ({ cryptosInfo, setBalance, carrito, setCarrito }) => {
-  
+const Body = ({ cryptosInfo, setBalance, carrito, setCarrito, notificaciones }) => {
+  const notify = () => toast("Producto añadido en WebStorage");
+
   const anadirProducto = (nombre, precio) => {
     setBalance((prevBalance) => prevBalance + precio); // Sumar al balance
 
@@ -10,6 +13,11 @@ const Body = ({ cryptosInfo, setBalance, carrito, setCarrito }) => {
     } else {
       setCarrito(incrementarCantidad(carrito, nombre));
     }
+
+    if(notificaciones){
+      notify(); // Llamar a la función notify para mostrar el mensaje
+    }
+
   };
 
   const borrarProducto = (nombre, precio) => {
@@ -52,9 +60,8 @@ const Body = ({ cryptosInfo, setBalance, carrito, setCarrito }) => {
     );
   }
 
-  
   return (
-    <div className="p-8 h-screen" id="body">
+    <div className="min-h-screen p-8 " id="body">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {cryptosInfo.map((crypto) => (
           <div
@@ -81,10 +88,10 @@ const Body = ({ cryptosInfo, setBalance, carrito, setCarrito }) => {
                 Vender
               </button>
             </div>
-            
           </div>
         ))}
       </div>
+      <ToastContainer /> {/* Asegúrate de incluir el ToastContainer aquí */}
     </div>
   );
 };

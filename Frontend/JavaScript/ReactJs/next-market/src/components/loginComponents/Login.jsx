@@ -5,9 +5,10 @@ import { useAuth } from "./AuthProvider";
 import ServicioUsuario from "../../service/ServicioUsuario";
 import bcrypt from "bcryptjs";
 
-const Login = () => {
+const Login = ({ setNotificaciones }) => { // Recibe props como un objeto y desestructura
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false); // Para recordar la sesión
   const [error, setError] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Login = () => {
         const user = response.data[0];
         const isMatch = await bcrypt.compare(password, user.password);
         if (isMatch) {
-          login(user);
+          login(user, rememberMe); // Pasar notificaciones a login
           navigate("/");
         } else {
           setError("Usuario o contraseña incorrectos");
@@ -34,15 +35,10 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="flex items-center justify-center min-h-screen bg-gray-100"
-      id="body"
-    >
+    <div className="flex items-center justify-center min-h-screen bg-gray-100" id="body">
       <div className="bg-[#1E1E1E] p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-2xl font-semibold text-center mb-4 text-white">
-          Login
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-10">
+        <h2 className="text-2xl font-semibold text-center mb-4 text-white">Login</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-white">Usuario</label>
             <input
@@ -62,6 +58,25 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+          </div>
+          <div className="flex items-center">
+            <input
+              type="checkbox"
+              id="rememberMe"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+              className="mr-2"
+            />
+            <label htmlFor="rememberMe" className="text-white">Recordar sesión</label>
+          </div>
+          <div className="flex items-center">
+            <input
+              type="checkbox"
+              id="notificationsEnabled"
+              onChange={(e) => setNotificaciones(e.target.checked)} // Actualizar el estado de notificaciones
+              className="mr-2"
+            />
+            <label htmlFor="notificationsEnabled" className="text-white">Permitir notificaciones</label>
           </div>
           {error && <p className="text-red-500 text-sm">{error}</p>}
           <button

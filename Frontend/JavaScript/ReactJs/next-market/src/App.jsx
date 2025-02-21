@@ -18,6 +18,8 @@ function App() {
   const [carrito, setCarrito] = useState([]);
   const [cryptosInfo, setCryptosInfo] = useState([]);
 
+  const[notificaciones, setNotificaciones]=useState(false);
+
   useEffect(() => {
     ServicioCryptos.getAll()
       .then((response) => {
@@ -42,12 +44,13 @@ function App() {
                   setBalance={setBalance}
                   carrito={carrito}
                   setCarrito={setCarrito}
+                  notificaciones={notificaciones}
                 />
               </RutasProtegidas>
             }
           />
 
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login setNotificaciones={setNotificaciones} />} />
 
           <Route
             path="/detalle-carrito"

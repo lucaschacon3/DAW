@@ -19,6 +19,7 @@ const Login = () => {
       .then((response) => {
         if (response.data.length !== 0) {
           if(response.data[0].administrador===1){
+            login(response.data[0].nombre);
             navigate("/admin");
           }
           login(response.data[0].nombre);
