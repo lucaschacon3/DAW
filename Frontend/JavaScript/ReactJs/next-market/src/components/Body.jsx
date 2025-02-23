@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Body = ({ cryptosInfo, setBalance, carrito, setCarrito, notificaciones }) => {
-  const notify = () => toast("Producto añadido en WebStorage");
+  const notify = () => toast("Criptomoneda comprada correctamente");
 
   const anadirProducto = (nombre, precio) => {
     setBalance((prevBalance) => prevBalance + parseInt(precio)); // Sumar al balance
