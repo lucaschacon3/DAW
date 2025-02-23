@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AficionConsultar = ({ contacto }) => {
+const AficionConsultar = ({ crypto }) => {
   
   return (
     <div>
-      <h2>{contacto.nombre}</h2>
-      <p><strong>Descripción:</strong> {contacto.numero}</p>
+      <h2>{crypto.nombre}</h2>
+      <p><strong>Precio:</strong> {crypto.precio}</p>
     </div>
   );
 };

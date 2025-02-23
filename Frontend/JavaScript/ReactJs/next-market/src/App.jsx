@@ -77,7 +77,7 @@ function App() {
           <Route path="/register" element={<Register/>}/>
           <Route
             path="/admin"
-            element={<Admin carrito={carrito} setCarrito={setCarrito}/>}
+            element={<Admin cryptosInfo={cryptosInfo} setCryptosInfo={setCryptosInfo}/>}
           />
         </Routes>
       </AuthProvider>

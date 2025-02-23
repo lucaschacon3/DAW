@@ -1,7 +1,7 @@
 import ServicioCryptos from "../../service/servicioCryptos";
 import Swal from "sweetalert2";
 
-const ContactoBorrar = (contacto, contactos, setContactos) => {
+const CryptoBorrar = (crypto, cryptosInfo, setCryptosInfo) => {
   Swal.fire({
     title: "¿Estás seguro?",
     text: "No podrás revertir esta acción",
@@ -13,28 +13,26 @@ const ContactoBorrar = (contacto, contactos, setContactos) => {
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
-      // Llamada al servicio para eliminar el contacto
-      ServicioContactos.delete(contacto.id)
+      
+      ServicioCryptos.delete(crypto.id)
         .then(() => {
-          Swal.fire("Contacto borrado correctamente");
+          Swal.fire("Crypto borrada correctamente");
 
-          // Filtrar el contacto eliminado de la lista
-          const nuevosContactos = contactos.filter((c) => c.id !== contacto.id);
+          const nuevasCryptos = cryptosInfo.filter((c) => c.id !== crypto.id);
 
-          // Actualizar el estado local
-          setContactos(nuevosContactos);
+          setCryptosInfo(nuevasCryptos);
 
           Swal.fire(
             "¡Eliminado!",
-            "El contacto ha sido eliminado.",
+            "La crypto ha sido eliminada.",
             "success"
           );
         })
         .catch(() => {
-          Swal.fire("ERROR, No se ha borrado el contacto");
+          Swal.fire("ERROR, No se ha borrado la crypto");
         });
     }
   });
 };
 
-export default ContactoBorrar;
+export default CryptoBorrar;

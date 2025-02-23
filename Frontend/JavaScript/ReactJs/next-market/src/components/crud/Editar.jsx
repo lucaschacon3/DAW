@@ -1,124 +1,115 @@
 import React, { useState } from 'react';
-import servicioContactos from '../../service/servicioCryptos';
+import servicioCryptos from '../../service/servicioCryptos';
 import Swal from 'sweetalert2';
 
-function ContactoEditar({ contacto, setContactos, onClose }) {
-  // Almacenar los errores del formulario
+function CryptoEditar({ crypto, setCryptosInfo, onClose }) {
   const [errores, setErrores] = useState({});
-
-  // Almacenar los valores del formulario
   const [form, setForm] = useState({
-    nombre: contacto.nombre,
-    numero: contacto.numero,
+    nombre: crypto.nombre,
+    precio: crypto.precio || '', // Cambiar 'numero' a 'precio'
+    url: crypto.url || '', // Agregar el campo url con un valor inicial
   });
 
-  //////////////////////////////////////
-  // Función para gestionar los cambios en los campos del formulario
-  //////////////////////////////////////
   const gestionarCambio = (e) => {
     const { name, value } = e.target;
-
     setForm({
       ...form,
       [name]: value,
     });
   };
 
-  //////////////////////////////////////
-  // Función de validación
-  //////////////////////////////////////
   const validar = () => {
     const nuevosErrores = {};
 
-    // Validación para "nombre"
     if (!form.nombre.trim()) {
       nuevosErrores.nombre = 'El nombre es obligatorio';
     }
 
-    // Validación para "numero"
-    if (!form.numero.trim()) {
-      nuevosErrores.numero = 'El número es obligatorio';
-    } else if (!/^\d+$/.test(form.numero)) {
-      nuevosErrores.numero = 'El número debe ser solo dígitos';
+    if (!form.precio.trim()) {
+      nuevosErrores.precio = 'El precio es obligatorio'; // Cambiar mensaje para 'precio'
+    } else if (isNaN(form.precio) || parseFloat(form.precio) < 0) {
+      nuevosErrores.precio = 'El precio debe ser un número positivo'; // Validar que sea un número
+    }
+
+    if (!form.url.trim()) {
+      nuevosErrores.url = 'La URL es obligatoria'; // Validar que la URL no esté vacía
+    } else if (!/^(ftp|http|https):\/\/[^ "]+$/.test(form.url)) {
+      nuevosErrores.url = 'La URL no es válida'; // Validar formato de URL
     }
 
     setErrores(nuevosErrores);
-
-    // Retorna true si no hay errores, de lo contrario retorna false
     return Object.keys(nuevosErrores).length === 0;
   };
 
-  // Función para manejar el envío del formulario
   const enviarFormulario = (e) => {
     e.preventDefault();
-
-    // Validar antes de enviar
     if (validar()) {
       console.clear();
       console.log('Formulario Enviado', form);
 
-      const editarContacto = {
+      const editarCrypto = {
         nombre: form.nombre,
-        numero: form.numero,
+        precio: form.precio, // Incluir el precio al enviar el formulario
+        url: form.url, // Incluir la URL al enviar el formulario
       };
 
-      // Enviar por Axios al JSON de la BD
-      servicioContactos.update(contacto.id, editarContacto)
+      servicioCryptos.update(crypto.id, editarCrypto)
         .then(response => {
-          Swal.fire("Contacto Actualizado correctamente");
-
-          // Limpiar el formulario después de agregar
-          setForm({
-            nombre: '',
-            numero: '',
-          });
-
-          // Actualizar el estado local de contactos
-          servicioContactos.getAll()
+          Swal.fire("Crypto actualizada correctamente");
+          setForm({ nombre: '', precio: '', url: '' }); // Limpiar también el campo URL
+          servicioCryptos.getAll()
             .then((response) => {
-              setContactos(response.data);
+              setCryptosInfo(response.data);
             });
-
-          // Cerramos el modal
           onClose();
-
         })
         .catch(error => {
-          Swal.fire("ERROR, Al actualizar el contacto");
+          Swal.fire("ERROR, al actualizar la crypto");
         });
     }
   };
 
   return (
-    <form onSubmit={enviarFormulario}>
-      {/* Campo de texto para nombre */}
-      <label htmlFor="nombre">Nombre del Contacto</label>
+    <form onSubmit={enviarFormulario} className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+      <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">Nombre de la Crypto</label>
       <input
         id="nombre"
         type="text"
         name="nombre"
         value={form.nombre}
         onChange={gestionarCambio}
-        placeholder="Escribe el nombre del contacto"
+        placeholder="Escribe el nombre de la crypto"
+        className="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300"
       />
-      {errores.nombre && <p className="error">{errores.nombre}</p>}
+      {errores.nombre && <p className="text-red-500 text-sm mt-1">{errores.nombre}</p>}
 
-      {/* Campo de texto para número de contacto */}
-      <label htmlFor="numero">Número de Teléfono</label>
+      <label htmlFor="precio" className="block text-sm font-medium text-gray-700 mt-4">Precio</label>
       <input
-        id="numero"
+        id="precio"
         type="text"
-        name="numero"
-        value={form.numero}
+        name="precio"
+        value={form.precio}
         onChange={gestionarCambio}
-        placeholder="Escribe el número de teléfono"
+        placeholder="Escribe el precio de la crypto"
+        className="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300"
       />
-      {errores.numero && <p className="error">{errores.numero}</p>}
+      {errores.precio && <p className="text-red-500 text-sm mt-1">{errores.precio}</p>}
 
-      {/* Botón de envío */}
-      <button type="submit">Actualizar</button>
+      <label htmlFor="url" className="block text-sm font-medium text-gray-700 mt-4">URL</label>
+      <input
+        id="url"
+        type="text"
+        name="url"
+        value={form.url}
+        onChange={gestionarCambio}
+        placeholder="Escribe la URL de la crypto"
+        className="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300"
+      />
+      {errores.url && <p className="text-red-500 text-sm mt-1">{errores.url}</p>}
+
+      <button type="submit" className="mt-4 bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-700">Actualizar</button>
     </form>
   );
 }
 
-export default ContactoEditar;
+export default CryptoEditar;
