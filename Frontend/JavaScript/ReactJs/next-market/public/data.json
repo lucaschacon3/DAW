@@ -35,6 +35,12 @@
       "nombre": "Cardano",
       "precio": 1.25,
       "url": "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/cardano_ada-512.png"
+    },
+    {
+      "id": "54cf",
+      "nombre": "doge",
+      "precio": "1",
+      "url": "https://static.vecteezy.com/system/resources/previews/024/239/834/non_2x/dogecoin-doge-crypto-free-png.png"
     }
   ]
 }

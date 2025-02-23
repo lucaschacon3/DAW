@@ -6,7 +6,7 @@ const Body = ({ cryptosInfo, setBalance, carrito, setCarrito, notificaciones }) 
   const notify = () => toast("Producto añadido en WebStorage");
 
   const anadirProducto = (nombre, precio) => {
-    setBalance((prevBalance) => prevBalance + precio); // Sumar al balance
+    setBalance((prevBalance) => prevBalance + parseInt(precio)); // Sumar al balance
 
     if (buscarProducto(nombre, carrito) === null) {
       setCarrito([...carrito, { nombre: nombre, cantidad: 1 }]);
