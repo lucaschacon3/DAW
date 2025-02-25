@@ -9,6 +9,16 @@
       "id": "5c4b",
       "nombre": "agustin",
       "password": "$2a$10$h4bmLklAJIhZxq/ga8s2Oe1ool90WIGNH.2LIS6QcL5B4sSbU1hpu"
+    },
+    {
+      "id": "eb92",
+      "nombre": "pedro",
+      "password": "$2a$10$EmfvnlSgRuBzo9P55YfzyO04EcdqXudfD1qliQU5JUZejX7X7/Yp2"
+    },
+    {
+      "id": "8bc9",
+      "nombre": "pepito",
+      "password": "$2a$10$EkVY6vHT36A7JegsdcNaZeWGfywCHaS4NvAKeAQBrV77e0qLhnHXq"
     }
   ],
   "cryptos": [
@@ -40,6 +50,12 @@
       "id": "54cf",
       "nombre": "doge",
       "precio": "1",
+      "url": "https://static.vecteezy.com/system/resources/previews/024/239/834/non_2x/dogecoin-doge-crypto-free-png.png"
+    },
+    {
+      "id": "f0d5",
+      "nombre": "aaaa",
+      "precio": "8",
       "url": "https://static.vecteezy.com/system/resources/previews/024/239/834/non_2x/dogecoin-doge-crypto-free-png.png"
     }
   ]
