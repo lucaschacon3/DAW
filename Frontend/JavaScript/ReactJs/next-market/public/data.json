@@ -19,6 +19,21 @@
       "id": "8bc9",
       "nombre": "pepito",
       "password": "$2a$10$EkVY6vHT36A7JegsdcNaZeWGfywCHaS4NvAKeAQBrV77e0qLhnHXq"
+    },
+    {
+      "id": "7eb3",
+      "nombre": "lucas",
+      "password": "$2a$10$zgmpkr8yIaU9CwcAjNLPsesw9BBVaE6YQrcjlM9W3q75yhOajFkk."
+    },
+    {
+      "id": "70bc",
+      "nombre": "pepe",
+      "password": "$2a$10$0G2nACwGvnaIy3EcLa77quRrYI3o8o7r16/jyPsPk9qYhguBgNuyW"
+    },
+    {
+      "id": "1a58",
+      "nombre": "javier",
+      "password": "$2a$10$aZWgQ/TR8ROrjqhlwu3tpegZvv8dbywj3Ts3rGzrJ2c3lq4C9.NLW"
     }
   ],
   "cryptos": [
@@ -47,15 +62,9 @@
       "url": "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/cardano_ada-512.png"
     },
     {
-      "id": "54cf",
+      "id": "1771",
       "nombre": "doge",
-      "precio": "1",
-      "url": "https://static.vecteezy.com/system/resources/previews/024/239/834/non_2x/dogecoin-doge-crypto-free-png.png"
-    },
-    {
-      "id": "f0d5",
-      "nombre": "aaaa",
-      "precio": "8",
+      "precio": "2",
       "url": "https://static.vecteezy.com/system/resources/previews/024/239/834/non_2x/dogecoin-doge-crypto-free-png.png"
     }
   ]
