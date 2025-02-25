@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear algebra</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/png" href="../icons/logo.svg" />
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- Header -->
+      <div id="header">
+        <a href="./home.html"
+          ><img
+            id="aulavirtual-icon"
+            src="../icons/logo.svg"
+            alt="(LUCAS)&sup2; logo"
+        /></a>
+        <div class="header-right">
+          <a href="./user.html"
+            ><img
+              id="user-profile-icon"
+              src="../img/user_profile_icon.png"
+              alt="user profile icon"
+          /></a>
+          <a id="close-sesion" href="../index.html">Log out</a>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Main content -->
+      <div id="main">
+        <div class="flex justify-between items-center -mt-4">
+          <a
+            href="./subject.html"
+            class="bg-[#30E3CA] p-3 rounded-lg text-lg font-semibold hover:bg-[#28b7a3] hover:text-[#e6ccd6] transition duration-300"
+          >
+            Go Back
+          </a>
+          <h1 class="text-4xl my-4 font-semibold text-center flex-1 mr-[90.44px]">
+            Linear algebra
+          </h1>
+        </div>
+
+        <div class="bg-[#2d3748] rounded-[15px] p-8">
+          <!-- Module 1: Introduction to Vector Spaces -->
+          <div class="flex flex-col lg:flex-row justify-between items-center">
+            <div class="w-full lg:w-1/2 lg:pr-2">
+              <h2 class="text-3xl underline mb-8">
+                Module 1: Introduction to Vector Spaces
+              </h2>
+              <p>
+                <span class="font-semibold">Objective:</span> This module
+                introduces the basic concepts of vector spaces, subspaces, and
+                linear independence, laying the foundation for solving linear
+                systems.
+              </p>
+
+              <div class="flex items-center mt-6">
+                <img src="../img/pdf_icon.png" alt="pdf icon" />
+                <a
+                  href="../resources/linear_algebra.pdf"
+                  download="Vector_Spaces.pdf"
+                  class="pl-4"
+                  >Theory PDF</a
+                >
+              </div>
+
+              <hr class="border-t w-full my-8" />
+
+              <div class="flex items-center">
+                <img
+                  src="../img/task_icon.png"
+                  alt="task icon"
+                  class="mx-[8px]"
+                />
+                <a href="./submit_task.html" class="pl-4">
+                  Identify vector subspaces
+                </a>
+              </div>
+            </div>
+
+            <!-- Vídeo: https://youtu.be/EP2ghkO0lSk?si=PjPTBI8sqcZ_hUdo -->
+            <div class="my-8 w-2/3 lg:w-1/2 lg:pl-2 flex justify-center">
+              <div class="w-full lg:w-1/2 aspect-[16/9]">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/EP2ghkO0lSk?si=Wb5Q2YnJr0bHk-OZ"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider-1 border-t w-full my-12" />
+
+          <!-- Module 2: Linear Transformations -->
+          <div class="flex flex-col lg:flex-row justify-between items-center">
+            <div class="w-full lg:w-1/2 lg:pr-2">
+              <h2 class="text-3xl underline mb-8">
+                Module 2: Linear Transformations
+              </h2>
+              <p>
+                <span class="font-semibold">Objective:</span> Learn about linear
+                transformations, their matrix representation, and their
+                application in solving problems in different fields.
+              </p>
+
+              <div class="flex items-center mt-6">
+                <img src="../img/pdf_icon.png" alt="pdf icon" />
+                <a
+                  href="../resources/linear_algebra.pdf"
+                  download="Linear_Transformations.pdf"
+                  class="pl-4"
+                  >Theory PDF</a
+                >
+              </div>
+
+              <hr class="border-t w-full my-8" />
+
+              <div class="flex items-center">
+                <img
+                  src="../img/task_icon.png"
+                  alt="task icon"
+                  class="mx-[8px]"
+                />
+                <a href="./submit_task.html" class="pl-4">
+                  Compute matrix transformations
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="my-8 lg:w-1/2 lg:pl-2 flex justify-center hover:scale-110 2xl:hover:scale-130 transition"
+            >
+              <img
+                src="../img/linear-transformations.jpg"
+                alt="Linear Transformations"
+                class="w-[525px] h-[267px]"
+              />
+            </div>
+          </div>
+
+          <hr class="divider-1 border-t w-full my-12" />
+
+          <!-- Module 3: Eigenvalues and Eigenvectors -->
+          <div class="flex flex-col lg:flex-row justify-between items-center">
+            <div class="w-full lg:w-1/2 lg:pr-2">
+              <h2 class="text-3xl underline mb-8">
+                Module 3: Eigenvalues and Eigenvectors
+              </h2>
+              <p>
+                <span class="font-semibold">Objective:</span> Study the concepts
+                of eigenvalues and eigenvectors, their properties, and their
+                role in solving linear systems and understanding matrix
+                behavior.
+              </p>
+
+              <div class="flex items-center mt-6">
+                <img src="../img/pdf_icon.png" alt="pdf icon" />
+                <a
+                  href="../resources/linear_algebra.pdf"
+                  download="Eigenvalues_Eigenvectors.pdf"
+                  class="pl-4"
+                  >Theory PDF</a
+                >
+              </div>
+
+              <hr class="border-t w-full my-8" />
+
+              <div class="flex items-center">
+                <img
+                  src="../img/task_icon.png"
+                  alt="task icon"
+                  class="mx-[8px]"
+                />
+                <a href="./submit_task.html" class="pl-4">
+                  Find eigenvalues and eigenvectors
+                </a>
+              </div>
+            </div>
+
+            <!-- Vídeo: https://youtu.be/TQvxWaQnrqI?si=SPwKN55obFaO0Uxl -->
+            <div class="my-8 w-2/3 lg:w-1/2 lg:pl-2 flex justify-center">
+              <div class="w-full lg:w-1/2 aspect-[16/9]">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/TQvxWaQnrqI?si=TQrPDy7LJK0LayU5"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider-1 border-t w-full my-12" />
+
+          <!-- Module 4: Solving Linear Systems -->
+          <div class="flex flex-col lg:flex-row justify-between items-center">
+            <div class="w-full lg:w-1/2 lg:pr-2">
+              <h2 class="text-3xl underline mb-8">
+                Module 4: Solving Linear Systems
+              </h2>
+              <p>
+                <span class="font-semibold">Objective:</span> Learn techniques
+                to solve systems of linear equations, including matrix methods
+                and the use of Gaussian elimination.
+              </p>
+
+              <div class="flex items-center mt-6">
+                <img src="../img/pdf_icon.png" alt="pdf icon" />
+                <a
+                  href="../resources/linear_algebra.pdf"
+                  download="Solving_Linear_Systems.pdf"
+                  class="pl-4"
+                  >Theory PDF</a
+                >
+              </div>
+
+              <hr class="border-t w-full my-8" />
+
+              <div class="flex items-center">
+                <img
+                  src="../img/task_icon.png"
+                  alt="task icon"
+                  class="mx-[8px]"
+                />
+                <a href="./submit_task.html" class="pl-4">
+                  Solve linear systems using matrices
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="my-8 lg:w-1/2 lg:pl-2 flex justify-center hover:scale-110 2xl:hover:scale-130 transition"
+            >
+              <img
+                src="../img/solving-linear-systems.png"
+                alt="Linear Transformations"
+                class="bg-white w-[525px] h-[267px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Footer -->
+      <div id="footer">
+        <div id="info-user">
+          <p>User: <span class="font-bold">Student123</span></p>
+          <p>Email: student@example.com</p>
+        </div>
+        <div>
+          <a href="./help.html">
+            <p>Help</p>
+          </a>
+        </div>
+        <div>
+          <p>&copy; 2025 Virtual Classroom. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

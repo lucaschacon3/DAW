@@ -1,0 +1,113 @@
+body {
+  background-image: url("../img/fondo2.png");
+  margin: 0;
+  padding: 25px;
+  color: #fff;
+}
+body h1 {
+  color: #f8e71c;
+}
+body h2 {
+  color: #a35aff;
+}
+body h3 {
+  font-style: italic;
+}
+body > div {
+  border-radius: 15px;
+}
+
+#container {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 25px;
+}
+#container .divider-1 {
+  color: #ff007f;
+}
+#container > hr {
+  margin: 15px 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+}
+#header #aulavirtual-icon {
+  width: 120px;
+}
+#header .header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#header #user-profile-icon {
+  height: 71px;
+  width: 71px;
+}
+#header #close-sesion {
+  padding: 0.5rem 1rem;
+  background-color: #30e3ca;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 15px;
+}
+#header #close-sesion:hover {
+  background-color: #28b7a3;
+  color: #e6ccd6;
+  transition-duration: 300ms;
+}
+#header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+  background-color: #2d3748;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+}
+#footer p {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+#footer a {
+  text-decoration: underline;
+}
+#footer #info-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: auto;
+}
+#footer #help:hover {
+  color: #e6ccd6;
+}
+
+@media only screen and (max-width: 639px) {
+  #close-sesion {
+    text-align: center;
+  }
+  #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+}/*# sourceMappingURL=index.css.map */
