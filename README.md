@@ -16,8 +16,7 @@
 
 ## [Iniciación](https:Enlace)
 1. Java.
-2. Python.
-3. POO.
+2. UML.
+3. Ciclo de vida del software.
 4. Clean Code.
-5. Ciclo de vida del software.
-6. UML
+5. POO
