@@ -37,3 +37,5 @@
     1-*: Alumno con 1 o mas asignaturas, sino no es alumno.
     nº exacto: Un segmento tiene dos puntos.
 
+![alt text](Ej1.png)
+![alt text](Ej2.png)

@@ -15,3 +15,5 @@ ej: Aula virtual
 1. Gestionar aula virtual.
 2. gestionar alumnos, gestionar ejercicios, gestionar cursos.
 3. Alumnos, profesores.
+
+![alt text](Ej1.png)
