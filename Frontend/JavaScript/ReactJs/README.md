@@ -1,13 +1,13 @@
 ## **Componentes**
-### **Toggle**
-### **Axios**
-### **CRUD-Axios**
-### **CRUD**
-### **Modal**
-### **Routing**
-### **WebStorage**
-### **Autenticacion**
-### **Registro**
+1. **Toggle**
+2. **Axios**
+3. **CRUD-Axios**
+4. **CRUD**
+5. **Modal**
+6. **Routing**
+7. **WebStorage**
+8. **Autenticacion**
+9. **Registro**
 
 ### **1. Introducción a las herramientas**
 
