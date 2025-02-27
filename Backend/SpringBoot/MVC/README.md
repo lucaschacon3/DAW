@@ -1,3 +1,259 @@
+# MVC
+
+### **1. Controladores en Spring Boot**
+
+### **1.1 @RestController vs @Controller**
+
+- `@RestController`: Retorna datos directamente en formato JSON o texto.
+- `@Controller`: Sirve para manejar vistas (usado con Thymeleaf).
+
+### **1.2 Ejemplo práctico con `@GetMapping` y `@PostMapping`**
+
+```java
+@Controller
+public class UserController {
+
+    // GET: Cargar un formulario HTML
+    @GetMapping("/")
+    public String showForm() {
+        return "form"; // Busca form.html en src/main/resources/templates
+    }
+
+    // POST: Procesar los datos del formulario
+    @PostMapping("/submit")
+    public String submitForm(@RequestParam("name") String name,
+                             @RequestParam("email") String email,
+                             Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("email", email);
+        return "result"; // Muestra result.html
+    }
+}
+
+```
+
+---
+
+### **2. Thymeleaf**
+
+### **2.1 Request Parameters (`@RequestParam`)**
+
+```java
+@Controller
+public class GreetingController {
+
+    @GetMapping("/greet")
+    public String greetUser(@RequestParam(name = "name", required = false, defaultValue = "Invitado") String name,
+                            Model model) {
+        model.addAttribute("name", name); // Se envía "name" al HTML
+        return "greeting"; // Busca greeting.html
+    }
+}
+
+```
+
+**HTML (`greeting.html`)**
+
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Greeting</title></head>
+<body>
+    <h1 th:text="'Hola, ' + ${name} + '!'">Hola, Invitado!</h1>
+</body>
+</html>
+
+```
+
+---
+
+### **2.2 HttpSession**
+
+```java
+@Controller
+@RequestMapping("/session")
+public class SessionController {
+
+    @GetMapping("/save")
+    public String saveInSession(HttpSession session) {
+        session.setAttribute("user", "Juan Pérez");
+        return "sessionSaved"; // Busca sessionSaved.html
+    }
+
+    @GetMapping("/get")
+    public String getFromSession(HttpSession session, Model model) {
+        String user = (String) session.getAttribute("user");
+        model.addAttribute("user", user);
+        return "sessionData"; // Busca sessionData.html
+    }
+}
+
+```
+
+**HTML para mostrar datos de sesión (`sessionData.html`)**
+
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Datos de Sesión</title></head>
+<body>
+    <h1 th:text="'Usuario en sesión: ' + ${user}">Usuario en sesión: Juan Pérez</h1>
+</body>
+</html>
+
+```
+
+---
+
+### **2.3 Etiquetas Thymeleaf (importantes para el examen)**
+
+1. **`th:text`**: Mostrar texto dinámico.
+2. **`th:href`**: Generar enlaces dinámicos.
+3. **`th:action`**: Generar rutas para formularios.
+4. **`th:each`**: Iterar sobre listas.
+5. **`th:if` y `th:unless`**: Condicionales.
+
+**Ejemplo práctico combinando etiquetas:**
+
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Ejemplo Thymeleaf</title></head>
+<body>
+    <h1 th:text="'Bienvenido, ' + ${name} + '!'">Bienvenido, Usuario!</h1>
+
+    <!-- Enlace dinámico -->
+    <a th:href="@{/greet(name='Juan')}">Saludar a Juan</a>
+
+    <!-- Tabla de usuarios -->
+    <table>
+        <thead>
+            <tr><th>Nombre</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.name}">Nombre</td>
+                <td th:text="${user.email}">Email</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulario -->
+    <form th:action="@{/submit}" method="post">
+        <input type="text" name="name" placeholder="Nombre"/>
+        <input type="email" name="email" placeholder="Email"/>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+```
+
+---
+
+### **3. Validaciones (`@Valid`, `BindingResult`)**
+
+### **3.1 Anotaciones de validación comunes**
+
+1. **`@NotNull`**: El campo no puede ser nulo.
+2. **`@Size`**: Restringe el tamaño del texto.
+3. **`@Min` y `@Max`**: Restringen valores numéricos.
+4. **`@Email`**: Valida un email.
+
+### **3.2 Ejemplo práctico de validaciones**
+
+```java
+import jakarta.validation.constraints.*;
+
+public class User {
+    @NotNull
+    @Size(min = 2, max = 30)
+    private String name;
+
+    @NotNull
+    @Email
+    private String email;
+
+    @Min(18)
+    @Max(100)
+    private int age;
+
+    // Getters y Setters
+}
+
+```
+
+### **3.3 Controlador con validación**
+
+```java
+@Controller
+@RequestMapping("/users")
+public class UserValidationController {
+
+    @GetMapping("/register")
+    public String showRegisterForm(Model model) {
+        model.addAttribute("user", new User()); // Modelo vacío
+        return "register"; // Busca register.html
+    }
+
+    @PostMapping("/register")
+    public String registerUser(@Valid @ModelAttribute("user") User user,
+                               BindingResult result,
+                               Model model) {
+        if (result.hasErrors()) {
+            return "register"; // Si hay errores, vuelve al formulario
+        }
+        model.addAttribute("message", "Usuario registrado con éxito!");
+        return "success"; // Busca success.html
+    }
+}
+
+```
+
+### **3.4 Formulario con manejo de errores**
+
+**HTML (`register.html`)**
+
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Registro</title></head>
+<body>
+    <form th:action="@{/users/register}" method="post" th:object="${user}">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" th:field="*{name}" />
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error en el nombre</p>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" th:field="*{email}" />
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error en el email</p>
+
+        <label for="age">Edad:</label>
+        <input type="number" id="age" th:field="*{age}" />
+        <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Error en la edad</p>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
+
+```
+
+---
+
+### **4. Tipos de Input en HTML**
+
+1. **Text:** `<input type="text" name="nombre" />`
+2. **Password:** `<input type="password" name="clave" />`
+3. **Email:** `<input type="email" name="email" />`
+4. **Number:** `<input type="number" name="edad" />`
+5. **Checkbox:** `<input type="checkbox" name="acepta" />`
+6. **Radio:** `<input type="radio" name="genero" value="Hombre" />`
+7. **File:** `<input type="file" name="archivo" />`
+8. **Textarea:** `<textarea name="comentarios"></textarea>`
+
+---
+
 ## Estructura proyecto
 
 ```java
