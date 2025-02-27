@@ -711,13 +711,10 @@ id decimal(10,4) not null,
     
 - **Uso de `IN` en subconsultas**:
 
-```
 ```sql
 SELECT mascota, dueño
 FROM mascotas
 WHERE mascota IN (SELECT nombre FROM mascotas WHERE propietario = "Juan");
-```
-
 ```
 
 ---
@@ -748,8 +745,8 @@ Esto debería incluir todos los comandos que mencionaste. Si necesitas más deta
 - **LEFT JOIN, RIGHT JOIN, CROSS JOIN:**
     
     ```sql
-    -- LEFT JOIN: Todos los registros de la tabla izquierda y los coincidentes de la derecha.
-    -- RIGHT JOIN: Todos los registros de la tabla derecha y los coincidentes de la izquierda.
-    -- CROSS JOIN: Todos los registros de ambas tablas (producto cartesiano).
+    LEFT JOIN --Todos los registros de la tabla izquierda y los coincidentes de la derecha.
+    RIGHT JOIN --Todos los registros de la tabla derecha y los coincidentes de la izquierda.
+    CROSS JOIN --Todos los registros de ambas tablas (producto cartesiano).
     
     ```
