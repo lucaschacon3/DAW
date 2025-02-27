@@ -1,6 +1,6 @@
 ## Directorios
 
-![directorios](Directorios_Linux.png)
+![directorios](DirectoriosLinux.png)
 
 ## Comandos
 
