@@ -27,6 +27,7 @@
 - **Elactic-em:** escala el texto con el zoom, normalmente 16px.
 - **Fluid-%:** establece el ancho de los distintos contedores respecto al padre.
 
+---
 - Para que funcionen bien las cajas con su relleno y borde usar:
     - Modelo **content-box** (navegador por defecto).
         - width + padding + border
