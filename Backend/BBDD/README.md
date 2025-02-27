@@ -1,3 +1,5 @@
+# BBDD
+
 1. Modelo entidad relación.
 2. Modelo ralacional y normalización.
 3. DDL: creacion y modificación de tablas.
