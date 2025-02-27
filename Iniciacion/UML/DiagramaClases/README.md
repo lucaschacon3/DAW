@@ -1,4 +1,4 @@
-### Diagrama de clases UML: Estandar de facto (DISEÑO)
+# Diagrama de clases UML: Estandar de facto (DISEÑO)
 
 - Elementos:
     
@@ -10,7 +10,7 @@
     
     + Publico: constantes.
     
-    # Protegidos: puden acceder clases hijas.
+    ## Protegidos: puden acceder clases hijas.
     
     -Metodos.
     

@@ -1,4 +1,4 @@
-# Java:
+# Java
 
 - **Orientado a objetos**: Java sigue el paradigma de la programación orientada a objetos (OOP), lo que significa que todo en Java es un objeto, y las interacciones se realizan a través de métodos y propiedades de estos objetos.
 - **Lenguaje de alto nivel**: Java es un lenguaje de programación de alto nivel, lo que facilita la escritura y comprensión del código al abstraer detalles complejos de la máquina.
