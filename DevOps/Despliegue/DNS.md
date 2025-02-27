@@ -1,3 +1,5 @@
+# DNS
+
 ### **1. Introducción al DNS (Domain Name System)**
 
 - **Definición**: El DNS es el sistema que traduce los nombres de dominio legibles por humanos (como `www.google.com`) en direcciones IP (como `142.250.185.46`), que son utilizadas por los ordenadores para comunicarse a través de Internet.
