@@ -1,3 +1,5 @@
+# Eventos
+
 ## Principales eventos
 
 - onfocus: Al obtener un foco.

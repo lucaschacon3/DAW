@@ -1,3 +1,5 @@
+# Sintaxis
+
 **Comentarios → //**  
 
 Al emparejar el html con el JavaScript usar **DEFER** para que no haya problemas de ejecución del script

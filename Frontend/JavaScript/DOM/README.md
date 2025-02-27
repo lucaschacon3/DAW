@@ -1,3 +1,5 @@
+# DOM
+
 - **Nodo**: El `<div>` en sí mismo es un nodo de tipo elemento, y el texto "Hola Mundo" es un nodo de texto.
 - **Objeto**: `miDiv` en JavaScript sería un objeto `HTMLElement` con propiedades como `id`, `innerText`, etc.
 - **Elemento**: `<div>` es un elemento dentro del DOM.

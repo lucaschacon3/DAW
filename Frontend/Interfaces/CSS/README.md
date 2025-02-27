@@ -1,3 +1,4 @@
+# CSS
 - El CSS se puede hacer en el head, en el body y en un archivo a parte conectado en el head (la mejor opción)(tambien se puede importar la url, pero es lo mismo).
 
 ### Class e ID

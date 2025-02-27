@@ -1,3 +1,5 @@
+# HTML
+
 ### Estructura básica
 
 - `<!DOCTYPE html>`: Define el tipo de documento como HTML5.

@@ -1,9 +1,9 @@
 ## [Backend](https://github.com/lucaschacon3/DAW/tree/main/Backend)
 
 1. [BBDD](https://github.com/lucaschacon3/DAW/tree/main/Backend/BBDD)
-    - [Modelo entidad relación](https://github.com/lucaschacon3/DAW/blob/main/Backend/BBDD/Modelo-Entidad-Relaci%C3%B3n.pdf)
+    - [Modelo entidad relación](https://github.com/lucaschacon3/DAW/blob/main/Backend/BBDD/Modelo_Entidad_Relacion.pdf)
     - [Modelo ralacional](https://github.com/lucaschacon3/DAW/blob/main/Backend/BBDD/Modelo-Relacional.pdf)
-    - [Normalización](https://github.com/lucaschacon3/DAW/blob/main/Backend/BBDD/Normalizaci%C3%B3n.pdf)
+    - [Normalización](https://github.com/lucaschacon3/DAW/blob/main/Backend/BBDD/Normalizacion.pdf)
     - [MySQL(DDL)](https://github.com/lucaschacon3/DAW/tree/main/Backend/BBDD/MySQL(DDL))
     - [MySQL(DQL)](https://github.com/lucaschacon3/DAW/tree/main/Backend/BBDD/MySQL(DQL))
     - [MySQL(PL-SQL)](https://github.com/lucaschacon3/DAW/tree/main/Backend/BBDD/MySQL(PL-SQL))

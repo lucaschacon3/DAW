@@ -1,10 +1,10 @@
-### UX- UI
+# UX- UI
 
 **UX** → se encarga de valorar el sitio web, aplicación o sistema, en base a la facilidad de navegar a través de éste.
 
 **UI**→ se encarga de conseguir un diseño atractivo centrándose en la creación de la interfaz: los colores, degradados, tipografías, layouts.
 
-### Normas basicas
+## Normas basicas
 
 - Haz que las cosas que no están relacionadas estén muy
 separadas entre sí. Es decir que haya mucho espacio en blanco. Y
