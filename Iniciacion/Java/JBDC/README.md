@@ -1,3 +1,5 @@
+# JDBC
+
 ## Manejo de Excepciones
 
 - **`try-catch`**: Siempre usarlo para manejar errores al trabajar con bases de datos.
