@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etapa 5</title>
+</head>
+<body>
+    <form th:action="@{/etapa5}" method="post">
+        <label for="signo">Signo:</label>
+            <select id="signo" name="signo">
+                <option value="1">Aries</option>
+                <option value="2">Tauro</option>
+                <option value="3">Géminis</option>
+                <option value="4">Cáncer</option>
+                <option value="5">Leo</option>
+                <option value="6">Virgo</option>
+                <option value="7">Libra</option>
+                <option value="8">Escorpio</option>
+                <option value="9">Sagitario</option>
+                <option value="10">Capricornio</option>
+                <option value="11">Acuario</option>
+                <option value="12">Piscis</option>
+            </select>
+        <br>
+        <span th:text="${error}"></span>
+        <br>
+        <button type="submit">Siguiente</button>
+    </form>
+    
+</body>
+</html>

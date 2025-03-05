@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <style>
+        *{
+            text-align: center;
+
+            margin: 0.4em;
+        }
+		span{
+			color: red;
+		}
+    </style>
+</head>
+<body>
+    <form th:action="@{/formulario}" method="post">
+        <label for="nombre">Nombre: 
+            <input type="text" name="nombre" id="nombre" th:value="${nombre}">
+        </label>
+        <span th:text="${errorNombre}"></span>
+        <br>
+
+        <label for="correo">Correo: 
+            <input type="text" name="correo" id="correo" th:value="${correo}">
+        </label>
+        <span th:text="${errorCorreo}"></span>
+        <br>
+
+        <label for="edad">Edad: 
+            <input type="number" name="edad" id="edad" th:value="${edad}">
+        </label>
+        <span th:text="${errorEdad}"></span>
+        <br>
+
+        <label for="contrasena">Contrasena: 
+            <input type="password" name="contrasena" id="contrasena" th:value="${contrasena}">
+        </label>
+        <span th:text="${errorContrasena}"></span>
+        <br>
+
+		<label for="signo">Signo: 
+		    <select name="signo" id="signo">
+		        <option value="0" th:selected="${signo == 0}">Tauro</option>
+		        <option value="1" th:selected="${signo == 1}">Libra</option>
+		        <option value="2" th:selected="${signo == 2}">Sagitario</option>
+		    </select>
+		</label>
+		<span th:text="${errorSigno}"></span>
+		<br>
+
+		<label for="aficiones">Aficiones: 
+		    <input type="checkbox" name="aficiones" value="0" th:checked="${aficiones != null and aficiones.contains('0')}"> Lectura 
+		    <input type="checkbox" name="aficiones" value="1" th:checked="${aficiones != null and aficiones.contains('1')}"> Videojuegos 
+		    <input type="checkbox" name="aficiones" value="2" th:checked="${aficiones != null and aficiones.contains('2')}"> Películas 
+		</label>
+		<span th:text="${errorAficiones}"></span>
+		<br>
+
+		<label for="condiciones">Condiciones: 
+		    <input type="radio" name="condiciones" value="0" th:checked="${condiciones == 0}">NO
+		    <input type="radio" name="condiciones" value="1" th:checked="${condiciones == 1}">SI
+		</label>
+		<span th:text="${errorCondiciones}"></span>
+        <br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+    
+</body>
+</html>

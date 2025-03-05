@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etapa 7</title>
+  </head>
+  <body>
+    <form th:action="@{/etapa7}" method="post">
+      <label>Condiciones:</label>
+        <input type="radio" name="condiciones" id="condiciones" value="0">SI
+        <input type="radio" name="condiciones" id="condiciones" value="1">NO
+      <br />
+      <span th:text="${error}"></span>
+      <br />
+      <button type="submit">Siguiente</button>
+    </form>
+  </body>
+</html>

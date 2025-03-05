@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form th:action="@{/form}" method="post">
+        <label for="nombre"> nombre
+            <input type="text" name="nombre" id="nombre">
+        </label>
+
+        <label for="puntos"> puntos
+            <input type="number" name="puntos" id="puntos">
+        </label>
+
+        <button type="submit">siguiente</button>
+    </form>
+    
+</body>
+</html>

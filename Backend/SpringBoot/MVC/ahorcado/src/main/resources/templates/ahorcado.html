@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ahorcado en Spring Boot</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .palabra { font-size: 24px; letter-spacing: 5px; margin: 20px; }
+        .error { color: red; font-weight: bold; }
+        .mensaje { font-size: 20px; font-weight: bold; margin: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+
+    <div class="palabra" th:text="${progreso}"></div>
+
+    <p>Intentos restantes: <span th:text="${intentosRestantes}"></span></p>
+
+    <p>Letras ingresadas: <span th:text="${letrasIngresadas}"></span></p>
+
+    <form action="/intentar" method="post">
+        <input type="text" name="letra" maxlength="1" required />
+        <button type="submit">Intentar</button>
+    </form>
+
+    <p class="error" th:if="${error}" th:text="${error}"></p>
+    <p class="mensaje" th:if="${mensaje}" th:text="${mensaje}"></p>
+</body>
+</html>

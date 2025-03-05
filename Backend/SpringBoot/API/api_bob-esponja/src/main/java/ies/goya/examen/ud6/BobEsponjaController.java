@@ -1,6 +1,5 @@
 package ies.goya.examen.ud6;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;

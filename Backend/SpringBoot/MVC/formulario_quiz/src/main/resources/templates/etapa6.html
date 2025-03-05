@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>etapa 6</title>
+  </head>
+  <body>
+    <form th:action="@{/etapa6}" method="post">
+      <label>Aficciones:</label>
+      <ol>
+        <li>
+          <input
+            type="checkbox"
+            id="aficcionDeportes"
+            name="aficiones"
+            value="0"
+          />
+          <label for="aficcionDeportes">Deportes</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="aficcionJuerga"
+            name="aficiones"
+            value="1"
+          />
+          <label for="aficcionJuerga">Juerga</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="aficcionLectura"
+            name="aficiones"
+            value="2"
+          />
+          <label for="aficcionLectura">Lectura</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="aficcionRelaciones"
+            name="aficiones"
+            value="3"
+          />
+          <label for="aficcionRelaciones">Relaciones sociales</label>
+        </li>
+      </ol>
+      <br />
+      <span th:text="${error}"></span>
+      <br />
+      <button type="submit">Siguiente</button>
+    </form>
+  </body>
+</html>

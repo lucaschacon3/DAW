@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etapa 2</title>
+</head>
+<body>
+    <form th:action="@{/etapa2}" method="post">
+        <label for="correo">correo:
+            <input type="email" name="correo" id="correo">
+        </label>
+        <br>
+        <span th:text="${error}"></span>
+        <br>
+        <button type="submit">Siguiente</button>
+    </form>
+	<a th:href="@{/etapa1}">Atras</a>
+    
+</body>
+</html>
